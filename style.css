@@ -1,0 +1,934 @@
+/* ============================================================
+   OJT Journal — style.css
+   Mae Anne B. Bongat | BSIT Internship Journal, 2026
+   ============================================================ */
+
+
+/* ===== CSS VARIABLES / DESIGN TOKENS ===== */
+:root {
+    --primary:       #2563eb;
+    --primary-dark:  #1d4ed8;
+    --accent:        #0ea5e9;
+    --text-dark:     #1e293b;
+    --text-muted:    #64748b;
+    --bg-light:      #f8fafc;
+    --border:        #e2e8f0;
+    --white:         #ffffff;
+    --radius:        12px;
+    --transition:    0.25s ease;
+}
+
+
+/* ===== BASE ===== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+    color: var(--text-dark);
+    background-color: var(--white);
+    line-height: 1.6;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* ===== NAVBAR ===== */
+.navbar {
+    border-bottom: 1px solid var(--border);
+    padding: 0.9rem 0;
+}
+
+/* Logo */
+.navbar-brand {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--primary) !important;
+    letter-spacing: -0.3px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Decorative dot next to logo */
+.brand-dot {
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    background: var(--primary);
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+/* Nav links */
+.nav-link {
+    font-size: 0.92rem;
+    font-weight: 500;
+    color: var(--text-dark) !important;
+    border-radius: 7px;
+    padding: 0.4rem 0.8rem !important;
+    transition: background-color var(--transition), color var(--transition);
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary) !important;
+    background-color: #eff6ff;
+}
+
+
+/* ===== HERO SECTION ===== */
+.hero-section {
+    min-height: 90vh;
+    padding: 6rem 0 4rem;
+    background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 55%, #f8fafc 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle radial glow in top-right corner */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: -80px;
+    right: -80px;
+    width: 480px;
+    height: 480px;
+    background: radial-gradient(circle, rgba(37, 99, 235, 0.07) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+/* Greeting line */
+.hero-greeting {
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: var(--primary);
+    letter-spacing: 0.3px;
+    margin-bottom: 0.75rem;
+}
+
+/* Main heading */
+.hero-heading {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+}
+
+/* Blue name highlight */
+.highlight {
+    color: var(--primary);
+}
+
+/* Typewriter role line */
+.hero-typewriter {
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    font-weight: 600;
+    color: var(--text-muted);
+    min-height: 2rem;
+}
+
+/* Blinking cursor */
+.cursor {
+    color: var(--primary);
+    animation: blink 0.8s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0; }
+}
+
+/* Descriptor paragraph */
+.hero-subtext {
+    color: var(--text-muted);
+    font-size: 1.02rem;
+    max-width: 500px;
+    line-height: 1.75;
+    margin-top: 0.75rem;
+}
+
+/* Circular avatar with icon */
+.hero-avatar {
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #dbeafe, #eff6ff);
+    border: 4px solid rgba(37, 99, 235, 0.14);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-avatar i {
+    font-size: 6rem;
+    color: var(--primary);
+    opacity: 0.7;
+}
+
+
+/* ===== BUTTON OVERRIDES ===== */
+.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color var(--transition), border-color var(--transition);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+}
+
+.btn-outline-primary {
+    border-color: var(--primary);
+    color: var(--primary);
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all var(--transition);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.btn-outline-secondary {
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+
+/* ===== SHARED SECTION STYLES ===== */
+
+/* Pill label above section headings */
+.section-label {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--primary);
+    background: #eff6ff;
+    padding: 0.25rem 0.8rem;
+    border-radius: 999px;
+    margin-bottom: 0.75rem;
+}
+
+/* Section heading */
+.section-title {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 800;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+/* Section body text */
+.section-text {
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.8;
+    max-width: 620px;
+    margin: 0 auto;
+}
+
+
+/* ===== ABOUT / PROGRESS SECTION ===== */
+.section-about {
+    background-color: var(--bg-light);
+}
+
+/* Progress bar container */
+.progress-wrapper {
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+/* Bootstrap progress track override */
+.ojt-progress {
+    height: 10px;
+    border-radius: 999px;
+    background-color: #e2e8f0;
+}
+
+/* Gradient fill */
+.ojt-progress .progress-bar {
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    border-radius: 999px;
+    transition: width 0.9s ease;
+}
+
+/* Small labels under progress bar */
+.progress-label {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+}
+
+
+/* ===== JOURNAL / BLOG CARDS SECTION ===== */
+.section-journal {
+    background-color: var(--white);
+}
+
+/* Card container */
+.journal-card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.journal-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(37, 99, 235, 0.1);
+}
+
+/* Card image */
+.journal-card .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Italic caption below image */
+.card-caption {
+    font-size: 0.73rem;
+    font-style: italic;
+    color: #94a3b8;
+    text-align: center;
+    background: var(--bg-light);
+    padding: 0.3rem 0.5rem;
+    border-bottom: 1px solid var(--border);
+}
+
+/* Week badge inside card */
+.badge-week {
+    display: inline-block;
+    padding: 0.2rem 0.7rem;
+    border-radius: 999px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    background: #dbeafe;
+    color: var(--primary);
+    width: fit-content;
+}
+
+.badge-week.coming-soon {
+    background: #f1f5f9;
+    color: #94a3b8;
+}
+
+/* Card title */
+.journal-card .card-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+/* Card body text */
+.journal-card .card-text {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.65;
+}
+
+
+/* ===== SKILLS SECTION ===== */
+.section-skills {
+    background-color: var(--bg-light);
+}
+
+/* Individual skill tile */
+.skill-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem 1rem;
+    transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+    cursor: default;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 28px rgba(37, 99, 235, 0.1);
+    border-color: var(--primary);
+}
+
+/* Skill icon */
+.skill-icon {
+    font-size: 2rem;
+    color: var(--primary);
+    display: block;
+    margin-bottom: 0.65rem;
+}
+
+/* Skill label */
+.skill-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin: 0;
+    line-height: 1.4;
+}
+
+
+/* ===== REFLECTION QUOTE SECTION ===== */
+.section-quote {
+    background: linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%);
+}
+
+/* Quote wrapper */
+.quote-block {
+    padding: 2.5rem 1.5rem;
+}
+
+/* Large decorative quote icon */
+.quote-icon {
+    font-size: 3.5rem;
+    color: rgba(255, 255, 255, 0.25);
+    display: block;
+    margin-bottom: 1rem;
+}
+
+/* Quote text */
+.quote-block blockquote {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    font-style: italic;
+    color: var(--white);
+    line-height: 1.85;
+    border: none;
+    margin: 0 0 1rem 0;
+    padding: 0;
+}
+
+/* Attribution */
+.quote-author {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.55);
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    margin: 0;
+}
+
+
+/* ===== CONTACT SECTION ===== */
+.section-contact {
+    background-color: var(--bg-light);
+}
+
+.contact-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 2rem 1.5rem;
+    transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 28px rgba(37, 99, 235, 0.1);
+    border-color: var(--primary);
+}
+
+.contact-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #eff6ff;
+    color: var(--primary);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.contact-card__title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 0.35rem;
+}
+
+.contact-card__text {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+.contact-socials {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.contact-social-link {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    background: var(--white);
+    color: var(--text-muted);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.15rem;
+    text-decoration: none;
+    transition: all var(--transition);
+}
+
+.contact-social-link:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: var(--white);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.2);
+}
+
+
+/* ===== FOOTER ===== */
+.site-footer {
+    background-color: var(--text-dark);
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 0.88rem;
+}
+
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+
+/* Center hero text on small screens */
+@media (max-width: 992px) {
+    .hero-section {
+        padding: 5rem 0 3rem;
+        text-align: center;
+    }
+
+    .hero-subtext {
+        margin: 0.75rem auto 0;
+    }
+
+    .hero-section .d-flex.flex-wrap {
+        justify-content: center;
+    }
+}
+
+/* Stack skills 2-per-row on very small screens */
+@media (max-width: 480px) {
+    .skill-card {
+        padding: 1.2rem 0.75rem;
+    }
+}
+
+
+/* ============================================================
+   WEEK DETAIL PAGE — week2.html (and reusable for all weeks)
+   ============================================================ */
+
+
+/* ===== WEEK BANNER ===== */
+.wk-banner {
+    position: relative;
+    height: clamp(340px, 55vh, 520px);
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+}
+
+.wk-banner__img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Dark-to-transparent gradient overlay */
+.wk-banner__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(15, 23, 42, 0.25) 0%,
+        rgba(15, 23, 42, 0.72) 100%
+    );
+}
+
+.wk-banner__content {
+    position: relative;
+    z-index: 2;
+    padding-bottom: 2.5rem;
+    color: var(--white);
+}
+
+.wk-banner__label {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+    background: rgba(37, 99, 235, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    padding: 0.25rem 0.8rem;
+    border-radius: 999px;
+    margin-bottom: 0.75rem;
+    backdrop-filter: blur(4px);
+}
+
+.wk-banner__title {
+    font-size: clamp(1.5rem, 4vw, 2.4rem);
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--white);
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+}
+
+.wk-banner__date {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 0.9rem;
+}
+
+.wk-banner__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.4rem;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.wk-banner__meta span {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+
+/* ===== MAIN CONTENT AREA ===== */
+.wk-main {
+    background-color: var(--white);
+}
+
+
+/* ===== SHARED SECTION WRAPPER ===== */
+.wk-section {
+    margin-bottom: 0.5rem;
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.wk-section.wk-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ===== BODY TEXT ===== */
+.wk-body-text {
+    font-size: 1rem;
+    color: #334155;
+    line-height: 1.9;
+    margin-bottom: 1.4rem;
+}
+
+
+/* ===== INLINE FIGURE / IMAGE ===== */
+.wk-figure {
+    margin: 2rem 0 2.2rem;
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid var(--border);
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.55s ease 0.1s, transform 0.55s ease 0.1s;
+}
+
+.wk-figure.wk-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.wk-figure__img {
+    width: 100%;
+    height: clamp(200px, 40vw, 380px);
+    object-fit: cover;
+    display: block;
+}
+
+.wk-figure__caption {
+    font-size: 0.78rem;
+    font-style: italic;
+    color: var(--text-muted);
+    background: var(--bg-light);
+    padding: 0.55rem 1rem;
+    border-top: 1px solid var(--border);
+    margin: 0;
+}
+
+
+/* ===== SECTION DIVIDER ===== */
+.wk-divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 2.8rem 0;
+}
+
+
+/* ===== REFLECTION CARD ===== */
+.wk-reflection-card {
+    background: #f8faff;
+    border: 1px solid #dbeafe;
+    border-left: 4px solid var(--primary);
+    border-radius: var(--radius);
+    padding: 1.8rem 1.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    margin-top: 1.2rem;
+}
+
+.wk-reflection-item {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.wk-reflection-item.wk-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.wk-reflection-icon {
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    background: #dbeafe;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    margin-top: 0.1rem;
+}
+
+.wk-reflection-icon--orange {
+    background: #fff7ed;
+    color: #ea580c;
+}
+
+.wk-reflection-icon--green {
+    background: #f0fdf4;
+    color: #16a34a;
+}
+
+.wk-reflection-heading {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 0.4rem;
+}
+
+.wk-reflection-text {
+    font-size: 0.91rem;
+    color: #475569;
+    line-height: 1.8;
+    margin: 0;
+    margin-bottom: 1.4rem;
+}
+
+
+/* ===== SKILLS GRID ===== */
+.wk-skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 0.85rem;
+    margin-top: 1.2rem;
+}
+
+.wk-skill-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 0.7rem 1rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+    opacity: 0;
+    transform: translateY(12px) scale(0.97);
+    transition: opacity 0.45s ease, transform 0.45s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.wk-skill-badge.wk-visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.wk-skill-badge:hover {
+    transform: translateY(-4px) scale(1) !important;
+    box-shadow: 0 8px 24px rgba(37, 99, 235, 0.12);
+    border-color: var(--primary);
+}
+
+.wk-skill-badge i {
+    font-size: 1.1rem;
+    color: var(--primary);
+    flex-shrink: 0;
+}
+
+
+/* ===== WEEK NAVIGATION BAR ===== */
+.wk-nav-bar {
+    background: var(--bg-light);
+    border-top: 1px solid var(--border);
+    padding: 1.8rem 0;
+}
+
+.wk-nav-inner {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 1rem;
+}
+
+/* Base nav button */
+.wk-nav-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    padding: 0.9rem 1.1rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    background: var(--white);
+    text-decoration: none;
+    color: var(--text-dark);
+    transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.wk-nav-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(37, 99, 235, 0.1);
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+/* Previous — left aligned text */
+.wk-nav-btn--prev {
+    flex-direction: row;
+    justify-content: flex-start;
+    text-align: left;
+}
+
+/* Next — right aligned text */
+.wk-nav-btn--next {
+    flex-direction: row;
+    justify-content: flex-end;
+    text-align: right;
+}
+
+/* Home — vertically centered icon + label, matches height of siblings */
+.wk-nav-btn--home {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 0.3rem;
+    padding: 0.9rem 1.4rem;
+    background: #eff6ff;
+    border-color: #bfdbfe;
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.wk-nav-btn--home:hover {
+    background: var(--primary);
+    color: var(--white);
+    border-color: var(--primary);
+}
+
+/* Nav button text lines */
+.wk-nav-btn__label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.wk-nav-btn__sub {
+    display: block;
+    font-size: 0.73rem;
+    color: var(--text-muted);
+    line-height: 1.3;
+    margin-top: 0.1rem;
+}
+
+.wk-nav-btn:hover .wk-nav-btn__sub {
+    color: inherit;
+    opacity: 0.75;
+}
+
+.wk-nav-btn i {
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+
+/* ===== WEEK PAGE RESPONSIVE ADJUSTMENTS ===== */
+
+/* Stack banner meta vertically on small screens */
+@media (max-width: 576px) {
+    .wk-banner__meta {
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+
+    .wk-banner__title {
+        font-size: 1.3rem;
+    }
+}
+
+/* Collapse nav bar to vertical stack on mobile */
+@media (max-width: 640px) {
+    .wk-nav-inner {
+        flex-wrap: wrap;
+    }
+
+    .wk-nav-btn {
+        flex: 1 1 auto;
+    }
+
+    .wk-nav-btn--next {
+        justify-content: flex-end;
+        text-align: right;
+    }
+}
+
+/* Skills wrap nicely on tablets */
+@media (max-width: 480px) {
+    .wk-skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .wk-reflection-card {
+        padding: 1.2rem 1rem;
+    }
+}
