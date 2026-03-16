@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Week 4 – Coming Soon</title>
+        <title>Week 4 – Malware Removal, Domain Configuration & System Implementation | OJT Journal</title>
 
         <!-- Google Fonts – Poppins -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -67,8 +67,8 @@
         <!-- ===== WEEK BANNER / HEADER ===== -->
         <header class="wk-banner">
             <img
-                src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1400&q=85"
-                alt="Network Troubleshooting, Data Recovery & IT Support"
+                src="https://images.unsplash.com/photo-1516321318423-f06f70504504?w=1400&q=85"
+                alt="Malware Removal, Domain Configuration & System Implementation"
                 class="wk-banner__img">
             <div class="wk-banner__overlay"></div>
             <div class="wk-banner__content container">
@@ -76,18 +76,15 @@
                     <i class="bi bi-journal-text me-1"></i>Weekly Journal
                 </span>
                 <h1 class="wk-banner__title">
-                    Week 4 – Network Troubleshooting, Data Recovery &amp; IT
-                    Support
+                    Week 4 – Malware Removal, Domain Configuration &amp; QR Code System Implementation
                 </h1>
                 <p class="wk-banner__date">
                     <i class="bi bi-calendar3 me-1"></i>March 9 – March 14, 2026
                 </p>
                 <div class="wk-banner__meta">
-                    <span><i class="bi bi-building me-1"></i>ALINDECO IT
-                        Department</span>
+                    <span><i class="bi bi-building me-1"></i>ALINDECO IT Department</span>
                     <span><i class="bi bi-clock me-1"></i>44 Hours Logged</span>
-                    <span><i class="bi bi-tools me-1"></i>Networking, Recovery
-                        &amp; Support</span>
+                    <span><i class="bi bi-tools me-1"></i>Malware Removal, Security &amp; Network Configuration</span>
                 </div>
             </div>
         </header>
@@ -101,307 +98,40 @@
                         <!-- ===== NARRATIVE SECTION ===== -->
                         <section class="wk-section" id="narrative">
                             <span class="section-label">Weekly Narrative</span>
-                            <h2 class="section-title">What Happened This
-                                Week</h2>
+                            <h2 class="section-title">What Happened This Week</h2>
 
                             <p class="wk-body-text">
-                                The third week of my internship started on Day
-                                10 with a printer troubleshooting request. An
-                                Epson L360 inkjet printer owned by Ma'am Mervie
-                                Curie M. Belen of the Warehouse Office was
-                                brought to our attention due to poor print
-                                quality — the printouts were coming out faded
-                                and streaky, with visible banding across the
-                                pages. Upon inspecting the unit, we first
-                                checked the ink levels and found them to be
-                                adequate, so the issue was not ink-related. We
-                                then noticed that the power cord appeared worn
-                                and was not providing a stable connection,
-                                causing the printer to intermittently lose
-                                power. We replaced the faulty power cord with a
-                                new one, which resolved the power instability.
-                                To address the print quality, we performed a
-                                power ink flushing — a deeper cleaning cycle
-                                that forces ink through the print head nozzles
-                                at high pressure to clear any dried ink or
-                                clogs. After running the flush and printing a
-                                nozzle check pattern, the output quality was
-                                noticeably restored, and Ma'am Belen confirmed
-                                that the prints were back to their expected
-                                clarity.
+                                Week 4 began on March 9 with a critical issue — a flash drive that had been corrupted and required data restoration. After successfully recovering the files, I encountered a problem when attempting to transfer the restored data back to the flash drive. The flash drive appeared corrupted, showing only shortcuts instead of the actual files. This was a classic case of a <strong>shortcut virus</strong> — a form of malware that hides files and replaces them with shortcuts, making it appear as though the data has been lost. Rather than pursuing surface-level solutions, I took a methodical approach to troubleshooting. First, I showed hidden files on the flash drive by using the <code>attrib -h -r -s /s /d E:\*.*</code> command, which unhides files that were hidden by the virus. However, the files remained inaccessible. I then researched multiple locations where the virus might be hiding — checking the <code>C:\Users\(myusername)\AppData\Roaming</code> directory and exploring the Windows Registry Editor, but found nothing suspicious there. The breakthrough came when I checked <code>services.msc</code> (Windows Services Manager), where I discovered a strange application that had been running in the background. After locating its file path, I was able to isolate and remove it. Once the malicious service was terminated, I ejected the flash drive and tested it again — the shortcut virus was completely gone, and the files were now accessible. This experience reminded me of a similar problem I had encountered on my personal laptop in March before the OJT began, which made the troubleshooting process familiar and manageable.
                             </p>
 
                             <p class="wk-body-text">
-                                Day 11 was largely administrative. We spent most
-                                of the day preparing documents for the IT
-                                Maintenance Request Form — a standardized
-                                internal document used by the IT department to
-                                formally log and track all maintenance
-                                activities performed on company equipment. This
-                                includes details such as the type of equipment
-                                serviced, the nature of the issue reported, the
-                                troubleshooting steps taken, the parts replaced
-                                (if any), and the final resolution. Proper
-                                documentation is a critical part of IT
-                                operations because it creates an audit trail,
-                                helps track recurring hardware issues, and
-                                ensures accountability. Filling out these forms
-                                also helped me understand the importance of
-                                maintaining organized records in a professional
-                                IT environment, as it allows the team to
-                                reference past maintenance history when
-                                diagnosing future problems on the same
-                                equipment.
+                                Day 10 (March 10) shifted focus to network infrastructure and Active Directory management. We were tasked with handling warehouse documents that required signatures and, more importantly, joining Sir Jess's desktop to the company domain. We made significant progress, but ran into an obstacle — we could not restart the desktop because the owner was not present and there were open Excel files with unsaved data. During this session, our mentor Sir Jhong provided valuable instruction on Active Directory Users and Computers, explaining its critical role in managing users and permissions across departments in a large organization like ALINDECO. One interesting problem we encountered involved logging in with Sir Jess's account. Despite being told there was no password set, the system repeatedly requested one at login. After consulting with Sir Jhong, we learned that Windows 8 Pro has a known behavior where pressing Enter without typing any password sometimes works as a workaround for this exact scenario. When we returned and tried this approach, it worked immediately — a surprising but effective solution that highlighted how operating system quirks can sometimes require creative troubleshooting.
                             </p>
 
                             <p class="wk-body-text">
-                                On Day 12, we created a UTP (Unshielded Twisted
-                                Pair) cable for a LAN-to-LAN connection needed
-                                by one of the employees in the Admin Office.
-                                This involved cutting the cable to the required
-                                length, stripping the outer jacket, arranging
-                                the individual wire pairs according to the
-                                T-568B wiring standard, and crimping RJ-45
-                                connectors onto both ends using a crimping tool.
-                                After crimping, we tested the cable with a LAN
-                                cable tester to verify that all eight pins were
-                                making proper contact and that there were no
-                                crossed or broken wires. The cable was then
-                                deployed to establish a direct Ethernet
-                                connection for the employee's workstation. In
-                                addition to the cabling work, we also prepared
-                                several documents that required signatures from
-                                various department heads. We organized the
-                                paperwork, ensured all necessary fields were
-                                filled out, and personally visited the
-                                corresponding signatories across the office to
-                                obtain their approvals. This part of the day
-                                gave me insight into how IT tasks often involve
-                                coordination with other departments and that the
-                                administrative side of IT work is just as
-                                important as the technical side.
+                                On March 11, we continued the domain joining process. Using the admin local account, we accessed the desktop and proceeded with the proper sequence: renaming the computer first, restarting, and then joining it to the domain. Our initial attempt had combined both operations, which is why it failed. After the first restart, we opened Control Panel → Network and Internet Sharing → Network Connections, right-clicked Ethernet 4, accessed Properties, navigated to IPv4 Properties, and configured the DNS settings by selecting "Use the following DNS server addresses." We set the preferred DNS server to <code>192.168.100.26</code> and the alternate DNS to <code>192.168.100.1</code>. However, when we attempted to join the domain again, we encountered new obstacles. Initial troubleshooting showed that pinging both DNS servers was successful (<code>ping 100.1</code> and <code>ping 100.26</code> both returned positive responses), indicating the network connectivity was fine. However, when I ran <code>nslookup</code>, it returned a timeout error with the message "the specified domain either does not exist or could not be contacted." This occurred because the client desktop could not locate the necessary SRV (service) records required to find the Domain Controller. To resolve this, I disabled IPv6 (which I suspected was causing interference), configured the DNS Suffix in the DNS tab, executed <code>ipconfig /registerdns</code> from the command line to register the machine name with the DNS server, and attempted the domain join again. This time, the configuration was accepted and the computer successfully joined the company domain. To complete the setup, we installed and configured AnyDesk remote access software so that the desktop could be remotely managed and accessed — a useful tool for IT support operations.
                             </p>
 
-                            <!-- Inline image 1 -->
                             <figure class="wk-figure">
                                 <img
-                                    src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=900&q=80"
-                                    alt="Network cabling and IT documentation"
+                                    src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=900&q=80"
+                                    alt="Network domain configuration and remote access setup"
                                     class="wk-figure__img">
                                 <figcaption class="wk-figure__caption">
-                                    <i class="bi bi-camera me-1"></i>Hands-on IT
-                                    work — from cable creation to document
-                                    preparation.
+                                    <i class="bi bi-camera me-1"></i>Configuring domain settings, DNS servers, and establishing remote access for IT management.
                                 </figcaption>
                             </figure>
 
                             <p class="wk-body-text">
-                                Day 13 was by far the most eventful and
-                                learning-intensive day of the week. It started
-                                with a complaint that there was no internet
-                                connection at the Staff House. The first thing
-                                we did was check the server connection that
-                                feeds the Staff House. We noticed that the
-                                indicator light on the <strong>media
-                                    converter</strong> — a networking device
-                                that converts signals between different media
-                                types, in this case converting fiber optic
-                                signals into Ethernet (RJ-45/LAN) signals so
-                                that devices using standard copper Ethernet
-                                cables can connect to a fiber optic network —
-                                was showing only one light, indicating that the
-                                fiber-to-Ethernet conversion was not happening
-                                and there was indeed no active internet
-                                connection being passed through.
+                                March 12 was a preparation day for an important company event. The company was preparing for a management review meeting, which meant the IT team needed to be ready to support the presentation infrastructure. I set up the projector and configured the laptop that would be used for the presentation. Additionally, while the employees were occupied with the management review preparations, we were able to successfully join Ms. Mervie's desktop to the company domain using the same process we had refined on the previous days. Simultaneously, I was working on preparing the QR Code System for Inventory — a project that had been in development and was ready for presentation to management. The system was designed to streamline inventory tracking by using generated QR codes linked to inventory items.
                             </p>
 
                             <p class="wk-body-text">
-                                We initially tried unplugging the LAN cable from
-                                the server and transferring it to a different
-                                port on the switch, but nothing changed. So we
-                                proceeded to the Staff House to inspect the
-                                media converter on that end. We found the same
-                                single-light indicator there as well. We tried
-                                unplugging both the power supply and the LAN
-                                cable from the Staff House media converter, but
-                                the issue persisted. Given that the problem
-                                appeared on both ends, we concluded that the
-                                issue was not with the Staff House connection
-                                itself but rather with the media converter at
-                                the server side — it seemed like the device was
-                                failing to convert the incoming fiber optic
-                                signal to an Ethernet signal. We returned to the
-                                Admin Office and tried unplugging the media
-                                converter from the server and plugging it back
-                                in, but still nothing changed. As a final step,
-                                we decided to replace the power cord of the
-                                media converter, suspecting that it might not be
-                                receiving sufficient or stable power. Sure
-                                enough, right after swapping the power cord, the
-                                indicator light showing an active internet
-                                connection came on. The light on the switch port
-                                connected to the Staff House LAN also turned on,
-                                confirming that the connection was restored. We
-                                went back to the Staff House to verify, and
-                                after connecting a phone to the Wi-Fi, the
-                                internet was confirmed to be working again.
+                                March 13 brought both success and renewed challenges. The management review meeting continued, and I was tasked with encoding required materials for a roofing replacement project in the PM 3 area. Later that afternoon, the person who assigned the task requested that I transfer the files to their flash drive. While I successfully completed the transfer on my laptop, my co-OJT experienced the shortcut virus issue again when they plugged the same flash drive into their computer. Since I had already mastered the troubleshooting process from the previous day, I was able to quickly and efficiently remove the virus from both my laptop and my co-OJT's machine. The experience demonstrated how knowledge gained from problem-solving can be immediately applied and shared with teammates.
                             </p>
 
                             <p class="wk-body-text">
-                                As soon as we returned to the main office,
-                                another complaint came in — this time from Ma'am
-                                Lindy, who reported that printing was taking an
-                                unusually long time. She suspected that the
-                                internet was slow since her printer was
-                                connected over the network. The troubleshooting
-                                for this issue was handled by our mentor, Sir
-                                Jhong, as we were still not familiar with
-                                diagnosing network printing performance issues.
-                                Sir Jhong ran a <code>ping google.com</code>
-                                command, and the response times were
-                                consistently in the 8ms–10ms range, which
-                                indicated that the local internet connection was
-                                perfectly healthy. He then pinged the IP address
-                                of the remote desktop that Ma'am Lindy was
-                                using, and the response times jumped to the
-                                86ms–89ms range. This clearly showed that the
-                                bottleneck was not the local network but the
-                                connection to the remote desktop — the high
-                                latency meant that data was taking significantly
-                                longer to travel between the remote desktop and
-                                the local printer. Since the remote desktop was
-                                hosted at the head office, the only course of
-                                action was to follow up with the head office IT
-                                team to investigate the connection on their end.
-                            </p>
-
-                            <!-- Inline image 2 -->
-                            <figure class="wk-figure">
-                                <img
-                                    src="https://images.unsplash.com/photo-1612178991541-b48cc8e92a4d?w=900&q=80"
-                                    alt="Network troubleshooting and data recovery"
-                                    class="wk-figure__img">
-                                <figcaption class="wk-figure__caption">
-                                    <i class="bi bi-camera me-1"></i>A day
-                                    filled with network diagnostics, file
-                                    recovery, and hands-on troubleshooting.
-                                </figcaption>
-                            </figure>
-
-                            <p class="wk-body-text">
-                                Later that day, we were asked to restore some
-                                files for one of the employees in the Purchasing
-                                Department. We booted the system unit and
-                                successfully entered the BIOS setup, but we
-                                encountered difficulty getting the boot options
-                                to appear so we could boot from the USB flash
-                                drive. We tried analyzing the situation first
-                                and plugged the flash drive into different USB
-                                ports on the system unit. When that didn't work,
-                                we checked whether the flash drive itself was
-                                corrupted by plugging it into our laptop. Upon
-                                inspection, we discovered that the flash drive
-                                did not contain the recovery files we needed to
-                                perform the restoration — the expected folders
-                                and files were simply missing. We then copied
-                                the necessary recovery files onto the flash
-                                drive and attempted the task again, but it still
-                                didn't boot properly.
-                            </p>
-
-                            <p class="wk-body-text">
-                                At that point, we decided to inform our mentor,
-                                Sir Jhong, about the problem. We showed him the
-                                contents of the flash drive, and he quickly
-                                identified the issue — the folders and files
-                                that we needed were actually present on the
-                                drive but were hidden. He showed us how to
-                                unhide the files by adjusting the folder options
-                                to display hidden files and folders. With the
-                                correct files now visible and accessible, we
-                                proceeded with the restoration. After
-                                approximately two hours of running the recovery
-                                process, we were able to successfully retrieve
-                                the files. However, Sir Joseph, the employee
-                                from the Purchasing team, informed us that he
-                                could not locate specific files he was looking
-                                for among the recovered data. He asked us to
-                                perform the restoration once more, but this time
-                                to specifically recover only files from the
-                                years 2023–2024, filtered by file type —
-                                specifically pictures and documents. We were
-                                also tasked with scanning physical documents to
-                                a PC. What amazed me was that the scanning could
-                                be done wirelessly — all we had to do was select
-                                the name of the destination desktop from the
-                                scanner's interface, and the scanned documents
-                                were sent directly to that computer over the
-                                network without needing any physical USB or
-                                cable connection. It was a small but impressive
-                                demonstration of how modern office equipment
-                                leverages network connectivity to streamline
-                                everyday tasks.
-                            </p>
-
-                            <p class="wk-body-text">
-                                On Day 14, we configured a TP-Link router for
-                                the Engineering Office. The task involved
-                                accessing the router's admin panel through a web
-                                browser, where we changed both the Wi-Fi network
-                                name (SSID) and the password. We renamed the
-                                network from its default name to "PM3-Temp"
-                                because the router was serving as a temporary
-                                replacement in the Engineering Office. Changing
-                                the SSID to a recognizable name helps employees
-                                easily identify and connect to the correct
-                                network, especially in an office environment
-                                where multiple Wi-Fi networks may be visible. We
-                                also created another LAN (Local Area Network)
-                                cable, this time for the Warehouse Office. One
-                                of the system units there had previously
-                                undergone a motherboard replacement (this repair
-                                was performed before we started our OJT) due to
-                                damaged ports on the original board. Since the
-                                new motherboard was already installed, our task
-                                was to run and connect the new LAN cable to
-                                re-establish the network connection. We crimped
-                                the cable using the T-568B standard, tested it
-                                for continuity, and successfully connected the
-                                system unit back to the office network. The
-                                cabling was completed without any issues.
-                            </p>
-
-                            <p class="wk-body-text">
-                                The last day of the week, Day 15, involved an
-                                Acer TravelMate 5760 (XSS38) laptop brought in
-                                by one of the employees who had forgotten their
-                                Windows login password. The laptop was going to
-                                be repurposed as a backup device — the plan was
-                                to back up the data on its existing HDD and
-                                eventually replace it with an SSD for better
-                                performance. However, before any of that could
-                                happen, we first needed to bypass the forgotten
-                                password to gain access to the system. Instead
-                                of going through the lengthy manual process of
-                                bypassing the Windows password (such as using
-                                command prompt through recovery mode or editing
-                                the SAM registry hive), we used Hiren's
-                                Boot CD PE — a pre-installation
-                                environment bootable tool that contains a suite
-                                of utilities for system recovery, diagnostics,
-                                and password management. Using the password
-                                reset utility included in Hiren's Boot CD PE, we
-                                were able to reset the Windows login password
-                                quickly and gain access to the laptop without
-                                any data loss. Once we had successfully bypassed
-                                the password and confirmed access to the
-                                desktop, we proceeded to update the installed
-                                version of Microsoft Office from the outdated
-                                MS Office 2010 to MS
-                                Office 365, ensuring the employee
-                                would have access to the latest productivity
-                                features, cloud integration, and security
-                                updates.
+                                The final day of the week, March 14, marked a turning point in the project scope. After the presentation of the proposed QR Code System for Inventory, the proposal was <strong>officially approved by management</strong>. This approval meant we could now move forward with actual implementation. The system utilizes a platform called QR.me for generating QR codes that would be assigned to inventory items for identification and real-time monitoring. My focus shifted to organizing the detailed inventory information that would be embedded in and associated with each QR code. This included preparing item specifications, descriptions, and other relevant data that would be accessible when users scanned the codes. I also conducted thorough testing of the QR codes generated from the platform, verifying that they displayed the correct information and that the scanning process would be functional and convenient for the employees who would use the system for daily inventory management. This work provided valuable insight into how existing third-party tools and services (in this case, QR.me) can be effectively integrated into custom business solutions without the need to build QR code generation functionality from scratch. It was an excellent demonstration of practical problem-solving and leveraging external resources to deliver efficient solutions.
                             </p>
                         </section>
 
@@ -410,8 +140,7 @@
 
                         <!-- ===== REFLECTION SECTION ===== -->
                         <section class="wk-section" id="reflection">
-                            <span class="section-label">Reflection &amp;
-                                Insights</span>
+                            <span class="section-label">Reflection &amp; Insights</span>
                             <h2 class="section-title">What I Took Away</h2>
 
                             <div class="wk-reflection-card">
@@ -420,90 +149,33 @@
                                         <i class="bi bi-lightbulb-fill"></i>
                                     </div>
                                     <div>
-                                        <h5 class="wk-reflection-heading">What I
-                                            Learned</h5>
+                                        <h5 class="wk-reflection-heading">What I Learned</h5>
                                         <p class="wk-reflection-text">
-                                            This week was incredibly rich in
-                                            learning. I gained hands-on
-                                            experience with network
-                                            troubleshooting — specifically
-                                            understanding how media converters
-                                            work and how something as simple as
-                                            a faulty power cord can bring down
-                                            an entire building's internet
-                                            connection. I also learned the
-                                            difference between local network
-                                            latency and remote desktop latency
-                                            through the ping diagnostics Sir
-                                            Jhong demonstrated. The file
-                                            recovery task taught me the
-                                            importance of checking for hidden
-                                            files before assuming data is
-                                            missing, and the password bypass
-                                            using Hiren's Boot CD PE showed me
-                                            how powerful bootable recovery tools
-                                            can be in an IT environment.
+                                            This week was pivotal in understanding both security threats and network infrastructure. The shortcut virus experience taught me the importance of checking system services and understanding how malware hides itself at the operating system level. On the network side, I gained hands-on experience with DNS configuration, domain joining, and the critical role of SRV records in Active Directory. The debugging process of domain joining — where I had to systematically test connectivity, validate DNS resolution, and understand the proper sequence of operations — strengthened my network troubleshooting fundamentals. I also learned that real-world implementations often involve leveraging existing platforms and services (like QR.me) rather than building everything from scratch, which is an important lesson in practical IT project management.
                                         </p>
                                     </div>
                                 </div>
 
                                 <div class="wk-reflection-item">
-                                    <div
-                                        class="wk-reflection-icon wk-reflection-icon--orange">
-                                        <i
-                                            class="bi bi-exclamation-triangle-fill"></i>
+                                    <div class="wk-reflection-icon wk-reflection-icon--orange">
+                                        <i class="bi bi-exclamation-triangle-fill"></i>
                                     </div>
                                     <div>
-                                        <h5
-                                            class="wk-reflection-heading">Challenges
-                                            Encountered</h5>
+                                        <h5 class="wk-reflection-heading">Challenges Encountered</h5>
                                         <p class="wk-reflection-text">
-                                            The biggest challenge this week was
-                                            the Staff House internet outage. It
-                                            required us to systematically go
-                                            back and forth between locations,
-                                            testing each component in the chain
-                                            — from the server room to the Staff
-                                            House and back — before we could
-                                            isolate the faulty power cord as the
-                                            root cause. The file recovery task
-                                            was also challenging because the
-                                            hidden files on the flash drive
-                                            initially made us think the
-                                            necessary files were missing
-                                            entirely. It was a reminder to
-                                            always check file visibility
-                                            settings before jumping to
-                                            conclusions.
+                                            The domain joining process proved to be the most complex challenge this week. Numerous factors had to align correctly — operating system configuration, network connectivity, DNS settings, and the proper sequence of operations. The initial failure when combining the rename and domain join operations taught me the value of following documented procedures step-by-step. The DNS timeout error during nslookup was particularly puzzling until I realized it was an SRV record issue, not a basic connectivity problem. The shortcut virus, while challenging on the first encounter, became manageable once the root cause was identified in services.msc. Managing expectations around the management review meeting and timing IT support tasks with company events also required flexibility and coordination.
                                         </p>
                                     </div>
                                 </div>
 
                                 <div class="wk-reflection-item">
-                                    <div
-                                        class="wk-reflection-icon wk-reflection-icon--green">
+                                    <div class="wk-reflection-icon wk-reflection-icon--green">
                                         <i class="bi bi-graph-up-arrow"></i>
                                     </div>
                                     <div>
-                                        <h5 class="wk-reflection-heading">How
-                                            This Week Built My Skills</h5>
+                                        <h5 class="wk-reflection-heading">How This Week Built My Skills</h5>
                                         <p class="wk-reflection-text">
-                                            By the end of Week 3, my
-                                            troubleshooting methodology has
-                                            improved significantly. I'm learning
-                                            to follow a logical, step-by-step
-                                            elimination process rather than
-                                            guessing at solutions. I've also
-                                            become more comfortable with
-                                            physical networking tasks like
-                                            crimping UTP cables and configuring
-                                            routers. The variety of tasks this
-                                            week — from printer repair and
-                                            network diagnostics to data recovery
-                                            and password bypass — gave me a
-                                            well-rounded understanding of what
-                                            day-to-day IT support looks like in
-                                            a real workplace.
+                                            By the end of Week 4, my capabilities in network administration and security troubleshooting have expanded significantly. I'm now confident in diagnosing and removing malware that hides at the service level, configuring DNS settings for domain environments, and managing the domain joining process. The repeated troubleshooting of the shortcut virus on multiple machines — both mine and my co-OJT's — reinforced the importance of documenting solutions and building repeatable processes. I've also developed a better understanding of how IT projects evolve from proposal and presentation to actual implementation, and how to work with external platforms to accelerate delivery. The variety of tasks this week — from security incident response to infrastructure configuration to project implementation — has given me a realistic picture of how diverse the IT support role can be in a real organization.
                                         </p>
                                     </div>
                                 </div>
@@ -516,41 +188,40 @@
                         <!-- ===== SKILLS GAINED SECTION ===== -->
                         <section class="wk-section" id="skills">
                             <span class="section-label">Skills Gained</span>
-                            <h2 class="section-title">Technical Skills from This
-                                Week</h2>
+                            <h2 class="section-title">Technical Skills from This Week</h2>
 
                             <div class="wk-skills-grid">
+                                <div class="wk-skill-badge">
+                                    <i class="bi bi-shield-exclamation"></i>
+                                    <span>Malware Removal</span>
+                                </div>
+                                <div class="wk-skill-badge">
+                                    <i class="bi bi-wrench"></i>
+                                    <span>Windows Services Management</span>
+                                </div>
+                                <div class="wk-skill-badge">
+                                    <i class="bi bi-diagram-3"></i>
+                                    <span>Active Directory Configuration</span>
+                                </div>
+                                <div class="wk-skill-badge">
+                                    <i class="bi bi-globe"></i>
+                                    <span>DNS Server Configuration</span>
+                                </div>
+                                <div class="wk-skill-badge">
+                                    <i class="bi bi-link-45deg"></i>
+                                    <span>Domain Joining Process</span>
+                                </div>
                                 <div class="wk-skill-badge">
                                     <i class="bi bi-wifi"></i>
                                     <span>Network Troubleshooting</span>
                                 </div>
                                 <div class="wk-skill-badge">
-                                    <i class="bi bi-ethernet"></i>
-                                    <span>UTP Cable Crimping</span>
+                                    <i class="bi bi-qr-code"></i>
+                                    <span>QR Code System Implementation</span>
                                 </div>
                                 <div class="wk-skill-badge">
-                                    <i class="bi bi-printer-fill"></i>
-                                    <span>Printer Troubleshooting</span>
-                                </div>
-                                <div class="wk-skill-badge">
-                                    <i class="bi bi-arrow-repeat"></i>
-                                    <span>Data Recovery</span>
-                                </div>
-                                <div class="wk-skill-badge">
-                                    <i class="bi bi-router-fill"></i>
-                                    <span>Router Configuration</span>
-                                </div>
-                                <div class="wk-skill-badge">
-                                    <i class="bi bi-shield-lock-fill"></i>
-                                    <span>Password Bypass</span>
-                                </div>
-                                <div class="wk-skill-badge">
-                                    <i class="bi bi-hdd-network-fill"></i>
-                                    <span>Media Converter Diagnostics</span>
-                                </div>
-                                <div class="wk-skill-badge">
-                                    <i class="bi bi-clipboard-data-fill"></i>
-                                    <span>IT Documentation</span>
+                                    <i class="bi bi-laptop"></i>
+                                    <span>Remote Access Setup (AnyDesk)</span>
                                 </div>
                             </div>
                         </section>
@@ -568,8 +239,7 @@
                     <a href="week3.html" class="wk-nav-btn wk-nav-btn--prev">
                         <i class="bi bi-arrow-left"></i>
                         <span class="wk-nav-btn__label">Previous Week</span>
-                        <span class="wk-nav-btn__sub">Week 3 – PC Setup &amp;
-                            Printer Maintenance</span>
+                        <span class="wk-nav-btn__sub">Week 3 – Network Troubleshooting, Data Recovery &amp; IT Support</span>
                     </a>
 
                     <a href="index.html" class="wk-nav-btn wk-nav-btn--home">
