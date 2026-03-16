@@ -3,7 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Week 4 – Malware Removal, Domain Configuration & System Implementation | OJT Journal</title>
+        <title>Week 4 – Malware Removal, Domain Configuration & System
+            Implementation | OJT Journal</title>
 
         <!-- Google Fonts – Poppins -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -76,15 +77,18 @@
                     <i class="bi bi-journal-text me-1"></i>Weekly Journal
                 </span>
                 <h1 class="wk-banner__title">
-                    Week 4 – Malware Removal, Domain Configuration &amp; QR Code System Implementation
+                    Week 4 – Malware Removal, Domain Configuration &amp; QR Code
+                    System Implementation
                 </h1>
                 <p class="wk-banner__date">
                     <i class="bi bi-calendar3 me-1"></i>March 9 – March 14, 2026
                 </p>
                 <div class="wk-banner__meta">
-                    <span><i class="bi bi-building me-1"></i>ALINDECO IT Department</span>
+                    <span><i class="bi bi-building me-1"></i>ALINDECO IT
+                        Department</span>
                     <span><i class="bi bi-clock me-1"></i>44 Hours Logged</span>
-                    <span><i class="bi bi-tools me-1"></i>Malware Removal, Security &amp; Network Configuration</span>
+                    <span><i class="bi bi-tools me-1"></i>Malware Removal,
+                        Security &amp; Network Configuration</span>
                 </div>
             </div>
         </header>
@@ -98,18 +102,122 @@
                         <!-- ===== NARRATIVE SECTION ===== -->
                         <section class="wk-section" id="narrative">
                             <span class="section-label">Weekly Narrative</span>
-                            <h2 class="section-title">What Happened This Week</h2>
+                            <h2 class="section-title">What Happened This
+                                Week</h2>
 
                             <p class="wk-body-text">
-                                Week 4 began on March 9 with a critical issue — a flash drive that had been corrupted and required data restoration. After successfully recovering the files, I encountered a problem when attempting to transfer the restored data back to the flash drive. The flash drive appeared corrupted, showing only shortcuts instead of the actual files. This was a classic case of a <strong>shortcut virus</strong> — a form of malware that hides files and replaces them with shortcuts, making it appear as though the data has been lost. Rather than pursuing surface-level solutions, I took a methodical approach to troubleshooting. First, I showed hidden files on the flash drive by using the <code>attrib -h -r -s /s /d E:\*.*</code> command, which unhides files that were hidden by the virus. However, the files remained inaccessible. I then researched multiple locations where the virus might be hiding — checking the <code>C:\Users\(myusername)\AppData\Roaming</code> directory and exploring the Windows Registry Editor, but found nothing suspicious there. The breakthrough came when I checked <code>services.msc</code> (Windows Services Manager), where I discovered a strange application that had been running in the background. After locating its file path, I was able to isolate and remove it. Once the malicious service was terminated, I ejected the flash drive and tested it again — the shortcut virus was completely gone, and the files were now accessible. This experience reminded me of a similar problem I had encountered on my personal laptop in March before the OJT began, which made the troubleshooting process familiar and manageable.
+                                Week 4 began on March 9 with a critical issue —
+                                a flash drive that had been corrupted and
+                                required data restoration. After successfully
+                                recovering the files, I encountered a problem
+                                when attempting to transfer the restored data
+                                back to the flash drive. The flash drive
+                                appeared corrupted, showing only shortcuts
+                                instead of the actual files. This was a classic
+                                case of a <strong>shortcut virus</strong> — a
+                                form of malware that hides files and replaces
+                                them with shortcuts, making it appear as though
+                                the data has been lost. Rather than pursuing
+                                surface-level solutions, I took a methodical
+                                approach to troubleshooting. First, I showed
+                                hidden files on the flash drive by using the
+                                <code>attrib -h -r -s /s /d E:\*.*</code>
+                                command, which unhides files that were hidden by
+                                the virus. However, the files remained
+                                inaccessible. I then researched multiple
+                                locations where the virus might be hiding —
+                                checking the
+                                <code>C:\Users\(myusername)\AppData\Roaming</code>
+                                directory and exploring the Windows Registry
+                                Editor, but found nothing suspicious there. The
+                                breakthrough came when I checked
+                                <code>services.msc</code> (Windows Services
+                                Manager), where I discovered a strange
+                                application that had been running in the
+                                background. After locating its file path, I was
+                                able to isolate and remove it. Once the
+                                malicious service was terminated, I ejected the
+                                flash drive and tested it again — the shortcut
+                                virus was completely gone, and the files were
+                                now accessible. This experience reminded me of a
+                                similar problem I had encountered on my personal
+                                laptop in March before the OJT began, which made
+                                the troubleshooting process familiar and
+                                manageable.
                             </p>
 
                             <p class="wk-body-text">
-                                Day 10 (March 10) shifted focus to network infrastructure and Active Directory management. We were tasked with handling warehouse documents that required signatures and, more importantly, joining Sir Jess's desktop to the company domain. We made significant progress, but ran into an obstacle — we could not restart the desktop because the owner was not present and there were open Excel files with unsaved data. During this session, our mentor Sir Jhong provided valuable instruction on Active Directory Users and Computers, explaining its critical role in managing users and permissions across departments in a large organization like ALINDECO. One interesting problem we encountered involved logging in with Sir Jess's account. Despite being told there was no password set, the system repeatedly requested one at login. After consulting with Sir Jhong, we learned that Windows 8 Pro has a known behavior where pressing Enter without typing any password sometimes works as a workaround for this exact scenario. When we returned and tried this approach, it worked immediately — a surprising but effective solution that highlighted how operating system quirks can sometimes require creative troubleshooting.
+                                Day 10 (March 10) shifted focus to network
+                                infrastructure and Active Directory management.
+                                We were tasked with handling warehouse documents
+                                that required signatures and, more importantly,
+                                joining Sir Jess's desktop to the company
+                                domain. We made significant progress, but ran
+                                into an obstacle — we could not restart the
+                                desktop because the owner was not present and
+                                there were open Excel files with unsaved data.
+                                During this session, our mentor Sir Jhong
+                                provided valuable instruction on Active
+                                Directory Users and Computers, explaining its
+                                critical role in managing users and permissions
+                                across departments in a large organization like
+                                ALINDECO. One interesting problem we encountered
+                                involved logging in with Sir Jess's account.
+                                Despite being told there was no password set,
+                                the system repeatedly requested one at login.
+                                After consulting with Sir Jhong, we learned that
+                                Windows 8 Pro has a known behavior where
+                                pressing Enter without typing any password
+                                sometimes works as a workaround for this exact
+                                scenario. When we returned and tried this
+                                approach, it worked immediately — a surprising
+                                but effective solution that highlighted how
+                                operating system quirks can sometimes require
+                                creative troubleshooting.
                             </p>
 
                             <p class="wk-body-text">
-                                On March 11, we continued the domain joining process. Using the admin local account, we accessed the desktop and proceeded with the proper sequence: renaming the computer first, restarting, and then joining it to the domain. Our initial attempt had combined both operations, which is why it failed. After the first restart, we opened Control Panel → Network and Internet Sharing → Network Connections, right-clicked Ethernet 4, accessed Properties, navigated to IPv4 Properties, and configured the DNS settings by selecting "Use the following DNS server addresses." We set the preferred DNS server to <code>192.168.100.26</code> and the alternate DNS to <code>192.168.100.1</code>. However, when we attempted to join the domain again, we encountered new obstacles. Initial troubleshooting showed that pinging both DNS servers was successful (<code>ping 100.1</code> and <code>ping 100.26</code> both returned positive responses), indicating the network connectivity was fine. However, when I ran <code>nslookup</code>, it returned a timeout error with the message "the specified domain either does not exist or could not be contacted." This occurred because the client desktop could not locate the necessary SRV (service) records required to find the Domain Controller. To resolve this, I disabled IPv6 (which I suspected was causing interference), configured the DNS Suffix in the DNS tab, executed <code>ipconfig /registerdns</code> from the command line to register the machine name with the DNS server, and attempted the domain join again. This time, the configuration was accepted and the computer successfully joined the company domain. To complete the setup, we installed and configured AnyDesk remote access software so that the desktop could be remotely managed and accessed — a useful tool for IT support operations.
+                                On March 11, we continued the domain joining
+                                process. Using the admin local account, we
+                                accessed the desktop and proceeded with the
+                                proper sequence: renaming the computer first,
+                                restarting, and then joining it to the domain.
+                                Our initial attempt had combined both
+                                operations, which is why it failed. After the
+                                first restart, we opened Control Panel → Network
+                                and Internet Sharing → Network Connections,
+                                right-clicked Ethernet 4, accessed Properties,
+                                navigated to IPv4 Properties, and configured the
+                                DNS settings by selecting
+                                "Use the following DNS server addresses." We set
+                                the preferred DNS server to
+                                <code>192.168.100.26</code> and the alternate
+                                DNS to <code>192.168.100.1</code>. However, when
+                                we attempted to join the domain again, we
+                                encountered new obstacles. Initial
+                                troubleshooting showed that pinging both DNS
+                                servers was successful (<code>ping 100.1</code>
+                                and <code>ping 100.26</code> both returned
+                                positive responses), indicating the network
+                                connectivity was fine. However, when I ran
+                                <code>nslookup</code>, it returned a timeout
+                                error with the message
+                                "the specified domain either does not exist or could not be contacted."
+                                This occurred because the client desktop could
+                                not locate the necessary SRV (service) records
+                                required to find the Domain Controller. To
+                                resolve this, I disabled IPv6 (which I suspected
+                                was causing interference), configured the DNS
+                                Suffix in the DNS tab, executed <code>ipconfig
+                                    /registerdns</code> from the command line to
+                                register the machine name with the DNS server,
+                                and attempted the domain join again. This time,
+                                the configuration was accepted and the computer
+                                successfully joined the company domain. To
+                                complete the setup, we installed and configured
+                                AnyDesk remote access software so that the
+                                desktop could be remotely managed and accessed —
+                                a useful tool for IT support operations.
                             </p>
 
                             <figure class="wk-figure">
@@ -118,20 +226,82 @@
                                     alt="Network domain configuration and remote access setup"
                                     class="wk-figure__img">
                                 <figcaption class="wk-figure__caption">
-                                    <i class="bi bi-camera me-1"></i>Configuring domain settings, DNS servers, and establishing remote access for IT management.
+                                    <i class="bi bi-camera me-1"></i>Configuring
+                                    domain settings, DNS servers, and
+                                    establishing remote access for IT
+                                    management.
                                 </figcaption>
                             </figure>
 
                             <p class="wk-body-text">
-                                March 12 was a preparation day for an important company event. The company was preparing for a management review meeting, which meant the IT team needed to be ready to support the presentation infrastructure. I set up the projector and configured the laptop that would be used for the presentation. Additionally, while the employees were occupied with the management review preparations, we were able to successfully join Ms. Mervie's desktop to the company domain using the same process we had refined on the previous days. Simultaneously, I was working on preparing the QR Code System for Inventory — a project that had been in development and was ready for presentation to management. The system was designed to streamline inventory tracking by using generated QR codes linked to inventory items.
+                                March 12 was a preparation day for an important
+                                company event. The company was preparing for a
+                                management review meeting, which meant the IT
+                                specialist needed to be ready to support the
+                                presentation infrastructure. I set up the
+                                projector and configured the laptop that would
+                                be used for the presentation. Additionally,
+                                while the employees were occupied with the
+                                management review preparations, we were able to
+                                successfully join Ms. Mervie's desktop to the
+                                company domain using the same process we had
+                                refined on the previous days. Simultaneously, I
+                                was working on preparing the QR Code System for
+                                tagging.
                             </p>
 
                             <p class="wk-body-text">
-                                March 13 brought both success and renewed challenges. The management review meeting continued, and I was tasked with encoding required materials for a roofing replacement project in the PM 3 area. Later that afternoon, the person who assigned the task requested that I transfer the files to their flash drive. While I successfully completed the transfer on my laptop, my co-OJT experienced the shortcut virus issue again when they plugged the same flash drive into their computer. Since I had already mastered the troubleshooting process from the previous day, I was able to quickly and efficiently remove the virus from both my laptop and my co-OJT's machine. The experience demonstrated how knowledge gained from problem-solving can be immediately applied and shared with teammates.
+                                March 13 brought both success and renewed
+                                challenges. The management review meeting
+                                continued, and I was tasked with encoding
+                                required materials for a roofing replacement
+                                project in the PM 3 area. Later that afternoon,
+                                the person who assigned the task requested that
+                                I transfer the files to their flash drive. While
+                                I successfully completed the transfer on my
+                                laptop, my co-OJT experienced the shortcut virus
+                                issue again when they plugged the same flash
+                                drive into their computer. Since I had already
+                                mastered the troubleshooting process from the
+                                previous day, I was able to quickly and
+                                efficiently remove the virus from both my laptop
+                                and my co-OJT's machine. The experience
+                                demonstrated how knowledge gained from
+                                problem-solving can be immediately applied and
+                                shared with teammates.
                             </p>
 
                             <p class="wk-body-text">
-                                The final day of the week, March 14, marked a turning point in the project scope. After the presentation of the proposed QR Code System for Inventory, the proposal was <strong>officially approved by management</strong>. This approval meant we could now move forward with actual implementation. The system utilizes a platform called QR.me for generating QR codes that would be assigned to inventory items for identification and real-time monitoring. My focus shifted to organizing the detailed inventory information that would be embedded in and associated with each QR code. This included preparing item specifications, descriptions, and other relevant data that would be accessible when users scanned the codes. I also conducted thorough testing of the QR codes generated from the platform, verifying that they displayed the correct information and that the scanning process would be functional and convenient for the employees who would use the system for daily inventory management. This work provided valuable insight into how existing third-party tools and services (in this case, QR.me) can be effectively integrated into custom business solutions without the need to build QR code generation functionality from scratch. It was an excellent demonstration of practical problem-solving and leveraging external resources to deliver efficient solutions.
+                                The final day of the week, March 14, marked a
+                                turning point in the project scope. After the
+                                presentation of the proposed QR Code System for
+                                Inventory, the proposal was officially
+                                    approved by management. This
+                                approval meant we could now move forward with
+                                actual implementation. The system utilizes a
+                                platform called QR.me for generating QR codes
+                                that would be assigned to inventory items for
+                                identification and real-time monitoring. My
+                                focus shifted to organizing the detailed
+                                inventory information that would be embedded in
+                                and associated with each QR code. This included
+                                preparing item specifications, descriptions, and
+                                other relevant data that would be accessible
+                                when users scanned the codes. I also conducted
+                                thorough testing of the QR codes generated from
+                                the platform, verifying that they displayed the
+                                correct information and that the scanning
+                                process would be functional and convenient for
+                                the employees who would use the system for daily
+                                inventory management. This work provided
+                                valuable insight into how existing third-party
+                                tools and services (in this case, QR.me) can be
+                                effectively integrated into custom business
+                                solutions without the need to build QR code
+                                generation functionality from scratch. It was an
+                                excellent demonstration of practical
+                                problem-solving and leveraging external
+                                resources to deliver efficient solutions.
                             </p>
                         </section>
 
@@ -140,7 +310,8 @@
 
                         <!-- ===== REFLECTION SECTION ===== -->
                         <section class="wk-section" id="reflection">
-                            <span class="section-label">Reflection &amp; Insights</span>
+                            <span class="section-label">Reflection &amp;
+                                Insights</span>
                             <h2 class="section-title">What I Took Away</h2>
 
                             <div class="wk-reflection-card">
@@ -149,33 +320,116 @@
                                         <i class="bi bi-lightbulb-fill"></i>
                                     </div>
                                     <div>
-                                        <h5 class="wk-reflection-heading">What I Learned</h5>
+                                        <h5 class="wk-reflection-heading">What I
+                                            Learned</h5>
                                         <p class="wk-reflection-text">
-                                            This week was pivotal in understanding both security threats and network infrastructure. The shortcut virus experience taught me the importance of checking system services and understanding how malware hides itself at the operating system level. On the network side, I gained hands-on experience with DNS configuration, domain joining, and the critical role of SRV records in Active Directory. The debugging process of domain joining — where I had to systematically test connectivity, validate DNS resolution, and understand the proper sequence of operations — strengthened my network troubleshooting fundamentals. I also learned that real-world implementations often involve leveraging existing platforms and services (like QR.me) rather than building everything from scratch, which is an important lesson in practical IT project management.
+                                            This week was pivotal in
+                                            understanding both security threats
+                                            and network infrastructure. The
+                                            shortcut virus experience taught me
+                                            the importance of checking system
+                                            services and understanding how
+                                            malware hides itself at the
+                                            operating system level. On the
+                                            network side, I gained hands-on
+                                            experience with DNS configuration,
+                                            domain joining, and the critical
+                                            role of SRV records in Active
+                                            Directory. The debugging process of
+                                            domain joining, where I had to
+                                            systematically test connectivity,
+                                            validate DNS resolution, and
+                                            understand the proper sequence of
+                                            operations, strengthened my network
+                                            troubleshooting fundamentals. I also
+                                            learned that real-world
+                                            implementations often involve
+                                            leveraging existing platforms and
+                                            services (like QR.me) rather than
+                                            building everything from scratch,
+                                            which is an important lesson in
+                                            practical IT project management.
                                         </p>
                                     </div>
                                 </div>
 
                                 <div class="wk-reflection-item">
-                                    <div class="wk-reflection-icon wk-reflection-icon--orange">
-                                        <i class="bi bi-exclamation-triangle-fill"></i>
+                                    <div
+                                        class="wk-reflection-icon wk-reflection-icon--orange">
+                                        <i
+                                            class="bi bi-exclamation-triangle-fill"></i>
                                     </div>
                                     <div>
-                                        <h5 class="wk-reflection-heading">Challenges Encountered</h5>
+                                        <h5
+                                            class="wk-reflection-heading">Challenges
+                                            Encountered</h5>
                                         <p class="wk-reflection-text">
-                                            The domain joining process proved to be the most complex challenge this week. Numerous factors had to align correctly — operating system configuration, network connectivity, DNS settings, and the proper sequence of operations. The initial failure when combining the rename and domain join operations taught me the value of following documented procedures step-by-step. The DNS timeout error during nslookup was particularly puzzling until I realized it was an SRV record issue, not a basic connectivity problem. The shortcut virus, while challenging on the first encounter, became manageable once the root cause was identified in services.msc. Managing expectations around the management review meeting and timing IT support tasks with company events also required flexibility and coordination.
+                                            The domain joining process proved to
+                                            be the most complex challenge this
+                                            week. Numerous factors had to align
+                                            correctly — operating system
+                                            configuration, network connectivity,
+                                            DNS settings, and the proper
+                                            sequence of operations. The initial
+                                            failure when combining the rename
+                                            and domain join operations taught me
+                                            the value of following documented
+                                            procedures step-by-step. The DNS
+                                            timeout error during nslookup was
+                                            particularly puzzling until I
+                                            realized it was an SRV record issue,
+                                            not a basic connectivity problem.
+                                            The shortcut virus, while
+                                            challenging on the first encounter,
+                                            became manageable once the root
+                                            cause was identified in
+                                            services.msc. Managing expectations
+                                            around the management review meeting
+                                            and timing IT support tasks with
+                                            company events also required
+                                            flexibility and coordination.
                                         </p>
                                     </div>
                                 </div>
 
                                 <div class="wk-reflection-item">
-                                    <div class="wk-reflection-icon wk-reflection-icon--green">
+                                    <div
+                                        class="wk-reflection-icon wk-reflection-icon--green">
                                         <i class="bi bi-graph-up-arrow"></i>
                                     </div>
                                     <div>
-                                        <h5 class="wk-reflection-heading">How This Week Built My Skills</h5>
+                                        <h5 class="wk-reflection-heading">How
+                                            This Week Built My Skills</h5>
                                         <p class="wk-reflection-text">
-                                            By the end of Week 4, my capabilities in network administration and security troubleshooting have expanded significantly. I'm now confident in diagnosing and removing malware that hides at the service level, configuring DNS settings for domain environments, and managing the domain joining process. The repeated troubleshooting of the shortcut virus on multiple machines — both mine and my co-OJT's — reinforced the importance of documenting solutions and building repeatable processes. I've also developed a better understanding of how IT projects evolve from proposal and presentation to actual implementation, and how to work with external platforms to accelerate delivery. The variety of tasks this week — from security incident response to infrastructure configuration to project implementation — has given me a realistic picture of how diverse the IT support role can be in a real organization.
+                                            By the end of Week 4, my
+                                            capabilities in network
+                                            administration and security
+                                            troubleshooting have expanded
+                                            significantly. I'm now confident in
+                                            diagnosing and removing malware that
+                                            hides at the service level,
+                                            configuring DNS settings for domain
+                                            environments, and managing the
+                                            domain joining process. The repeated
+                                            troubleshooting of the shortcut
+                                            virus on multiple machines — both
+                                            mine and my co-OJT's — reinforced
+                                            the importance of documenting
+                                            solutions and building repeatable
+                                            processes. I've also developed a
+                                            better understanding of how IT
+                                            projects evolve from proposal and
+                                            presentation to actual
+                                            implementation, and how to work with
+                                            external platforms to accelerate
+                                            delivery. The variety of tasks this
+                                            week — from security incident
+                                            response to infrastructure
+                                            configuration to project
+                                            implementation — has given me a
+                                            realistic picture of how diverse the
+                                            IT support role can be in a real
+                                            organization.
                                         </p>
                                     </div>
                                 </div>
@@ -188,7 +442,8 @@
                         <!-- ===== SKILLS GAINED SECTION ===== -->
                         <section class="wk-section" id="skills">
                             <span class="section-label">Skills Gained</span>
-                            <h2 class="section-title">Technical Skills from This Week</h2>
+                            <h2 class="section-title">Technical Skills from This
+                                Week</h2>
 
                             <div class="wk-skills-grid">
                                 <div class="wk-skill-badge">
@@ -239,7 +494,9 @@
                     <a href="week3.html" class="wk-nav-btn wk-nav-btn--prev">
                         <i class="bi bi-arrow-left"></i>
                         <span class="wk-nav-btn__label">Previous Week</span>
-                        <span class="wk-nav-btn__sub">Week 3 – Network Troubleshooting, Data Recovery &amp; IT Support</span>
+                        <span class="wk-nav-btn__sub">Week 3 – Network
+                            Troubleshooting, Data Recovery &amp; IT
+                            Support</span>
                     </a>
 
                     <a href="index.html" class="wk-nav-btn wk-nav-btn--home">
