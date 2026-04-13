@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en" class="dark">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Week 4 – OJT Journal</title>
-    
-    <!-- Inter Font: Perfect for clean, modern, and minimal blog websites -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind CSS (Browser setup for real-time simple styling without build tools) -->
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    
-    <!-- Custom CSS Configuration -->
-    <style type="text/tailwindcss">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Week 4 – OJT Journal</title>
+
+        <!-- Inter Font: Perfect for clean, modern, and minimal blog websites -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet">
+
+        <!-- Tailwind CSS (Browser setup for real-time simple styling without build tools) -->
+        <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+        <!-- Custom CSS Configuration -->
+        <style type="text/tailwindcss">
       @theme {
         --font-sans: 'Inter', sans-serif;
         --color-bg: #09090b; /* Deep dark bg */
@@ -65,149 +67,308 @@
           color: var(--color-heading);
       }
     </style>
-</head>
-<body class="pb-24">
-    
-    <!-- Minimal Glass Navigation -->
-    <nav class="glass-nav fixed top-0 w-full z-50 transition-all">
-        <div class="max-w-3xl mx-auto px-6 h-16 flex items-center justify-between">
-            <a href="index.html" class="flex items-center gap-2.5 group">
-                <span class="w-2 h-2 rounded-full bg-primary group-hover:scale-[1.6] transition-transform duration-300 ease-out"></span>
-                <span class="text-heading font-medium tracking-tight text-sm">OJT Journal</span>
-            </a>
-            <div class="flex gap-6 text-sm font-medium text-text">
-                <a href="index.html" class="hover:text-heading transition-colors">Home</a>
-                <a href="index.html#journal" class="hover:text-heading transition-colors">Journal</a>
-                <a href="index.html#about" class="hover:text-heading transition-colors">About</a>
-            </div>
-        </div>
-    </nav>
-    
-    <!-- Main Content wrapper -->
-    <main class="max-w-2xl mx-auto px-6 pt-32 md:pt-40">
-        
-        <!-- Header Section -->
-        <header class="mb-14 fade-in">
-            <!-- Metadata tags -->
-            <div class="flex items-center gap-3 text-xs font-semibold tracking-wider uppercase mb-5 text-primary">
-                <span>Week 4</span>
-                <span class="w-1 h-1 rounded-full bg-border"></span>
-                <span class="text-text">Mar 9 – Mar 14, 2026</span>
-            </div>
-            
-            <h1 class="text-3xl md:text-[2.5rem] font-semibold text-heading tracking-tight leading-[1.15] mb-8">
-                Malware Removal, Domain Configuration & QR Code System
-            </h1>
-            
-            <div class="flex flex-wrap gap-5 text-sm text-text border-y border-border py-4">
-                <div class="flex items-center gap-2">
-                    <svg class="w-4 h-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
-                    ALINDECO IT Department
-                </div>
-                <div class="flex items-center gap-2">
-                    <svg class="w-4 h-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                    44 Hours Logged
-                </div>
-            </div>
-        </header>
-        
-        <!-- Article / Narrative -->
-        <article class="prose text-[0.95rem] md:text-base text-text fade-in delay-1">
-            <h2 class="text-lg font-medium text-heading mb-4 tracking-tight">Narrative</h2>
-            <p>
-                Week 4 began on March 9 with a critical issue — a flash drive that had been corrupted and required data restoration. After successfully recovering the files, I encountered a problem when attempting to transfer the restored data back to the flash drive. The flash drive appeared corrupted, showing only shortcuts instead of the actual files. This was a classic case of a <strong class="text-heading font-medium">shortcut virus</strong> — a form of malware that hides files and replaces them with shortcuts, making it appear as though the data has been lost.
-            </p>
-            <p>
-                Rather than pursuing surface-level solutions, I took a methodical approach to troubleshooting. First, I showed hidden files on the flash drive by using the <code class="bg-surface px-1.5 py-0.5 rounded text-[0.85em] text-heading border border-border font-mono">attrib -h -r -s /s /d E:\*.*</code> command. However, the files remained inaccessible. I then researched multiple locations to isolate where the virus might be hiding. The breakthrough came when I checked Windows Services Manager (<code class="bg-surface px-1.5 py-0.5 rounded text-[0.85em] text-heading border border-border font-mono">services.msc</code>), where I discovered a strange application that had been running in the background. After locating its file path, I was able to isolate and remove it. Once terminated, the shortcut virus was completely gone, and the files were accessible.
-            </p>
-            <p>
-                Day 10 shifted focus to network infrastructure and Active Directory management. We joined Sir Jess's desktop to the company domain. During this session, our mentor Sir Jhong provided valuable instruction on Active Directory Users and Computers, explaining its critical role in managing permissions across departments.
-            </p>
-            
-            <!-- Aesthetic inline image -->
-            <figure class="my-10 border border-border rounded-xl overflow-hidden bg-surface p-1.5 group">
-                <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=900&q=80" alt="Network domain configuration" class="w-full h-auto rounded-lg rounded-b-sm grayscale-[60%] opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 object-cover max-h-64" />
-                <figcaption class="text-[0.75rem] text-center pt-3 pb-1.5 text-gray-500 tracking-wide">CONFIGURING DOMAIN SETTINGS AND REMOTE ACCESS</figcaption>
-            </figure>
+    </head>
+    <body class="pb-24">
 
-            <p>
-                On March 11, we continued the domain joining process using proper sequencing: renaming the computer first, restarting, and then joining it to the domain. After specifying the DNS as <code class="bg-surface px-1.5 py-0.5 rounded text-[0.85em] text-heading border border-border font-mono">192.168.100.26</code>, we ran into an SRV timeout error via <code class="bg-surface px-1.5 py-0.5 rounded text-[0.85em] text-heading border border-border font-mono">nslookup</code>. To resolve this, I disabled IPv6, configured the DNS Suffix manually, executed <code class="bg-surface px-1.5 py-0.5 rounded text-[0.85em] text-heading border border-border font-mono">ipconfig /registerdns</code>, and successfully joined the machine to the domain.
-            </p>
-            <p>
-                March 12 was a preparation day for an important company event. The company was preparing for a management review meeting, which meant setting up projection hardware. Meanwhile, I continued working on preparing the QR Code System.
-            </p>
-            <p>
-                By March 14, the QR Code System for Inventory proposal was officially approved by management. The platform utilizes QR.me for generating dynamic codes. My focus shifted to organizing the detailed inventory specifications that would be embedded in each code. This was an excellent demonstration of leveraging external robust platforms rather than building features blindly from scratch.
-            </p>
-        </article>
-        
-        <!-- Elegant separator -->
-        <div class="flex items-center justify-center gap-2 my-14 fade-in delay-2">
-            <div class="h-px w-12 bg-border"></div>
-            <div class="w-1 h-1 rounded-full bg-border"></div>
-            <div class="h-px w-12 bg-border"></div>
-        </div>
-        
-        <!-- Reflection Section -->
-        <section class="fade-in delay-2">
-            <h2 class="text-lg font-medium text-heading mb-6 tracking-tight">Insights</h2>
-            
-            <div class="flex flex-col gap-4 text-[0.95rem]">
-                <!-- Card 1 -->
-                <div class="p-5 rounded-2xl bg-surface border border-border hover:border-gray-600 transition-colors duration-300">
-                    <div class="flex items-center gap-3 mb-3">
-                        <div class="w-7 h-7 rounded-full bg-blue-500/10 flex items-center justify-center text-primary">
-                            <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
-                        </div>
-                        <h3 class="font-medium text-heading">What I Learned</h3>
-                    </div>
-                    <p class="text-text leading-relaxed">
-                        This week was pivotal in understanding security threats and network infrastructure at the service level. Debugging Active Directory issues mathematically—testing connectivity, DNS resolution, and operation sequencing—solidified my network fundamentals.
-                    </p>
-                </div>
-                
-                <!-- Card 2 -->
-                <div class="p-5 rounded-2xl bg-surface border border-border hover:border-gray-600 transition-colors duration-300">
-                    <div class="flex items-center gap-3 mb-3">
-                        <div class="w-7 h-7 rounded-full bg-orange-500/10 flex items-center justify-center text-orange-400">
-                            <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
-                        </div>
-                        <h3 class="font-medium text-heading">Challenges Encountered</h3>
-                    </div>
-                    <p class="text-text leading-relaxed">
-                        The domain joining process proved highly sensitive to operation sequence. The initial failure combining the rename and domain join operations taught me to stringently follow sequential procedures. The shortcut virus was challenging but became trivial once checking <code class="text-[0.9em] border border-border bg-black px-1 rounded inline-block">services.msc</code>.
-                    </p>
+        <!-- Minimal Glass Navigation -->
+        <nav class="glass-nav fixed top-0 w-full z-50 transition-all">
+            <div
+                class="max-w-3xl mx-auto px-6 h-16 flex items-center justify-between">
+                <a href="index.html" class="flex items-center gap-2.5 group">
+                    <span
+                        class="w-2 h-2 rounded-full bg-primary group-hover:scale-[1.6] transition-transform duration-300 ease-out"></span>
+                    <span
+                        class="text-heading font-medium tracking-tight text-sm">OJT
+                        Journal</span>
+                </a>
+                <div class="flex gap-6 text-sm font-medium text-text">
+                    <a href="index.html"
+                        class="hover:text-heading transition-colors">Home</a>
+                    <a href="index.html#journal"
+                        class="hover:text-heading transition-colors">Journal</a>
+                    <a href="index.html#about"
+                        class="hover:text-heading transition-colors">About</a>
                 </div>
             </div>
-        </section>
-        
-        <div class="h-px w-full bg-border my-12 fade-in delay-3"></div>
-        
-        <!-- Skills Chips -->
-        <section class="fade-in delay-3">
-            <h2 class="text-lg font-medium text-heading mb-4 tracking-tight">Skills Gained</h2>
-            <div class="flex flex-wrap gap-2.5">
-                <span class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">Malware Removal</span>
-                <span class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">Windows Services</span>
-                <span class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">Active Directory</span>
-                <span class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">DNS Config</span>
-                <span class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">Domain Join</span>
-                <span class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">QR Code Implementations</span>
-            </div>
-        </section>
-        
-        <!-- Minimal Footer Navigation -->
-        <nav class="mt-24 pt-8 border-t border-border flex justify-between items-center text-sm font-medium text-text fade-in delay-3">
-            <a href="week3.html" class="flex items-center gap-2 hover:text-heading transition-colors group">
-                <svg class="w-4 h-4 group-hover:-translate-x-1.5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 19l-7-7 7-7" /></svg>
-                Week 3
-            </a>
-            <a href="week5.html" class="flex items-center gap-2 hover:text-heading transition-colors group">
-                Week 5
-                <svg class="w-4 h-4 group-hover:translate-x-1.5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5l7 7-7 7" /></svg>
-            </a>
         </nav>
-        
-    </main>
-</body>
+
+        <!-- Main Content wrapper -->
+        <main class="max-w-2xl mx-auto px-6 pt-32 md:pt-40">
+
+            <!-- Header Section -->
+            <header class="mb-14 fade-in">
+                <!-- Metadata tags -->
+                <div
+                    class="flex items-center gap-3 text-xs font-semibold tracking-wider uppercase mb-5 text-primary">
+                    <span>Week 4</span>
+                    <span class="w-1 h-1 rounded-full bg-border"></span>
+                    <span class="text-text">Mar 9 – Mar 14, 2026</span>
+                </div>
+
+                <h1
+                    class="text-3xl md:text-[2.5rem] font-semibold text-heading tracking-tight leading-[1.15] mb-8">
+                    Malware Removal, Domain Configuration & QR Code System
+                </h1>
+
+                <div
+                    class="flex flex-wrap gap-5 text-sm text-text border-y border-border py-4">
+                    <div class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-gray-500" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor"><path
+                                stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="1.5"
+                                d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
+                        ALINDECO IT Department
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-gray-500" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor"><path
+                                stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="1.5"
+                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        44 Hours Logged
+                    </div>
+                </div>
+            </header>
+
+            <!-- Article / Narrative -->
+            <article
+                class="prose text-[0.95rem] md:text-base text-text fade-in delay-1">
+                <h2
+                    class="text-lg font-medium text-heading mb-4 tracking-tight">Narrative</h2>
+                <p>
+                    Week 4 began on March 9 with a critical issue — a flash
+                    drive that had been corrupted and required data restoration.
+                    After successfully recovering the files, I encountered a
+                    problem when attempting to transfer the restored data back
+                    to the flash drive. The flash drive appeared corrupted,
+                    showing only shortcuts instead of the actual files. This was
+                    a classic case of a <strong
+                        class="text-heading font-medium">shortcut virus</strong>
+                    — a form of malware that hides files and replaces them with
+                    shortcuts, making it appear as though the data has been
+                    lost.
+                </p>
+                <p>
+                    Rather than pursuing surface-level solutions, I took a
+                    methodical approach to troubleshooting. First, I showed
+                    hidden files on the flash drive by using the <code
+                        class="bg-surface px-1.5 py-0.5 rounded text-[0.85em] text-heading border border-border font-mono">attrib
+                        -h -r -s /s /d E:\*.*</code> command. However, the files
+                    remained inaccessible. I then researched multiple locations
+                    to isolate where the virus might be hiding. The breakthrough
+                    came when I checked Windows Services Manager (<code
+                        class="bg-surface px-1.5 py-0.5 rounded text-[0.85em] text-heading border border-border font-mono">services.msc</code>),
+                    where I discovered a strange application that had been
+                    running in the background. After locating its file path, I
+                    was able to isolate and remove it. Once terminated, the
+                    shortcut virus was completely gone, and the files were
+                    accessible.
+                </p>
+                <p>
+                    Day 10 shifted focus to network infrastructure and Active
+                    Directory management. We joined Sir Jess's desktop to the
+                    company domain. During this session, our mentor Sir Jhong
+                    provided valuable instruction on Active Directory Users and
+                    Computers, explaining its critical role in managing
+                    permissions across departments.
+                </p>
+
+                <!-- Aesthetic inline image -->
+                <figure
+                    class="my-10 border border-border rounded-xl overflow-hidden bg-surface p-1.5 group">
+                    <img
+                        src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=900&q=80"
+                        alt="Network domain configuration"
+                        class="w-full h-auto rounded-lg rounded-b-sm grayscale-[60%] opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 object-cover max-h-64" />
+                    <figcaption
+                        class="text-[0.75rem] text-center pt-3 pb-1.5 text-gray-500 tracking-wide">CONFIGURING
+                        DOMAIN SETTINGS AND REMOTE ACCESS</figcaption>
+                </figure>
+
+                <p>
+                    On March 11, we continued the domain joining process using
+                    proper sequencing: renaming the computer first, restarting,
+                    and then joining it to the domain. After specifying the DNS
+                    as <code
+                        class="bg-surface px-1.5 py-0.5 rounded text-[0.85em] text-heading border border-border font-mono">192.168.100.26</code>,
+                    we ran into an SRV timeout error via <code
+                        class="bg-surface px-1.5 py-0.5 rounded text-[0.85em] text-heading border border-border font-mono">nslookup</code>.
+                    To resolve this, I disabled IPv6, configured the DNS Suffix
+                    manually, executed <code
+                        class="bg-surface px-1.5 py-0.5 rounded text-[0.85em] text-heading border border-border font-mono">ipconfig
+                        /registerdns</code>, and successfully joined the machine
+                    to the domain.
+                </p>
+                <p>
+                    March 12 was a preparation day for an important company
+                    event. The company was preparing for a management review
+                    meeting, which meant setting up projection hardware.
+                    Meanwhile, I continued working on preparing the QR Code
+                    System.
+                </p>
+                <p>
+                    By March 14, the QR Code System for Inventory proposal was
+                    officially approved by management. The platform utilizes
+                    QR.me for generating dynamic codes. My focus shifted to
+                    organizing the detailed inventory specifications that would
+                    be embedded in each code. This was an excellent
+                    demonstration of leveraging external robust platforms rather
+                    than building features blindly from scratch.
+                </p>
+            </article>
+
+            <!-- Elegant separator -->
+            <div
+                class="flex items-center justify-center gap-2 my-14 fade-in delay-2">
+                <div class="h-px w-12 bg-border"></div>
+                <div class="w-1 h-1 rounded-full bg-border"></div>
+                <div class="h-px w-12 bg-border"></div>
+            </div>
+
+            <!-- Reflection Section -->
+            <section class="fade-in delay-2">
+                <h2
+                    class="text-lg font-medium text-heading mb-6 tracking-tight">Insights</h2>
+
+                <div class="flex flex-col gap-4 text-[0.95rem]">
+                    <!-- Card 1 -->
+                    <div
+                        class="p-5 rounded-2xl bg-surface border border-border hover:border-gray-600 transition-colors duration-300">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div
+                                class="w-7 h-7 rounded-full bg-blue-500/10 flex items-center justify-center text-primary">
+                                <svg class="w-3.5 h-3.5" fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"><path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2"
+                                        d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                            </div>
+                            <h3 class="font-medium text-heading">What I
+                                Learned</h3>
+                        </div>
+                        <p class="text-text leading-relaxed">
+                            This week was pivotal in understanding security
+                            threats and network infrastructure at the service
+                            level. Debugging Active Directory issues
+                            mathematically—testing connectivity, DNS resolution,
+                            and operation sequencing—solidified my network
+                            fundamentals.
+                        </p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div
+                        class="p-5 rounded-2xl bg-surface border border-border hover:border-gray-600 transition-colors duration-300">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div
+                                class="w-7 h-7 rounded-full bg-orange-500/10 flex items-center justify-center text-orange-400">
+                                <svg class="w-3.5 h-3.5" fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"><path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2"
+                                        d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+                            </div>
+                            <h3 class="font-medium text-heading">Challenges
+                                Encountered</h3>
+                        </div>
+                        <p class="text-text leading-relaxed">
+                            The domain joining process proved highly sensitive
+                            to operation sequence. The initial failure combining
+                            the rename and domain join operations taught me to
+                            stringently follow sequential procedures. The
+                            shortcut virus was challenging but became trivial
+                            once checking <code
+                                class="text-[0.9em] border border-border bg-black px-1 rounded inline-block">services.msc</code>.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="h-px w-full bg-border my-12 fade-in delay-3"></div>
+
+            <!-- Skills Chips -->
+            <section class="fade-in delay-3">
+                <h2
+                    class="text-lg font-medium text-heading mb-4 tracking-tight">Skills
+                    Gained</h2>
+                <div class="flex flex-wrap gap-2.5">
+                    <span
+                        class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">Malware
+                        Removal</span>
+                    <span
+                        class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">Windows
+                        Services</span>
+                    <span
+                        class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">Active
+                        Directory</span>
+                    <span
+                        class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">DNS
+                        Config</span>
+                    <span
+                        class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">Domain
+                        Join</span>
+                    <span
+                        class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">QR
+                        Code Implementations</span>
+                </div>
+            </section>
+
+            <!-- Minimal Footer Navigation -->
+            <nav
+                class="mt-24 pt-8 border-t border-border flex justify-between items-center text-sm font-medium text-text fade-in delay-3">
+                <a href="week3.html"
+                    class="flex items-center gap-2 hover:text-heading transition-colors group">
+                    <svg
+                        class="w-4 h-4 group-hover:-translate-x-1.5 transition-transform duration-300"
+                        fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor"><path stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="1.5"
+                            d="M15 19l-7-7 7-7" /></svg>
+                    Week 3
+                </a>
+                <a href="week5.html"
+                    class="flex items-center gap-2 hover:text-heading transition-colors group">
+                    Week 5
+                    <svg
+                        class="w-4 h-4 group-hover:translate-x-1.5 transition-transform duration-300"
+                        fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor"><path stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="1.5"
+                            d="M9 5l7 7-7 7" /></svg>
+                </a>
+            </nav>
+
+        </main>
+
+        <!-- Auto-scroll Carousel Script -->
+        <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const carousels = document.querySelectorAll('.overflow-x-auto.snap-x');
+            carousels.forEach(carousel => {
+                let scrollInterval;
+                
+                const startScroll = () => {
+                    scrollInterval = setInterval(() => {
+                        // If reached the end, scroll back to the start
+                        if (carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - 10) {
+                            carousel.scrollTo({ left: 0, behavior: 'smooth' });
+                        } else {
+                            // Otherwise, scroll by the width of one image container
+                            carousel.scrollBy({ left: carousel.clientWidth, behavior: 'smooth' });
+                        }
+                    }, 3000); // 3 seconds interval
+                };
+                
+                startScroll();
+                
+                // Pause on hover
+                carousel.addEventListener('mouseenter', () => clearInterval(scrollInterval));
+                carousel.addEventListener('mouseleave', startScroll);
+            });
+        });
+    </script>
+    </body>
 </html>

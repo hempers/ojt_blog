@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" class="dark scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Week 2 – OJT Journal</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <style type="text/tailwindcss">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Week 2 – OJT Journal</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet">
+        <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+        <style type="text/tailwindcss">
       @theme {
         --font-sans: 'Inter', sans-serif;
         --color-bg: #09090b; --color-surface: #18181b; --color-border: #27272a; 
@@ -21,224 +23,392 @@
       @keyframes fadeIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
       .delay-1 { animation-delay: 0.1s; } .delay-2 { animation-delay: 0.2s; } .delay-3 { animation-delay: 0.3s; }
     </style>
-</head>
-<body class="pb-24 selection:bg-primary/30 selection:text-white">
-    
-    <nav class="glass-nav fixed top-0 w-full z-50 transition-all">
-        <div class="max-w-3xl mx-auto px-6 h-16 flex items-center justify-between">
-            <a href="index.html" class="flex items-center gap-2.5 group">
-                <span class="w-2 h-2 rounded-full bg-primary group-hover:scale-[1.6] transition-transform duration-300"></span>
-                <span class="text-heading font-medium tracking-tight text-sm">OJT Journal</span>
-            </a>
-            <div class="flex gap-6 text-sm font-medium text-text">
-                <a href="index.html" class="hover:text-heading transition-colors">Home</a>
-                <a href="index.html#journal" class="hover:text-heading transition-colors">Journal</a>
-                <a href="index.html#about" class="hover:text-heading transition-colors">About</a>
-            </div>
-        </div>
-    </nav>
-    
-    <main class="max-w-2xl mx-auto px-6 pt-32 md:pt-40">
-        <header class="mb-14 fade-in">
-            <div class="flex items-center gap-3 text-xs font-semibold tracking-wider uppercase mb-5 text-primary">
-                <span>Week 2</span><span class="w-1 h-1 rounded-full bg-border"></span><span class="text-text"></span>
-            </div>
-            <h1 class="text-3xl md:text-[2.5rem] font-semibold text-heading tracking-tight leading-[1.15] mb-8">Week 2 – PC Setup &amp; Printer Maintenance</h1>
-            <div class="flex flex-wrap gap-5 text-sm text-text border-y border-border py-4">
-                <div class="flex items-center gap-2"><svg class="w-4 h-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg> ALINDECO</div>
-                <div class="flex items-center gap-2"><svg class="w-4 h-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg> 44 Hours Logged</div>
-            </div>
-        </header>
-        
-        <article class="prose text-[0.95rem] md:text-base text-text fade-in delay-1">
-            <h2 class="text-lg font-medium text-heading mb-4 tracking-tight">Narrative</h2>
-            <p>
-                                The second week of my internship began with a
-                                hands-on deployment task. On Day 4, we were
-                                assigned to set up a company computer using a
-                                backup system unit. The original unit of the
-                                employee had issues, so a replacement unit was
-                                prepared to ensure continuous workflow. I
-                                assisted in preparing the backup PC by checking
-                                its hardware condition and ensuring that it was
-                                properly functioning before deployment. After
-                                confirming that the system unit was operational,
-                                we installed the necessary printer drivers to
-                                allow the computer to communicate with the
-                                office printers. We made sure that the drivers
-                                matched the specific printer models used in the
-                                department and tested print functionality to
-                                confirm proper installation. We also restored
-                                important files from the previous computer. This
-                                involved transferring essential documents and
-                                user data to the backup unit while ensuring that
-                                no critical files were lost. Proper file
-                                organization was observed to maintain the
-                                employee's workflow continuity.
-                            </p>
+    </head>
+    <body class="pb-24 selection:bg-primary/30 selection:text-white">
 
-                            <p>
-                                On Day 5, we continued working on the same unit
-                                by adding SSD storage to the computer to improve
-                                its overall performance. We then updated the
-                                Windows version and installed Microsoft Office.
-                                Both Windows and MS Office were properly
-                                activated to ensure full functionality. Upon
-                                completing all the necessary configurations, we
-                                joined the computer to the company domain and
-                                renamed it to correspond to the name of the
-                                actual user of the computer, following the
-                                company's naming convention for network devices.
-                            </p>
-
-                            <!-- Inline image 1 -->
-                            <figure class="my-10 border border-border rounded-xl overflow-hidden bg-surface p-1.5 group"><img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=900&q=80" alt="PC setup and configuration in progress" class="w-full h-auto rounded-lg rounded-b-sm grayscale-[60%] opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 object-cover max-h-64"><figcaption class="text-[0.75rem] text-center pt-3 pb-1.5 text-gray-500 tracking-wide uppercase">Setting up
-                                    and configuring the backup system unit for
-                                    deployment.</figcaption></figure>
-
-                            <p>
-                                Day 6 started with the deployment of the system
-                                unit that was configured the previous day, now
-                                equipped with the updated Windows installation
-                                and the additional SSD storage. After the
-                                deployment, we began conducting a PC inventory
-                                across each department. We visited the current
-                                excel file our mentor have as a record of the
-                                units in the company. I proposed to use a QR
-                                code system to improve the inventory process. By
-                                generating unique QR codes for each computer and
-                                attaching them to the respective units, we can
-                                quickly scan and view the units information. As
-                                of now, the inventory is not yet done as all
-                                employees here are busy using their respective
-                                computers.
-                            </p>
-
-                            <p>
-                                The second half of the week shifted toward
-                                printer maintenance. On Day 7, we replaced the
-                                toner cartridge of a Brother DCP-L2540DW series
-                                printer and cleaned the ink waste pad of an
-                                Epson L120 printer assigned to the Human
-                                Resource Department, Ms. Cristy Lim. These
-                                tasks introduced me to the routine upkeep that
-                                IT staff perform to keep office printing
-                                equipment running smoothly.
-                            </p>
-
-                            <p>
-                                On Day 8, we continued with printer maintenance
-                                by cleaning the ink waste pad of another Epson
-                                L120 unit. We then moved on to a more involved
-                                task — disassembling an HP Deskjet Ink Advantage
-                                3635. The printer was experiencing ink pooling
-                                caused by waste ink pad saturation, so we
-                                carefully took apart the case and individual
-                                parts to clean them thoroughly. After finishing
-                                the cleaning, we reassembled the printer and
-                                ensured it was functioning properly.
-                            </p>
-
-                            <!-- Inline image 2 -->
-                            <figure class="my-10 border border-border rounded-xl overflow-hidden bg-surface p-1.5 group"><img src="https://images.unsplash.com/photo-1612178991541-b48cc8e92a4d?w=900&q=80" alt="Printer maintenance and troubleshooting" class="w-full h-auto rounded-lg rounded-b-sm grayscale-[60%] opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 object-cover max-h-64"><figcaption class="text-[0.75rem] text-center pt-3 pb-1.5 text-gray-500 tracking-wide uppercase">Printer
-                                    disassembly and cleaning during routine
-                                    maintenance.</figcaption></figure>
-
-                            <p>
-                                The last day of the week, Day 9, was dedicated
-                                to troubleshooting the same HP Deskjet Ink
-                                Advantage 3635 which was now prompting an E4
-                                error. Upon replacement of the encoder strip,
-                                the error changed from E4 to E3. We tried
-                                several resolutions but were still unable to
-                                fully resolve the issue. The likely cause of the
-                                problem is a faulty encoder sensor — the encoder
-                                strip works in tandem with the sensor to track
-                                the precise position of the print carriage. If
-                                the sensor is damaged, dirty, or misaligned, it
-                                cannot properly read the encoder strip, which
-                                results in the printer being unable to determine
-                                the carriage position and throwing error codes
-                                like E3 and E4. This was a valuable learning
-                                experience in understanding how closely related
-                                printer components interact and how one faulty
-                                part can cascade into multiple error symptoms.
-                            </p>
-        </article>
-        
-        <div class="flex items-center justify-center gap-2 my-14 fade-in delay-2"><div class="h-px w-12 bg-border"></div><div class="w-1 h-1 rounded-full bg-border"></div><div class="h-px w-12 bg-border"></div></div>
-        
-        <section class="fade-in delay-2">
-            <h2 class="text-lg font-medium text-heading mb-6 tracking-tight">Insights</h2>
-            <div class="flex flex-col gap-4 text-[0.95rem]">
-                <div class="p-5 rounded-2xl bg-surface border border-border hover:border-gray-600 transition-colors">
-                    <div class="flex items-center gap-3 mb-3"><div class="w-7 h-7 rounded-full bg-blue-500/10 flex items-center justify-center text-primary"><svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg></div><h3 class="font-medium text-heading">What I Learned</h3></div>
-                    <p class="text-text leading-relaxed">This week gave me a well-rounded
-                                            experience covering both PC
-                                            deployment and printer maintenance.
-                                            I learned the full process of
-                                            setting up a backup system unit —
-                                            from hardware inspection and file
-                                            restoration to SSD installation, OS
-                                            updating, software activation, and
-                                            domain joining. On the printer side,
-                                            I gained hands-on knowledge in toner
-                                            cartridge replacement, waste ink pad
-                                            cleaning, and full printer
-                                            disassembly for deep cleaning. The
-                                            troubleshooting session with the HP
-                                            Deskjet 3635 taught me how encoder
-                                            strips and encoder sensors work
-                                            together to control print carriage
-                                            positioning.</p>
-                </div>
-                <div class="p-5 rounded-2xl bg-surface border border-border hover:border-gray-600 transition-colors">
-                    <div class="flex items-center gap-3 mb-3"><div class="w-7 h-7 rounded-full bg-orange-500/10 flex items-center justify-center text-orange-400"><svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg></div><h3 class="font-medium text-heading">Challenges Encountered</h3></div>
-                    <p class="text-text leading-relaxed">The biggest challenge this week was
-                                            troubleshooting the HP Deskjet Ink
-                                            Advantage 3635. After replacing the
-                                            encoder strip, the error code
-                                            shifted from E4 to E3 but the issue
-                                            persisted. Despite trying multiple
-                                            resolutions, we were unable to fully
-                                            fix the printer. This experience
-                                            showed me that hardware
-                                            troubleshooting doesn't always end
-                                            with a clear solution — sometimes
-                                            identifying the probable root cause
-                                            (in this case, a faulty encoder
-                                            sensor) is just as important as the
-                                            fix itself. It reinforced the need
-                                            for patience and systematic
-                                            elimination when diagnosing hardware
-                                            issues.</p>
+        <nav class="glass-nav fixed top-0 w-full z-50 transition-all">
+            <div
+                class="max-w-3xl mx-auto px-6 h-16 flex items-center justify-between">
+                <a href="index.html" class="flex items-center gap-2.5 group">
+                    <span
+                        class="w-2 h-2 rounded-full bg-primary group-hover:scale-[1.6] transition-transform duration-300"></span>
+                    <span
+                        class="text-heading font-medium tracking-tight text-sm">OJT
+                        Journal</span>
+                </a>
+                <div class="flex gap-6 text-sm font-medium text-text">
+                    <a href="index.html"
+                        class="hover:text-heading transition-colors">Home</a>
+                    <a href="index.html#journal"
+                        class="hover:text-heading transition-colors">Journal</a>
+                    <a href="index.html#about"
+                        class="hover:text-heading transition-colors">About</a>
                 </div>
             </div>
-        </section>
-        
-        <div class="h-px w-full bg-border my-12 fade-in delay-3"></div>
-        
-        <section class="fade-in delay-3">
-            <h2 class="text-lg font-medium text-heading mb-4 tracking-tight">Skills Gained</h2>
-            <div class="flex flex-wrap gap-2.5">
-                <span class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">SSD Installation</span>
-                <span class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">Windows Update &amp; Activation</span>
-                <span class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">Printer Driver Installation</span>
-                <span class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">Printer Troubleshooting</span>
-                <span class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">File Restoration &amp; Transfer</span>
-            </div>
-        </section>
-        
-        <nav class="mt-24 pt-8 border-t border-border flex justify-between items-center text-sm font-medium text-text fade-in delay-3">
-            <a href="week1.html" class="flex items-center gap-2 hover:text-heading transition-colors group">
-                <svg class="w-4 h-4 group-hover:-translate-x-1.5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 19l-7-7 7-7" /></svg>
-                Week 1
-            </a>
-            <a href="week3.html" class="flex items-center gap-2 hover:text-heading transition-colors group">
-                Week 3
-                <svg class="w-4 h-4 group-hover:translate-x-1.5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5l7 7-7 7" /></svg>
-            </a>
         </nav>
-    </main>
-</body>
+
+        <main class="max-w-2xl mx-auto px-6 pt-32 md:pt-40">
+            <header class="mb-14 fade-in">
+                <div
+                    class="flex items-center gap-3 text-xs font-semibold tracking-wider uppercase mb-5 text-primary">
+                    <span>Week 2</span><span
+                        class="w-1 h-1 rounded-full bg-border"></span><span
+                        class="text-text"></span>
+                </div>
+                <h1
+                    class="text-3xl md:text-[2.5rem] font-semibold text-heading tracking-tight leading-[1.15] mb-8">Week
+                    2 – PC Setup &amp; Printer Maintenance</h1>
+                <div
+                    class="flex flex-wrap gap-5 text-sm text-text border-y border-border py-4">
+                    <div class="flex items-center gap-2"><svg
+                            class="w-4 h-4 text-gray-500" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor"><path
+                                stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="1.5"
+                                d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
+                        ALINDECO</div>
+                    <div class="flex items-center gap-2"><svg
+                            class="w-4 h-4 text-gray-500" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor"><path
+                                stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="1.5"
+                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        44 Hours Logged</div>
+                </div>
+            </header>
+
+            <article
+                class="prose text-[0.95rem] md:text-base text-text fade-in delay-1">
+                <h2
+                    class="text-lg font-medium text-heading mb-4 tracking-tight">Narrative</h2>
+                <p>
+                    The second week of my internship began with a
+                    hands-on deployment task. On Day 4, we were
+                    assigned to set up a company computer using a
+                    backup system unit. The original unit of the
+                    employee had issues, so a replacement unit was
+                    prepared to ensure continuous workflow. I
+                    assisted in preparing the backup PC by checking
+                    its hardware condition and ensuring that it was
+                    properly functioning before deployment. After
+                    confirming that the system unit was operational,
+                    we installed the necessary printer drivers to
+                    allow the computer to communicate with the
+                    office printers. We made sure that the drivers
+                    matched the specific printer models used in the
+                    department and tested print functionality to
+                    confirm proper installation. We also restored
+                    important files from the previous computer. This
+                    involved transferring essential documents and
+                    user data to the backup unit while ensuring that
+                    no critical files were lost. Proper file
+                    organization was observed to maintain the
+                    employee's workflow continuity.
+                </p>
+
+                <p>
+                    On Day 5, we continued working on the same unit
+                    by adding SSD storage to the computer to improve
+                    its overall performance. We then updated the
+                    Windows version and installed Microsoft Office.
+                    Both Windows and MS Office were properly
+                    activated to ensure full functionality. Upon
+                    completing all the necessary configurations, we
+                    joined the computer to the company domain and
+                    renamed it to correspond to the name of the
+                    actual user of the computer, following the
+                    company's naming convention for network devices.
+                </p>
+
+                <!-- Inline image 1 -->
+                <div
+                    class="my-10 border border-border rounded-xl overflow-hidden bg-surface p-1.5 group relative">
+                    <div
+                        class="flex overflow-x-auto snap-x snap-mandatory gap-2 scroll-smooth pb-2"
+                        style="scrollbar-width: none; -ms-overflow-style: none;">
+                        <div class="snap-center shrink-0 w-full">
+                            <img
+                                src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=900&q=80"
+                                alt="PC setup and configuration in progress"
+                                class="w-full h-auto rounded-lg rounded-b-sm grayscale-[60%] opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 object-cover max-h-64">
+                        </div>
+                        <div class="snap-center shrink-0 w-full">
+                            <img
+                                src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=901&q=80"
+                                alt="PC setup and configuration in progress 2"
+                                class="w-full h-auto rounded-lg rounded-b-sm grayscale-[60%] opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 object-cover max-h-64">
+                        </div>
+                        <div class="snap-center shrink-0 w-full">
+                            <img
+                                src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=902&q=80"
+                                alt="PC setup and configuration in progress 3"
+                                class="w-full h-auto rounded-lg rounded-b-sm grayscale-[60%] opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 object-cover max-h-64">
+                        </div>
+                    </div>
+                    <figcaption
+                        class="text-[0.75rem] text-center pt-3 pb-1.5 text-gray-500 tracking-wide uppercase">Setting
+                        up
+                        and configuring the backup system unit for
+                        deployment.</figcaption>
+                    <!-- CSS to hide scrollbar for webkit -->
+                    <style>
+        .flex::-webkit-scrollbar { display: none; }
+    </style>
+                </div>
+
+                <p>
+                    Day 6 started with the deployment of the system
+                    unit that was configured the previous day, now
+                    equipped with the updated Windows installation
+                    and the additional SSD storage. After the
+                    deployment, we began conducting a PC inventory
+                    across each department. We visited the current
+                    excel file our mentor have as a record of the
+                    units in the company. I proposed to use a QR
+                    code system to improve the inventory process. By
+                    generating unique QR codes for each computer and
+                    attaching them to the respective units, we can
+                    quickly scan and view the units information. As
+                    of now, the inventory is not yet done as all
+                    employees here are busy using their respective
+                    computers.
+                </p>
+
+                <p>
+                    The second half of the week shifted toward
+                    printer maintenance. On Day 7, we replaced the
+                    toner cartridge of a Brother DCP-L2540DW series
+                    printer and cleaned the ink waste pad of an
+                    Epson L120 printer assigned to the Human
+                    Resource Department, Ms. Cristy Lim. These
+                    tasks introduced me to the routine upkeep that
+                    IT staff perform to keep office printing
+                    equipment running smoothly.
+                </p>
+
+                <p>
+                    On Day 8, we continued with printer maintenance
+                    by cleaning the ink waste pad of another Epson
+                    L120 unit. We then moved on to a more involved
+                    task — disassembling an HP Deskjet Ink Advantage
+                    3635. The printer was experiencing ink pooling
+                    caused by waste ink pad saturation, so we
+                    carefully took apart the case and individual
+                    parts to clean them thoroughly. After finishing
+                    the cleaning, we reassembled the printer and
+                    ensured it was functioning properly.
+                </p>
+
+                <!-- Inline image 2 -->
+                <div
+                    class="my-10 border border-border rounded-xl overflow-hidden bg-surface p-1.5 group relative">
+                    <div
+                        class="flex overflow-x-auto snap-x snap-mandatory gap-2 scroll-smooth pb-2"
+                        style="scrollbar-width: none; -ms-overflow-style: none;">
+                        <div class="snap-center shrink-0 w-full">
+                            <img
+                                src="https://images.unsplash.com/photo-1612178991541-b48cc8e92a4d?w=900&q=80"
+                                alt="Printer maintenance and troubleshooting"
+                                class="w-full h-auto rounded-lg rounded-b-sm grayscale-[60%] opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 object-cover max-h-64">
+                        </div>
+                        <div class="snap-center shrink-0 w-full">
+                            <img
+                                src="https://images.unsplash.com/photo-1612178991541-b48cc8e92a4d?w=901&q=80"
+                                alt="Printer maintenance and troubleshooting 2"
+                                class="w-full h-auto rounded-lg rounded-b-sm grayscale-[60%] opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 object-cover max-h-64">
+                        </div>
+                        <div class="snap-center shrink-0 w-full">
+                            <img
+                                src="https://images.unsplash.com/photo-1612178991541-b48cc8e92a4d?w=902&q=80"
+                                alt="Printer maintenance and troubleshooting 3"
+                                class="w-full h-auto rounded-lg rounded-b-sm grayscale-[60%] opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 object-cover max-h-64">
+                        </div>
+                    </div>
+                    <figcaption
+                        class="text-[0.75rem] text-center pt-3 pb-1.5 text-gray-500 tracking-wide uppercase">Printer
+                        disassembly and cleaning during routine
+                        maintenance.</figcaption>
+                    <!-- CSS to hide scrollbar for webkit -->
+                    <style>
+        .flex::-webkit-scrollbar { display: none; }
+    </style>
+                </div>
+
+                <p>
+                    The last day of the week, Day 9, was dedicated
+                    to troubleshooting the same HP Deskjet Ink
+                    Advantage 3635 which was now prompting an E4
+                    error. Upon replacement of the encoder strip,
+                    the error changed from E4 to E3. We tried
+                    several resolutions but were still unable to
+                    fully resolve the issue. The likely cause of the
+                    problem is a faulty encoder sensor — the encoder
+                    strip works in tandem with the sensor to track
+                    the precise position of the print carriage. If
+                    the sensor is damaged, dirty, or misaligned, it
+                    cannot properly read the encoder strip, which
+                    results in the printer being unable to determine
+                    the carriage position and throwing error codes
+                    like E3 and E4. This was a valuable learning
+                    experience in understanding how closely related
+                    printer components interact and how one faulty
+                    part can cascade into multiple error symptoms.
+                </p>
+            </article>
+
+            <div
+                class="flex items-center justify-center gap-2 my-14 fade-in delay-2"><div
+                    class="h-px w-12 bg-border"></div><div
+                    class="w-1 h-1 rounded-full bg-border"></div><div
+                    class="h-px w-12 bg-border"></div></div>
+
+            <section class="fade-in delay-2">
+                <h2
+                    class="text-lg font-medium text-heading mb-6 tracking-tight">Insights</h2>
+                <div class="flex flex-col gap-4 text-[0.95rem]">
+                    <div
+                        class="p-5 rounded-2xl bg-surface border border-border hover:border-gray-600 transition-colors">
+                        <div class="flex items-center gap-3 mb-3"><div
+                                class="w-7 h-7 rounded-full bg-blue-500/10 flex items-center justify-center text-primary"><svg
+                                    class="w-3.5 h-3.5" fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"><path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2"
+                                        d="M13 10V3L4 14h7v7l9-11h-7z" /></svg></div><h3
+                                class="font-medium text-heading">What I
+                                Learned</h3></div>
+                        <p class="text-text leading-relaxed">This week gave me a
+                            well-rounded
+                            experience covering both PC
+                            deployment and printer maintenance.
+                            I learned the full process of
+                            setting up a backup system unit —
+                            from hardware inspection and file
+                            restoration to SSD installation, OS
+                            updating, software activation, and
+                            domain joining. On the printer side,
+                            I gained hands-on knowledge in toner
+                            cartridge replacement, waste ink pad
+                            cleaning, and full printer
+                            disassembly for deep cleaning. The
+                            troubleshooting session with the HP
+                            Deskjet 3635 taught me how encoder
+                            strips and encoder sensors work
+                            together to control print carriage
+                            positioning.</p>
+                    </div>
+                    <div
+                        class="p-5 rounded-2xl bg-surface border border-border hover:border-gray-600 transition-colors">
+                        <div class="flex items-center gap-3 mb-3"><div
+                                class="w-7 h-7 rounded-full bg-orange-500/10 flex items-center justify-center text-orange-400"><svg
+                                    class="w-3.5 h-3.5" fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"><path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2"
+                                        d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg></div><h3
+                                class="font-medium text-heading">Challenges
+                                Encountered</h3></div>
+                        <p class="text-text leading-relaxed">The biggest
+                            challenge this week was
+                            troubleshooting the HP Deskjet Ink
+                            Advantage 3635. After replacing the
+                            encoder strip, the error code
+                            shifted from E4 to E3 but the issue
+                            persisted. Despite trying multiple
+                            resolutions, we were unable to fully
+                            fix the printer. This experience
+                            showed me that hardware
+                            troubleshooting doesn't always end
+                            with a clear solution — sometimes
+                            identifying the probable root cause
+                            (in this case, a faulty encoder
+                            sensor) is just as important as the
+                            fix itself. It reinforced the need
+                            for patience and systematic
+                            elimination when diagnosing hardware
+                            issues.</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="h-px w-full bg-border my-12 fade-in delay-3"></div>
+
+            <section class="fade-in delay-3">
+                <h2
+                    class="text-lg font-medium text-heading mb-4 tracking-tight">Skills
+                    Gained</h2>
+                <div class="flex flex-wrap gap-2.5">
+                    <span
+                        class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">SSD
+                        Installation</span>
+                    <span
+                        class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">Windows
+                        Update &amp; Activation</span>
+                    <span
+                        class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">Printer
+                        Driver Installation</span>
+                    <span
+                        class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">Printer
+                        Troubleshooting</span>
+                    <span
+                        class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">File
+                        Restoration &amp; Transfer</span>
+                </div>
+            </section>
+
+            <nav
+                class="mt-24 pt-8 border-t border-border flex justify-between items-center text-sm font-medium text-text fade-in delay-3">
+                <a href="week1.html"
+                    class="flex items-center gap-2 hover:text-heading transition-colors group">
+                    <svg
+                        class="w-4 h-4 group-hover:-translate-x-1.5 transition-transform duration-300"
+                        fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor"><path stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="1.5"
+                            d="M15 19l-7-7 7-7" /></svg>
+                    Week 1
+                </a>
+                <a href="week3.html"
+                    class="flex items-center gap-2 hover:text-heading transition-colors group">
+                    Week 3
+                    <svg
+                        class="w-4 h-4 group-hover:translate-x-1.5 transition-transform duration-300"
+                        fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor"><path stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="1.5"
+                            d="M9 5l7 7-7 7" /></svg>
+                </a>
+            </nav>
+        </main>
+
+        <!-- Auto-scroll Carousel Script -->
+        <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const carousels = document.querySelectorAll('.overflow-x-auto.snap-x');
+            carousels.forEach(carousel => {
+                let scrollInterval;
+                
+                const startScroll = () => {
+                    scrollInterval = setInterval(() => {
+                        // If reached the end, scroll back to the start
+                        if (carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - 10) {
+                            carousel.scrollTo({ left: 0, behavior: 'smooth' });
+                        } else {
+                            // Otherwise, scroll by the width of one image container
+                            carousel.scrollBy({ left: carousel.clientWidth, behavior: 'smooth' });
+                        }
+                    }, 3000); // 3 seconds interval
+                };
+                
+                startScroll();
+                
+                // Pause on hover
+                carousel.addEventListener('mouseenter', () => clearInterval(scrollInterval));
+                carousel.addEventListener('mouseleave', startScroll);
+            });
+        });
+    </script>
+    </body>
 </html>

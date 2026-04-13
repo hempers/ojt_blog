@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" class="dark scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Week 1 – OJT Journal</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <style type="text/tailwindcss">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Week 1 – OJT Journal</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet">
+        <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+        <style type="text/tailwindcss">
       @theme {
         --font-sans: 'Inter', sans-serif;
         --color-bg: #09090b; --color-surface: #18181b; --color-border: #27272a; 
@@ -21,204 +23,374 @@
       @keyframes fadeIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
       .delay-1 { animation-delay: 0.1s; } .delay-2 { animation-delay: 0.2s; } .delay-3 { animation-delay: 0.3s; }
     </style>
-</head>
-<body class="pb-24 selection:bg-primary/30 selection:text-white">
-    
-    <nav class="glass-nav fixed top-0 w-full z-50 transition-all">
-        <div class="max-w-3xl mx-auto px-6 h-16 flex items-center justify-between">
-            <a href="index.html" class="flex items-center gap-2.5 group">
-                <span class="w-2 h-2 rounded-full bg-primary group-hover:scale-[1.6] transition-transform duration-300"></span>
-                <span class="text-heading font-medium tracking-tight text-sm">OJT Journal</span>
-            </a>
-            <div class="flex gap-6 text-sm font-medium text-text">
-                <a href="index.html" class="hover:text-heading transition-colors">Home</a>
-                <a href="index.html#journal" class="hover:text-heading transition-colors">Journal</a>
-                <a href="index.html#about" class="hover:text-heading transition-colors">About</a>
-            </div>
-        </div>
-    </nav>
-    
-    <main class="max-w-2xl mx-auto px-6 pt-32 md:pt-40">
-        <header class="mb-14 fade-in">
-            <div class="flex items-center gap-3 text-xs font-semibold tracking-wider uppercase mb-5 text-primary">
-                <span>Week 1</span><span class="w-1 h-1 rounded-full bg-border"></span><span class="text-text"></span>
-            </div>
-            <h1 class="text-3xl md:text-[2.5rem] font-semibold text-heading tracking-tight leading-[1.15] mb-8">Week 1 – PC Disassembly &amp; Hardware
-                    Setup</h1>
-            <div class="flex flex-wrap gap-5 text-sm text-text border-y border-border py-4">
-                <div class="flex items-center gap-2"><svg class="w-4 h-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg> ALINDECO</div>
-                <div class="flex items-center gap-2"><svg class="w-4 h-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg> 20 Hours Logged</div>
-            </div>
-        </header>
-        
-        <article class="prose text-[0.95rem] md:text-base text-text fade-in delay-1">
-            <h2 class="text-lg font-medium text-heading mb-4 tracking-tight">Narrative</h2>
-            <p>
-                                During the first week of my internship, my
-                                co-OJT student and I officially began our
-                                training by attending the company orientation.
-                                The session introduced us to the company’s
-                                history, mission, vision, and internal policies.
-                                Workplace guidelines and safety procedures were
-                                thoroughly explained to ensure that we clearly
-                                understood the standards and responsibilities
-                                expected from us as interns. Being introduced to
-                                the members of the Board of Directors also gave
-                                us insight into the organization’s leadership
-                                structure and how different departments are
-                                managed.
-                            </p>
+    </head>
+    <body class="pb-24 selection:bg-primary/30 selection:text-white">
 
-                            <p>
-                                We were then formally introduced to the IT
-                                Specialist, who would serve as our mentor
-                                throughout the duration of our internship. After
-                                the orientation, he gave us a short tour of the
-                                company premises. Walking through different
-                                departments allowed us to observe daily
-                                operations and understand how IT support
-                                integrates with various teams. He also gave us
-                                an overview of the technical tasks we would
-                                eventually handle, which made me both excited
-                                and slightly nervous about the responsibilities
-                                ahead.
-                            </p>
-
-                            <!-- Inline image 1 -->
-                            <figure class="my-10 border border-border rounded-xl overflow-hidden bg-surface p-1.5 group"><img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=900&q=80" alt="Windows installation in progress on multiple units" class="w-full h-auto rounded-lg rounded-b-sm grayscale-[60%] opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 object-cover max-h-64"><figcaption class="text-[0.75rem] text-center pt-3 pb-1.5 text-gray-500 tracking-wide uppercase">Batch OS
-                                    installation in progress across multiple
-                                    deployment units.</figcaption></figure>
-
-                            <p>
-                                On my second day, my mentor guided us in
-                                hands-on technical tasks. First, we disassembled
-                                a PC to understand its internal components and
-                                then reassembled it carefully. This activity
-                                helped me refreshed my knowledge of the proper
-                                handling of hardware
-                                components as my last experience with PC
-                                assembly was during my senior high school
-                                activity.
-                            </p>
-
-                            <p>
-                                After assembling the PC, we proceeded to install
-                                the operating system. Initially, we used a USB
-                                drive prepared with Rufus as the bootable media.
-                                However, when we attempted to boot the newly
-                                assembled PC from the USB, the system failed to
-                                recognize the device. Despite multiple attempts,
-                                the bootable drive did not appear in the boot
-                                menu.
-                            </p>
-
-                            <p>
-                                We checked the BIOS settings to verify USB boot
-                                was enabled and reviewed the boot order
-                                configuration. After considering compatibility
-                                issues between the USB format, partition scheme
-                                (MBR or GPT), and firmware mode (Legacy BIOS or
-                                UEFI), we determined the issue was likely
-                                related to how the USB was configured. Switching
-                                to Ventoy resolved the problem, and we
-                                proceeded with the installation successfully.
-                                We then installed Microsoft Office to prepare
-                                the system for everyday office tasks.
-                            </p>
-
-                            <!-- Inline image 2 -->
-                            <figure class="my-10 border border-border rounded-xl overflow-hidden bg-surface p-1.5 group"><img src="https://images.unsplash.com/photo-1612178991541-b48cc8e92a4d?w=900&q=80" alt="Hardware inventory and documentation" class="w-full h-auto rounded-lg rounded-b-sm grayscale-[60%] opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 object-cover max-h-64"><figcaption class="text-[0.75rem] text-center pt-3 pb-1.5 text-gray-500 tracking-wide uppercase">Documenting
-                                    hardware inventory — serial numbers, specs,
-                                    and deployment locations.</figcaption></figure>
-
-                            <p>
-                                Following the OS installation, we installed
-                                Microsoft Office to prepare the system for daily
-                                office tasks. We also upgraded the unit’s
-                                storage replacing the HDD with an SSD. This process involved
-                                carefully installing the SSD, and ensuring
-                                that the system booted successfully with the newly added
-                                storage device. Our mentor explained the
-                                performance advantages of SSDs, particularly in
-                                terms of faster boot times, quicker application
-                                loading, and improved overall responsiveness.
-
-                                By the end of the week, I had gained both
-                                organizational awareness and practical exposure
-                                to real-world IT tasks. The experience allowed
-                                me to transition from purely academic exercises
-                                to performing technical responsibilities in a
-                                professional environment.
-                            </p>
-
-                            <p>
-                                By the end of the week, I had gained both
-                                organizational awareness and practical exposure
-                                to real-world IT tasks. The experience allowed
-                                me to transition from purely academic exercises
-                                to performing technical responsibilities in a
-                                professional environment.
-                            </p>
-        </article>
-        
-        <div class="flex items-center justify-center gap-2 my-14 fade-in delay-2"><div class="h-px w-12 bg-border"></div><div class="w-1 h-1 rounded-full bg-border"></div><div class="h-px w-12 bg-border"></div></div>
-        
-        <section class="fade-in delay-2">
-            <h2 class="text-lg font-medium text-heading mb-6 tracking-tight">Insights</h2>
-            <div class="flex flex-col gap-4 text-[0.95rem]">
-                <div class="p-5 rounded-2xl bg-surface border border-border hover:border-gray-600 transition-colors">
-                    <div class="flex items-center gap-3 mb-3"><div class="w-7 h-7 rounded-full bg-blue-500/10 flex items-center justify-center text-primary"><svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg></div><h3 class="font-medium text-heading">What I Learned</h3></div>
-                    <p class="text-text leading-relaxed">During the first week of my
-                                            internship, I learned the importance
-                                            of understanding the workplace
-                                            environment and professional
-                                            expectations. The orientation
-                                            provided a clear picture of the
-                                            company's structure and the
-                                            responsibilities of its IT
-                                            department.</p>
-                </div>
-                <div class="p-5 rounded-2xl bg-surface border border-border hover:border-gray-600 transition-colors">
-                    <div class="flex items-center gap-3 mb-3"><div class="w-7 h-7 rounded-full bg-orange-500/10 flex items-center justify-center text-orange-400"><svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg></div><h3 class="font-medium text-heading">Challenges Encountered</h3></div>
-                    <p class="text-text leading-relaxed">One of the main challenges I
-                                            encountered was related to the
-                                            bootable device used for OS
-                                            installation. Initially, we used a
-                                            USB drive prepared with Rufus.
-                                            However, when we attempted to boot
-                                            the newly assembled PC from the USB,
-                                            the system failed to recognize the
-                                            device. Despite multiple attempts,
-                                            the bootable drive did not appear in
-                                            the boot menu.</p>
+        <nav class="glass-nav fixed top-0 w-full z-50 transition-all">
+            <div
+                class="max-w-3xl mx-auto px-6 h-16 flex items-center justify-between">
+                <a href="index.html" class="flex items-center gap-2.5 group">
+                    <span
+                        class="w-2 h-2 rounded-full bg-primary group-hover:scale-[1.6] transition-transform duration-300"></span>
+                    <span
+                        class="text-heading font-medium tracking-tight text-sm">OJT
+                        Journal</span>
+                </a>
+                <div class="flex gap-6 text-sm font-medium text-text">
+                    <a href="index.html"
+                        class="hover:text-heading transition-colors">Home</a>
+                    <a href="index.html#journal"
+                        class="hover:text-heading transition-colors">Journal</a>
+                    <a href="index.html#about"
+                        class="hover:text-heading transition-colors">About</a>
                 </div>
             </div>
-        </section>
-        
-        <div class="h-px w-full bg-border my-12 fade-in delay-3"></div>
-        
-        <section class="fade-in delay-3">
-            <h2 class="text-lg font-medium text-heading mb-4 tracking-tight">Skills Gained</h2>
-            <div class="flex flex-wrap gap-2.5">
-                <span class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">PC Disassembly &amp; Reassembly</span>
-                <span class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">OS Installation using Ventoy</span>
-                <span class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">Microsoft Office Installation</span>
-                <span class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">HDD to SSD Storage Upgrade</span>
-                <span class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">BIOS &amp; Boot Configuration</span>
-                <span class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">Bootable Media Troubleshooting</span>
-            </div>
-        </section>
-        
-        <nav class="mt-24 pt-8 border-t border-border flex justify-between items-center text-sm font-medium text-text fade-in delay-3">
-            <a href="week1.html" class="flex items-center gap-2 hover:text-heading transition-colors group">
-                <svg class="w-4 h-4 group-hover:-translate-x-1.5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 19l-7-7 7-7" /></svg>
-                Week 1
-            </a>
-            <a href="week2.html" class="flex items-center gap-2 hover:text-heading transition-colors group">
-                Week 2
-                <svg class="w-4 h-4 group-hover:translate-x-1.5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5l7 7-7 7" /></svg>
-            </a>
         </nav>
-    </main>
-</body>
+
+        <main class="max-w-2xl mx-auto px-6 pt-32 md:pt-40">
+            <header class="mb-14 fade-in">
+                <div
+                    class="flex items-center gap-3 text-xs font-semibold tracking-wider uppercase mb-5 text-primary">
+                    <span>Week 1</span><span
+                        class="w-1 h-1 rounded-full bg-border"></span><span
+                        class="text-text"></span>
+                </div>
+                <h1
+                    class="text-3xl md:text-[2.5rem] font-semibold text-heading tracking-tight leading-[1.15] mb-8">Week
+                    1 – PC Disassembly &amp; Hardware
+                    Setup</h1>
+                <div
+                    class="flex flex-wrap gap-5 text-sm text-text border-y border-border py-4">
+                    <div class="flex items-center gap-2"><svg
+                            class="w-4 h-4 text-gray-500" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor"><path
+                                stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="1.5"
+                                d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
+                        ALINDECO</div>
+                    <div class="flex items-center gap-2"><svg
+                            class="w-4 h-4 text-gray-500" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor"><path
+                                stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="1.5"
+                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        20 Hours Logged</div>
+                </div>
+            </header>
+
+            <article
+                class="prose text-[0.95rem] md:text-base text-text fade-in delay-1">
+                <h2
+                    class="text-lg font-medium text-heading mb-4 tracking-tight">Narrative</h2>
+                <p>
+                    During the first week of my internship, my
+                    co-OJT student and I officially began our
+                    training by attending the company orientation.
+                    The session introduced us to the company’s
+                    history, mission, vision, and internal policies.
+                    Workplace guidelines and safety procedures were
+                    thoroughly explained to ensure that we clearly
+                    understood the standards and responsibilities
+                    expected from us as interns. Being introduced to
+                    the members of the Board of Directors also gave
+                    us insight into the organization’s leadership
+                    structure and how different departments are
+                    managed.
+                </p>
+
+                <p>
+                    We were then formally introduced to the IT
+                    Specialist, who would serve as our mentor
+                    throughout the duration of our internship. After
+                    the orientation, he gave us a short tour of the
+                    company premises. Walking through different
+                    departments allowed us to observe daily
+                    operations and understand how IT support
+                    integrates with various teams. He also gave us
+                    an overview of the technical tasks we would
+                    eventually handle, which made me both excited
+                    and slightly nervous about the responsibilities
+                    ahead.
+                </p>
+
+                <!-- Inline image 1 -->
+                <div
+                    class="my-10 border border-border rounded-xl overflow-hidden bg-surface p-1.5 group relative">
+                    <div
+                        class="flex overflow-x-auto snap-x snap-mandatory gap-2 scroll-smooth pb-2"
+                        style="scrollbar-width: none; -ms-overflow-style: none;">
+                        <div class="snap-center shrink-0 w-full">
+                            <img
+                                src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=900&q=80"
+                                alt="Windows installation in progress on multiple units"
+                                class="w-full h-auto rounded-lg rounded-b-sm grayscale-[60%] opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 object-cover max-h-64">
+                        </div>
+                        <div class="snap-center shrink-0 w-full">
+                            <img
+                                src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=901&q=80"
+                                alt="Windows installation in progress on multiple units 2"
+                                class="w-full h-auto rounded-lg rounded-b-sm grayscale-[60%] opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 object-cover max-h-64">
+                        </div>
+                        <div class="snap-center shrink-0 w-full">
+                            <img
+                                src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=902&q=80"
+                                alt="Windows installation in progress on multiple units 3"
+                                class="w-full h-auto rounded-lg rounded-b-sm grayscale-[60%] opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 object-cover max-h-64">
+                        </div>
+                    </div>
+                    <figcaption
+                        class="text-[0.75rem] text-center pt-3 pb-1.5 text-gray-500 tracking-wide uppercase">Batch
+                        OS
+                        installation in progress across multiple
+                        deployment units.</figcaption>
+                    <!-- CSS to hide scrollbar for webkit -->
+                    <style>
+        .flex::-webkit-scrollbar { display: none; }
+    </style>
+                </div>
+
+                <p>
+                    On my second day, my mentor guided us in
+                    hands-on technical tasks. First, we disassembled
+                    a PC to understand its internal components and
+                    then reassembled it carefully. This activity
+                    helped me refreshed my knowledge of the proper
+                    handling of hardware
+                    components as my last experience with PC
+                    assembly was during my senior high school
+                    activity.
+                </p>
+
+                <p>
+                    After assembling the PC, we proceeded to install
+                    the operating system. Initially, we used a USB
+                    drive prepared with Rufus as the bootable media.
+                    However, when we attempted to boot the newly
+                    assembled PC from the USB, the system failed to
+                    recognize the device. Despite multiple attempts,
+                    the bootable drive did not appear in the boot
+                    menu.
+                </p>
+
+                <p>
+                    We checked the BIOS settings to verify USB boot
+                    was enabled and reviewed the boot order
+                    configuration. After considering compatibility
+                    issues between the USB format, partition scheme
+                    (MBR or GPT), and firmware mode (Legacy BIOS or
+                    UEFI), we determined the issue was likely
+                    related to how the USB was configured. Switching
+                    to Ventoy resolved the problem, and we
+                    proceeded with the installation successfully.
+                    We then installed Microsoft Office to prepare
+                    the system for everyday office tasks.
+                </p>
+
+                <!-- Inline image 2 -->
+                <div
+                    class="my-10 border border-border rounded-xl overflow-hidden bg-surface p-1.5 group relative">
+                    <div
+                        class="flex overflow-x-auto snap-x snap-mandatory gap-2 scroll-smooth pb-2"
+                        style="scrollbar-width: none; -ms-overflow-style: none;">
+                        <div class="snap-center shrink-0 w-full">
+                            <img
+                                src="https://images.unsplash.com/photo-1612178991541-b48cc8e92a4d?w=900&q=80"
+                                alt="Hardware inventory and documentation"
+                                class="w-full h-auto rounded-lg rounded-b-sm grayscale-[60%] opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 object-cover max-h-64">
+                        </div>
+                        <div class="snap-center shrink-0 w-full">
+                            <img
+                                src="https://images.unsplash.com/photo-1612178991541-b48cc8e92a4d?w=901&q=80"
+                                alt="Hardware inventory and documentation 2"
+                                class="w-full h-auto rounded-lg rounded-b-sm grayscale-[60%] opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 object-cover max-h-64">
+                        </div>
+                        <div class="snap-center shrink-0 w-full">
+                            <img
+                                src="https://images.unsplash.com/photo-1612178991541-b48cc8e92a4d?w=902&q=80"
+                                alt="Hardware inventory and documentation 3"
+                                class="w-full h-auto rounded-lg rounded-b-sm grayscale-[60%] opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 object-cover max-h-64">
+                        </div>
+                    </div>
+                    <figcaption
+                        class="text-[0.75rem] text-center pt-3 pb-1.5 text-gray-500 tracking-wide uppercase">Documenting
+                        hardware inventory — serial numbers, specs,
+                        and deployment locations.</figcaption>
+                    <!-- CSS to hide scrollbar for webkit -->
+                    <style>
+        .flex::-webkit-scrollbar { display: none; }
+    </style>
+                </div>
+
+                <p>
+                    Following the OS installation, we installed
+                    Microsoft Office to prepare the system for daily
+                    office tasks. We also upgraded the unit’s
+                    storage replacing the HDD with an SSD. This process involved
+                    carefully installing the SSD, and ensuring
+                    that the system booted successfully with the newly added
+                    storage device. Our mentor explained the
+                    performance advantages of SSDs, particularly in
+                    terms of faster boot times, quicker application
+                    loading, and improved overall responsiveness.
+
+                    By the end of the week, I had gained both
+                    organizational awareness and practical exposure
+                    to real-world IT tasks. The experience allowed
+                    me to transition from purely academic exercises
+                    to performing technical responsibilities in a
+                    professional environment.
+                </p>
+
+                <p>
+                    By the end of the week, I had gained both
+                    organizational awareness and practical exposure
+                    to real-world IT tasks. The experience allowed
+                    me to transition from purely academic exercises
+                    to performing technical responsibilities in a
+                    professional environment.
+                </p>
+            </article>
+
+            <div
+                class="flex items-center justify-center gap-2 my-14 fade-in delay-2"><div
+                    class="h-px w-12 bg-border"></div><div
+                    class="w-1 h-1 rounded-full bg-border"></div><div
+                    class="h-px w-12 bg-border"></div></div>
+
+            <section class="fade-in delay-2">
+                <h2
+                    class="text-lg font-medium text-heading mb-6 tracking-tight">Insights</h2>
+                <div class="flex flex-col gap-4 text-[0.95rem]">
+                    <div
+                        class="p-5 rounded-2xl bg-surface border border-border hover:border-gray-600 transition-colors">
+                        <div class="flex items-center gap-3 mb-3"><div
+                                class="w-7 h-7 rounded-full bg-blue-500/10 flex items-center justify-center text-primary"><svg
+                                    class="w-3.5 h-3.5" fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"><path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2"
+                                        d="M13 10V3L4 14h7v7l9-11h-7z" /></svg></div><h3
+                                class="font-medium text-heading">What I
+                                Learned</h3></div>
+                        <p class="text-text leading-relaxed">During the first
+                            week of my
+                            internship, I learned the importance
+                            of understanding the workplace
+                            environment and professional
+                            expectations. The orientation
+                            provided a clear picture of the
+                            company's structure and the
+                            responsibilities of its IT
+                            department.</p>
+                    </div>
+                    <div
+                        class="p-5 rounded-2xl bg-surface border border-border hover:border-gray-600 transition-colors">
+                        <div class="flex items-center gap-3 mb-3"><div
+                                class="w-7 h-7 rounded-full bg-orange-500/10 flex items-center justify-center text-orange-400"><svg
+                                    class="w-3.5 h-3.5" fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"><path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2"
+                                        d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg></div><h3
+                                class="font-medium text-heading">Challenges
+                                Encountered</h3></div>
+                        <p class="text-text leading-relaxed">One of the main
+                            challenges I
+                            encountered was related to the
+                            bootable device used for OS
+                            installation. Initially, we used a
+                            USB drive prepared with Rufus.
+                            However, when we attempted to boot
+                            the newly assembled PC from the USB,
+                            the system failed to recognize the
+                            device. Despite multiple attempts,
+                            the bootable drive did not appear in
+                            the boot menu.</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="h-px w-full bg-border my-12 fade-in delay-3"></div>
+
+            <section class="fade-in delay-3">
+                <h2
+                    class="text-lg font-medium text-heading mb-4 tracking-tight">Skills
+                    Gained</h2>
+                <div class="flex flex-wrap gap-2.5">
+                    <span
+                        class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">PC
+                        Disassembly &amp; Reassembly</span>
+                    <span
+                        class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">OS
+                        Installation using Ventoy</span>
+                    <span
+                        class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">Microsoft
+                        Office Installation</span>
+                    <span
+                        class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">HDD
+                        to SSD Storage Upgrade</span>
+                    <span
+                        class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">BIOS
+                        &amp; Boot Configuration</span>
+                    <span
+                        class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">Bootable
+                        Media Troubleshooting</span>
+                </div>
+            </section>
+
+            <nav
+                class="mt-24 pt-8 border-t border-border flex justify-between items-center text-sm font-medium text-text fade-in delay-3">
+                <a href="week1.html"
+                    class="flex items-center gap-2 hover:text-heading transition-colors group">
+                    <svg
+                        class="w-4 h-4 group-hover:-translate-x-1.5 transition-transform duration-300"
+                        fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor"><path stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="1.5"
+                            d="M15 19l-7-7 7-7" /></svg>
+                    Week 1
+                </a>
+                <a href="week2.html"
+                    class="flex items-center gap-2 hover:text-heading transition-colors group">
+                    Week 2
+                    <svg
+                        class="w-4 h-4 group-hover:translate-x-1.5 transition-transform duration-300"
+                        fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor"><path stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="1.5"
+                            d="M9 5l7 7-7 7" /></svg>
+                </a>
+            </nav>
+        </main>
+
+        <!-- Auto-scroll Carousel Script -->
+        <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const carousels = document.querySelectorAll('.overflow-x-auto.snap-x');
+            carousels.forEach(carousel => {
+                let scrollInterval;
+                
+                const startScroll = () => {
+                    scrollInterval = setInterval(() => {
+                        // If reached the end, scroll back to the start
+                        if (carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - 10) {
+                            carousel.scrollTo({ left: 0, behavior: 'smooth' });
+                        } else {
+                            // Otherwise, scroll by the width of one image container
+                            carousel.scrollBy({ left: carousel.clientWidth, behavior: 'smooth' });
+                        }
+                    }, 3000); // 3 seconds interval
+                };
+                
+                startScroll();
+                
+                // Pause on hover
+                carousel.addEventListener('mouseenter', () => clearInterval(scrollInterval));
+                carousel.addEventListener('mouseleave', startScroll);
+            });
+        });
+    </script>
+    </body>
 </html>

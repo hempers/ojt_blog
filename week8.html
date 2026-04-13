@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" class="dark scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Week 8 – OJT Journal</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <style type="text/tailwindcss">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Week 8 – OJT Journal</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet">
+        <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+        <style type="text/tailwindcss">
       @theme {
         --font-sans: 'Inter', sans-serif;
         --color-bg: #09090b; --color-surface: #18181b; --color-border: #27272a; 
@@ -16,44 +18,335 @@
       }
       body { font-family: var(--font-sans); background-color: var(--color-bg); color: var(--color-text); -webkit-font-smoothing: antialiased; }
       .glass-nav { background-color: rgba(9, 9, 11, 0.7); backdrop-filter: blur(12px); border-bottom: 1px solid var(--color-border); }
+      .prose p { margin-bottom: 1.6em; line-height: 1.8; }
       .fade-in { animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; opacity: 0; }
       @keyframes fadeIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
-      .delay-1 { animation-delay: 0.1s; } 
+      .delay-1 { animation-delay: 0.1s; } .delay-2 { animation-delay: 0.2s; } .delay-3 { animation-delay: 0.3s; }
     </style>
-</head>
-<body class="pb-24 selection:bg-primary/30 selection:text-white">
-    <nav class="glass-nav fixed top-0 w-full z-50 transition-all">
-        <div class="max-w-3xl mx-auto px-6 h-16 flex items-center justify-between">
-            <a href="index.html" class="flex items-center gap-2.5 group">
-                <span class="w-2 h-2 rounded-full bg-primary group-hover:scale-[1.6] transition-transform duration-300"></span>
-                <span class="text-heading font-medium tracking-tight text-sm">OJT Journal</span>
-            </a>
-            <div class="flex gap-6 text-sm font-medium text-text">
-                <a href="index.html" class="hover:text-heading transition-colors">Home</a>
-                <a href="index.html#journal" class="hover:text-heading transition-colors">Journal</a>
-                <a href="index.html#about" class="hover:text-heading transition-colors">About</a>
+    </head>
+    <body class="pb-24 selection:bg-primary/30 selection:text-white">
+
+        <nav class="glass-nav fixed top-0 w-full z-50 transition-all">
+            <div
+                class="max-w-3xl mx-auto px-6 h-16 flex items-center justify-between">
+                <a href="index.html" class="flex items-center gap-2.5 group">
+                    <span
+                        class="w-2 h-2 rounded-full bg-primary group-hover:scale-[1.6] transition-transform duration-300"></span>
+                    <span
+                        class="text-heading font-medium tracking-tight text-sm">OJT
+                        Journal</span>
+                </a>
+                <div class="flex gap-6 text-sm font-medium text-text">
+                    <a href="index.html"
+                        class="hover:text-heading transition-colors">Home</a>
+                    <a href="index.html#journal"
+                        class="hover:text-heading transition-colors">Journal</a>
+                    <a href="index.html#about"
+                        class="hover:text-heading transition-colors">About</a>
+                </div>
             </div>
-        </div>
-    </nav>
-    <main class="max-w-2xl mx-auto px-6 pt-32 md:pt-40 text-center">
-        <div class="fade-in flex flex-col items-center justify-center min-h-[50vh]">
-            <div class="w-16 h-16 bg-surface border border-border rounded-full flex items-center justify-center mb-6 text-border mx-auto">
-                <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-            </div>
-            <h1 class="text-3xl font-semibold text-heading tracking-tight mb-4">Coming Soon</h1>
-            <p class="text-text max-w-sm mb-10 mx-auto">Details about Week 8 will be uploaded here once completed.</p>
-            
-            <nav class="w-full pt-8 border-t border-border flex justify-between items-center text-sm font-medium text-text">
-                <a href="week7.html" class="flex items-center gap-2 hover:text-heading transition-colors group">
-                    <svg class="w-4 h-4 group-hover:-translate-x-1.5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 19l-7-7 7-7" /></svg>
+        </nav>
+
+        <main class="max-w-2xl mx-auto px-6 pt-32 md:pt-40">
+            <header class="mb-14 fade-in">
+                <div
+                    class="flex items-center gap-3 text-xs font-semibold tracking-wider uppercase mb-5 text-primary">
+                    <span>Week 8</span><span
+                        class="w-1 h-1 rounded-full bg-border"></span><span
+                        class="text-text">April 6 – 11, 2026</span>
+                </div>
+                <h1
+                    class="text-3xl md:text-[2.5rem] font-semibold text-heading tracking-tight leading-[1.15] mb-8">Week
+                    8 – System Finalization & IIS Deployment</h1>
+                <div
+                    class="flex flex-wrap gap-5 text-sm text-text border-y border-border py-4">
+                    <div class="flex items-center gap-2"><svg
+                            class="w-4 h-4 text-gray-500" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor"><path
+                                stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="1.5"
+                                d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
+                        ALINDECO</div>
+                    <div class="flex items-center gap-2"><svg
+                            class="w-4 h-4 text-gray-500" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor"><path
+                                stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="1.5"
+                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        Hardware & Software Ops</div>
+                </div>
+            </header>
+
+            <article
+                class="prose text-[0.95rem] md:text-base text-text fade-in delay-1">
+                <h2
+                    class="text-lg font-medium text-heading mb-4 tracking-tight">Narrative</h2>
+                <p>
+                    Week 8 was incredibly packed, blending both hardware
+                    maintenance and major software milestones. It started on
+                    April 6 with a hardware request to replace the toner for a
+                    BROTHER DCP L2540DW printer. After physically removing and
+                    replacing the cartridge, I ran into an issue where the
+                    machine still displayed a "toner low" error. Since my mentor
+                    was on leave and my co-OJT was absent, I had to troubleshoot
+                    independently. I messaged my mentor for advice, and he
+                    reminded me to perform a manual reset on the printer's
+                    software. Following his instructions, the reset was
+                    successful, and the printer resumed normal operation.
+                </p>
+
+                <p>
+                    The rest of that day was dedicated back to the QR Inventory
+                    System. I added a much-needed search bar functionality to
+                    the departments module, heavily enhanced the reports UI, and
+                    implemented a comprehensive reports tracking table. To make
+                    navigation easier for users, I fixed icon inconsistencies,
+                    applied color-coding logic to the department codes for
+                    quicker visual identification, and polished the
+                    authentication modal UI further.
+                </p>
+
+                <div
+                    class="my-10 border border-border rounded-xl overflow-hidden bg-surface p-1.5 group relative">
+                    <div
+                        class="flex overflow-x-auto snap-x snap-mandatory gap-2 scroll-smooth pb-2"
+                        style="scrollbar-width: none; -ms-overflow-style: none;">
+                        <div class="snap-center shrink-0 w-full">
+                            <img
+                                src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=900&q=80"
+                                alt="Network deployment and server management"
+                                class="w-full h-auto rounded-lg rounded-b-sm grayscale-[60%] opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 object-cover max-h-64">
+                        </div>
+                        <div class="snap-center shrink-0 w-full">
+                            <img
+                                src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=901&q=80"
+                                alt="Network deployment and server management 2"
+                                class="w-full h-auto rounded-lg rounded-b-sm grayscale-[60%] opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 object-cover max-h-64">
+                        </div>
+                        <div class="snap-center shrink-0 w-full">
+                            <img
+                                src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=902&q=80"
+                                alt="Network deployment and server management 3"
+                                class="w-full h-auto rounded-lg rounded-b-sm grayscale-[60%] opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 object-cover max-h-64">
+                        </div>
+                    </div>
+                    <figcaption
+                        class="text-[0.75rem] text-center pt-3 pb-1.5 text-gray-500 tracking-wide uppercase">Practicing
+                        system deployment processes using Windows Server IIS in
+                        a Virtual Machine environment.</figcaption>
+                    <style>
+                    .flex::-webkit-scrollbar { display: none; }
+                </style>
+                </div>
+
+                <p>
+                    On April 7 and 8, my primary objective was aligning the
+                    generated system documents with the company's official
+                    templates. I spent significant time coding the layout for
+                    downloaded PDF reports so that they exactly matched the
+                    layout of the company-provided masterlist. This included
+                    embedding the official company logo directly into the PDF
+                    headers and ensuring the table structure rendered perfectly
+                    before finalizing the entire development phase of the
+                    system.
+                </p>
+
+                <p>
+                    Later on April 8, preparing for the big launch, I
+                    reinstalled a virtual machine (VM) specifically to practice
+                    deployment using Windows Server Internet Information
+                    Services (IIS). My goal was to perfect the deployment steps
+                    in an isolated staging environment so that I would not
+                    encounter structural errors when touching the company's real
+                    server. This early practice immediately paid off, as I
+                    encountered an issue where installing the URL Rewrite module
+                    caused the local site to go down.
+                </p>
+
+                <p>
+                    By April 10, I continued wrestling with the URL rewrite
+                    module. The main culprit turned out to be the `php.ini`
+                    configuration file, which had become scrambled due to
+                    conflicting previous installations of PHP sets alongside
+                    Node.js. After untangling the configuration paths, I finally
+                    had a stable staging environment.
+                </p>
+
+                <p>
+                    Finally, on April 11, the time came for the live launch.
+                    Using the exact steps I practiced in the VM, I successfully
+                    deployed the QR Inventory project directly onto the
+                    company's primary server. The launch was flawless, and the
+                    new web-based project became officially visible and
+                    accessible to other devices sitting securely within the
+                    company network!
+                </p>
+
+                <div
+                    class="my-10 border border-border rounded-xl overflow-hidden bg-surface p-1.5 group relative">
+                    <div
+                        class="flex overflow-x-auto snap-x snap-mandatory gap-2 scroll-smooth pb-2"
+                        style="scrollbar-width: none; -ms-overflow-style: none;">
+                        <div class="snap-center shrink-0 w-full">
+                            <img
+                                src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=900&q=80"
+                                alt="Finalizing deployment on company server"
+                                class="w-full h-auto rounded-lg rounded-b-sm grayscale-[60%] opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 object-cover max-h-64">
+                        </div>
+                        <div class="snap-center shrink-0 w-full">
+                            <img
+                                src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=901&q=80"
+                                alt="Finalizing deployment on company server 2"
+                                class="w-full h-auto rounded-lg rounded-b-sm grayscale-[60%] opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 object-cover max-h-64">
+                        </div>
+                        <div class="snap-center shrink-0 w-full">
+                            <img
+                                src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=902&q=80"
+                                alt="Finalizing deployment on company server 3"
+                                class="w-full h-auto rounded-lg rounded-b-sm grayscale-[60%] opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 object-cover max-h-64">
+                        </div>
+                    </div>
+                    <figcaption
+                        class="text-[0.75rem] text-center pt-3 pb-1.5 text-gray-500 tracking-wide uppercase">Successfully
+                        mapping local sites onto the live company
+                        network.</figcaption>
+                    <style>
+                    .flex::-webkit-scrollbar { display: none; }
+                </style>
+                </div>
+            </article>
+
+            <div
+                class="flex items-center justify-center gap-2 my-14 fade-in delay-2"><div
+                    class="h-px w-12 bg-border"></div><div
+                    class="w-1 h-1 rounded-full bg-border"></div><div
+                    class="h-px w-12 bg-border"></div></div>
+
+            <section class="fade-in delay-2">
+                <h2
+                    class="text-lg font-medium text-heading mb-6 tracking-tight">Insights</h2>
+                <div class="flex flex-col gap-4 text-[0.95rem]">
+                    <div
+                        class="p-5 rounded-2xl bg-surface border border-border hover:border-gray-600 transition-colors">
+                        <div class="flex items-center gap-3 mb-3"><div
+                                class="w-7 h-7 rounded-full bg-blue-500/10 flex items-center justify-center text-primary"><svg
+                                    class="w-3.5 h-3.5" fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"><path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2"
+                                        d="M13 10V3L4 14h7v7l9-11h-7z" /></svg></div><h3
+                                class="font-medium text-heading">What I
+                                Learned</h3></div>
+                        <p class="text-text leading-relaxed">I learned a crucial
+                            lesson about staging environments this week. By
+                            deliberately taking the time to set up a Virtual
+                            Machine and practice the entire deployment process
+                            via Windows Server IIS first, I was able to safely
+                            break things—like the `php.ini` config—without
+                            affecting the company's real web services. When it
+                            came time to deploy to the live server, I had
+                            absolute confidence and no hiccups.</p>
+                    </div>
+                    <div
+                        class="p-5 rounded-2xl bg-surface border border-border hover:border-gray-600 transition-colors">
+                        <div class="flex items-center gap-3 mb-3"><div
+                                class="w-7 h-7 rounded-full bg-orange-500/10 flex items-center justify-center text-orange-400"><svg
+                                    class="w-3.5 h-3.5" fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"><path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2"
+                                        d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg></div><h3
+                                class="font-medium text-heading">Challenges
+                                Encountered</h3></div>
+                        <p class="text-text leading-relaxed">Two significant
+                            challenges stood out: First, hardware
+                            troubleshooting when alone. Replacing a printer
+                            toner usually solves the error immediately, but
+                            having to dig deeper into the physical firmware
+                            settings to manually reset a persistent error taught
+                            me self-reliance. Second, battling conflicting
+                            environment paths (`php.ini` vs Node.js) during the
+                            IIS URL Rewrite setup, which required meticulous
+                            debugging to untangle.</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="h-px w-full bg-border my-12 fade-in delay-3"></div>
+
+            <section class="fade-in delay-3">
+                <h2
+                    class="text-lg font-medium text-heading mb-4 tracking-tight">Skills
+                    Gained</h2>
+                <div class="flex flex-wrap gap-2.5">
+                    <span
+                        class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">Windows
+                        Server IIS Deployment</span>
+                    <span
+                        class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">Virtual
+                        Machine Staging</span>
+                    <span
+                        class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">PHP
+                        Configuration Debugging</span>
+                    <span
+                        class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">Frontend
+                        PDF Generation</span>
+                    <span
+                        class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">Printer
+                        Hardware Maintenance</span>
+                </div>
+            </section>
+
+            <nav
+                class="mt-24 pt-8 border-t border-border flex justify-between items-center text-sm font-medium text-text fade-in delay-3">
+                <a href="week7.html"
+                    class="flex items-center gap-2 hover:text-heading transition-colors group">
+                    <svg
+                        class="w-4 h-4 group-hover:-translate-x-1.5 transition-transform duration-300"
+                        fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor"><path stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="1.5"
+                            d="M15 19l-7-7 7-7" /></svg>
                     Week 7
                 </a>
-                <a href="week9.html" class="flex items-center gap-2 hover:text-heading transition-colors group">
+                <a href="week9.html"
+                    class="flex items-center gap-2 hover:text-heading transition-colors group">
                     Week 9
-                    <svg class="w-4 h-4 group-hover:translate-x-1.5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5l7 7-7 7" /></svg>
+                    <svg
+                        class="w-4 h-4 group-hover:translate-x-1.5 transition-transform duration-300"
+                        fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor"><path stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="1.5"
+                            d="M9 5l7 7-7 7" /></svg>
                 </a>
             </nav>
-        </div>
-    </main>
-</body>
+        </main>
+
+        <!-- Auto-scroll Carousel Script -->
+        <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const carousels = document.querySelectorAll('.overflow-x-auto.snap-x');
+            carousels.forEach(carousel => {
+                let scrollInterval;
+                
+                const startScroll = () => {
+                    scrollInterval = setInterval(() => {
+                        if (carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - 10) {
+                            carousel.scrollTo({ left: 0, behavior: 'smooth' });
+                        } else {
+                            carousel.scrollBy({ left: carousel.clientWidth, behavior: 'smooth' });
+                        }
+                    }, 3000);
+                };
+                
+                startScroll();
+                
+                carousel.addEventListener('mouseenter', () => clearInterval(scrollInterval));
+                carousel.addEventListener('mouseleave', startScroll);
+            });
+        });
+    </script>
+    </body>
 </html>

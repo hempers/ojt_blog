@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" class="dark scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Week 3 – OJT Journal</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <style type="text/tailwindcss">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Week 3 – OJT Journal</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet">
+        <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+        <style type="text/tailwindcss">
       @theme {
         --font-sans: 'Inter', sans-serif;
         --color-bg: #09090b; --color-surface: #18181b; --color-border: #27272a; 
@@ -21,400 +23,578 @@
       @keyframes fadeIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
       .delay-1 { animation-delay: 0.1s; } .delay-2 { animation-delay: 0.2s; } .delay-3 { animation-delay: 0.3s; }
     </style>
-</head>
-<body class="pb-24 selection:bg-primary/30 selection:text-white">
-    
-    <nav class="glass-nav fixed top-0 w-full z-50 transition-all">
-        <div class="max-w-3xl mx-auto px-6 h-16 flex items-center justify-between">
-            <a href="index.html" class="flex items-center gap-2.5 group">
-                <span class="w-2 h-2 rounded-full bg-primary group-hover:scale-[1.6] transition-transform duration-300"></span>
-                <span class="text-heading font-medium tracking-tight text-sm">OJT Journal</span>
-            </a>
-            <div class="flex gap-6 text-sm font-medium text-text">
-                <a href="index.html" class="hover:text-heading transition-colors">Home</a>
-                <a href="index.html#journal" class="hover:text-heading transition-colors">Journal</a>
-                <a href="index.html#about" class="hover:text-heading transition-colors">About</a>
-            </div>
-        </div>
-    </nav>
-    
-    <main class="max-w-2xl mx-auto px-6 pt-32 md:pt-40">
-        <header class="mb-14 fade-in">
-            <div class="flex items-center gap-3 text-xs font-semibold tracking-wider uppercase mb-5 text-primary">
-                <span>Week 3</span><span class="w-1 h-1 rounded-full bg-border"></span><span class="text-text">March 2 – March 7, 2026</span>
-            </div>
-            <h1 class="text-3xl md:text-[2.5rem] font-semibold text-heading tracking-tight leading-[1.15] mb-8">Week 3 – Network Troubleshooting, Data Recovery &amp; IT
-                    Support</h1>
-            <div class="flex flex-wrap gap-5 text-sm text-text border-y border-border py-4">
-                <div class="flex items-center gap-2"><svg class="w-4 h-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg> ALINDECO</div>
-                <div class="flex items-center gap-2"><svg class="w-4 h-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg> 42 Hours Logged</div>
-            </div>
-        </header>
-        
-        <article class="prose text-[0.95rem] md:text-base text-text fade-in delay-1">
-            <h2 class="text-lg font-medium text-heading mb-4 tracking-tight">Narrative</h2>
-            <p>
-                                The third week of my internship started on Day
-                                10 with a printer troubleshooting request. An
-                                Epson L360 inkjet printer owned by Ma'am Mervie
-                                Curie M. Belen of the Warehouse Office was
-                                brought to our attention due to poor print
-                                quality — the printouts were coming out faded
-                                and streaky, with visible banding across the
-                                pages. Upon inspecting the unit, we first
-                                checked the ink levels and found them to be
-                                adequate, so the issue was not ink-related. We
-                                then noticed that the power cord appeared worn
-                                and was not providing a stable connection,
-                                causing the printer to intermittently lose
-                                power. We replaced the faulty power cord with a
-                                new one, which resolved the power instability.
-                                To address the print quality, we performed a
-                                power ink flushing — a deeper cleaning cycle
-                                that forces ink through the print head nozzles
-                                at high pressure to clear any dried ink or
-                                clogs. After running the flush and printing a
-                                nozzle check pattern, the output quality was
-                                noticeably restored, and Ma'am Belen confirmed
-                                that the prints were back to their expected
-                                clarity.
-                            </p>
+    </head>
+    <body class="pb-24 selection:bg-primary/30 selection:text-white">
 
-                            <p>
-                                Day 11 was largely administrative. We spent most
-                                of the day preparing documents for the IT
-                                Maintenance Request Form — a standardized
-                                internal document used by the IT department to
-                                formally log and track all maintenance
-                                activities performed on company equipment. This
-                                includes details such as the type of equipment
-                                serviced, the nature of the issue reported, the
-                                troubleshooting steps taken, the parts replaced
-                                (if any), and the final resolution. Proper
-                                documentation is a critical part of IT
-                                operations because it creates an audit trail,
-                                helps track recurring hardware issues, and
-                                ensures accountability. Filling out these forms
-                                also helped me understand the importance of
-                                maintaining organized records in a professional
-                                IT environment, as it allows the team to
-                                reference past maintenance history when
-                                diagnosing future problems on the same
-                                equipment.
-                            </p>
-
-                            <p>
-                                On Day 12, we created a UTP (Unshielded Twisted
-                                Pair) cable for a LAN-to-LAN connection needed
-                                by one of the employees in the Admin Office.
-                                This involved cutting the cable to the required
-                                length, stripping the outer jacket, arranging
-                                the individual wire pairs according to the
-                                T-568B wiring standard, and crimping RJ-45
-                                connectors onto both ends using a crimping tool.
-                                After crimping, we tested the cable with a LAN
-                                cable tester to verify that all eight pins were
-                                making proper contact and that there were no
-                                crossed or broken wires. The cable was then
-                                deployed to establish a direct Ethernet
-                                connection for the employee's workstation. In
-                                addition to the cabling work, we also prepared
-                                several documents that required signatures from
-                                various department heads. We organized the
-                                paperwork, ensured all necessary fields were
-                                filled out, and personally visited the
-                                corresponding signatories across the office to
-                                obtain their approvals. This part of the day
-                                gave me insight into how IT tasks often involve
-                                coordination with other departments and that the
-                                administrative side of IT work is just as
-                                important as the technical side.
-                            </p>
-
-                            <!-- Inline image 1 -->
-                            <figure class="my-10 border border-border rounded-xl overflow-hidden bg-surface p-1.5 group"><img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=900&q=80" alt="Network cabling and IT documentation" class="w-full h-auto rounded-lg rounded-b-sm grayscale-[60%] opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 object-cover max-h-64"><figcaption class="text-[0.75rem] text-center pt-3 pb-1.5 text-gray-500 tracking-wide uppercase">Hands-on IT
-                                    work — from cable creation to document
-                                    preparation.</figcaption></figure>
-
-                            <p>
-                                Day 13 was by far the most eventful and
-                                learning-intensive day of the week. It started
-                                with a complaint that there was no internet
-                                connection at the Staff House. The first thing
-                                we did was check the server connection that
-                                feeds the Staff House. We noticed that the
-                                indicator light on the <strong class="text-heading font-medium">media
-                                    converter</strong> — a networking device
-                                that converts signals between different media
-                                types, in this case converting fiber optic
-                                signals into Ethernet (RJ-45/LAN) signals so
-                                that devices using standard copper Ethernet
-                                cables can connect to a fiber optic network —
-                                was showing only one light, indicating that the
-                                fiber-to-Ethernet conversion was not happening
-                                and there was indeed no active internet
-                                connection being passed through.
-                            </p>
-
-                            <p>
-                                We initially tried unplugging the LAN cable from
-                                the server and transferring it to a different
-                                port on the switch, but nothing changed. So we
-                                proceeded to the Staff House to inspect the
-                                media converter on that end. We found the same
-                                single-light indicator there as well. We tried
-                                unplugging both the power supply and the LAN
-                                cable from the Staff House media converter, but
-                                the issue persisted. Given that the problem
-                                appeared on both ends, we concluded that the
-                                issue was not with the Staff House connection
-                                itself but rather with the media converter at
-                                the server side — it seemed like the device was
-                                failing to convert the incoming fiber optic
-                                signal to an Ethernet signal. We returned to the
-                                Admin Office and tried unplugging the media
-                                converter from the server and plugging it back
-                                in, but still nothing changed. As a final step,
-                                we decided to replace the power cord of the
-                                media converter, suspecting that it might not be
-                                receiving sufficient or stable power. Sure
-                                enough, right after swapping the power cord, the
-                                indicator light showing an active internet
-                                connection came on. The light on the switch port
-                                connected to the Staff House LAN also turned on,
-                                confirming that the connection was restored. We
-                                went back to the Staff House to verify, and
-                                after connecting a phone to the Wi-Fi, the
-                                internet was confirmed to be working again.
-                            </p>
-
-                            <p>
-                                As soon as we returned to the main office,
-                                another complaint came in — this time from Ma'am
-                                Lindy, who reported that printing was taking an
-                                unusually long time. She suspected that the
-                                internet was slow since her printer was
-                                connected over the network. The troubleshooting
-                                for this issue was handled by our mentor, Sir
-                                Jhong, as we were still not familiar with
-                                diagnosing network printing performance issues.
-                                Sir Jhong ran a <code class="bg-surface px-1.5 py-0.5 rounded text-[0.85em] text-heading border border-border font-mono">ping google.com</code>
-                                command, and the response times were
-                                consistently in the 8ms–10ms range, which
-                                indicated that the local internet connection was
-                                perfectly healthy. He then pinged the IP address
-                                of the remote desktop that Ma'am Lindy was
-                                using, and the response times jumped to the
-                                86ms–89ms range. This clearly showed that the
-                                bottleneck was not the local network but the
-                                connection to the remote desktop — the high
-                                latency meant that data was taking significantly
-                                longer to travel between the remote desktop and
-                                the local printer. Since the remote desktop was
-                                hosted at the head office, the only course of
-                                action was to follow up with the head office IT
-                                team to investigate the connection on their end.
-                            </p>
-
-                            <!-- Inline image 2 -->
-                            <figure class="my-10 border border-border rounded-xl overflow-hidden bg-surface p-1.5 group"><img src="https://images.unsplash.com/photo-1612178991541-b48cc8e92a4d?w=900&q=80" alt="Network troubleshooting and data recovery" class="w-full h-auto rounded-lg rounded-b-sm grayscale-[60%] opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 object-cover max-h-64"><figcaption class="text-[0.75rem] text-center pt-3 pb-1.5 text-gray-500 tracking-wide uppercase">A day
-                                    filled with network diagnostics, file
-                                    recovery, and hands-on troubleshooting.</figcaption></figure>
-
-                            <p>
-                                Later that day, we were asked to restore some
-                                files for one of the employees in the Purchasing
-                                Department. We booted the system unit and
-                                successfully entered the BIOS setup, but we
-                                encountered difficulty getting the boot options
-                                to appear so we could boot from the USB flash
-                                drive. We tried analyzing the situation first
-                                and plugged the flash drive into different USB
-                                ports on the system unit. When that didn't work,
-                                we checked whether the flash drive itself was
-                                corrupted by plugging it into our laptop. Upon
-                                inspection, we discovered that the flash drive
-                                did not contain the recovery files we needed to
-                                perform the restoration — the expected folders
-                                and files were simply missing. We then copied
-                                the necessary recovery files onto the flash
-                                drive and attempted the task again, but it still
-                                didn't boot properly.
-                            </p>
-
-                            <p>
-                                At that point, we decided to inform our mentor,
-                                Sir Jhong, about the problem. We showed him the
-                                contents of the flash drive, and he quickly
-                                identified the issue — the folders and files
-                                that we needed were actually present on the
-                                drive but were hidden. He showed us how to
-                                unhide the files by adjusting the folder options
-                                to display hidden files and folders. With the
-                                correct files now visible and accessible, we
-                                proceeded with the restoration. After
-                                approximately two hours of running the recovery
-                                process, we were able to successfully retrieve
-                                the files. However, Sir Joseph, the employee
-                                from the Purchasing team, informed us that he
-                                could not locate specific files he was looking
-                                for among the recovered data. He asked us to
-                                perform the restoration once more, but this time
-                                to specifically recover only files from the
-                                years 2023–2024, filtered by file type —
-                                specifically pictures and documents. We were
-                                also tasked with scanning physical documents to
-                                a PC. What amazed me was that the scanning could
-                                be done wirelessly — all we had to do was select
-                                the name of the destination desktop from the
-                                scanner's interface, and the scanned documents
-                                were sent directly to that computer over the
-                                network without needing any physical USB or
-                                cable connection. It was a small but impressive
-                                demonstration of how modern office equipment
-                                leverages network connectivity to streamline
-                                everyday tasks.
-                            </p>
-
-                            <p>
-                                On Day 14, we configured a TP-Link router for
-                                the Engineering Office. The task involved
-                                accessing the router's admin panel through a web
-                                browser, where we changed both the Wi-Fi network
-                                name (SSID) and the password. We renamed the
-                                network from its default name to "PM3-Temp"
-                                because the router was serving as a temporary
-                                replacement in the Engineering Office. Changing
-                                the SSID to a recognizable name helps employees
-                                easily identify and connect to the correct
-                                network, especially in an office environment
-                                where multiple Wi-Fi networks may be visible. We
-                                also created another LAN (Local Area Network)
-                                cable, this time for the Warehouse Office. One
-                                of the system units there had previously
-                                undergone a motherboard replacement (this repair
-                                was performed before we started our OJT) due to
-                                damaged ports on the original board. Since the
-                                new motherboard was already installed, our task
-                                was to run and connect the new LAN cable to
-                                re-establish the network connection. We crimped
-                                the cable using the T-568B standard, tested it
-                                for continuity, and successfully connected the
-                                system unit back to the office network. The
-                                cabling was completed without any issues.
-                            </p>
-
-                            <p>
-                                The last day of the week, Day 15, involved an
-                                Acer TravelMate 5760 (XSS38) laptop brought in
-                                by one of the employees who had forgotten their
-                                Windows login password. The laptop was going to
-                                be repurposed as a backup device — the plan was
-                                to back up the data on its existing HDD and
-                                eventually replace it with an SSD for better
-                                performance. However, before any of that could
-                                happen, we first needed to bypass the forgotten
-                                password to gain access to the system. Instead
-                                of going through the lengthy manual process of
-                                bypassing the Windows password (such as using
-                                command prompt through recovery mode or editing
-                                the SAM registry hive), we used Hiren's
-                                Boot CD PE — a pre-installation
-                                environment bootable tool that contains a suite
-                                of utilities for system recovery, diagnostics,
-                                and password management. Using the password
-                                reset utility included in Hiren's Boot CD PE, we
-                                were able to reset the Windows login password
-                                quickly and gain access to the laptop without
-                                any data loss. Once we had successfully bypassed
-                                the password and confirmed access to the
-                                desktop, we proceeded to update the installed
-                                version of Microsoft Office from the outdated
-                                MS Office 2010 to MS
-                                Office 365, ensuring the employee
-                                would have access to the latest productivity
-                                features, cloud integration, and security
-                                updates.
-                            </p>
-        </article>
-        
-        <div class="flex items-center justify-center gap-2 my-14 fade-in delay-2"><div class="h-px w-12 bg-border"></div><div class="w-1 h-1 rounded-full bg-border"></div><div class="h-px w-12 bg-border"></div></div>
-        
-        <section class="fade-in delay-2">
-            <h2 class="text-lg font-medium text-heading mb-6 tracking-tight">Insights</h2>
-            <div class="flex flex-col gap-4 text-[0.95rem]">
-                <div class="p-5 rounded-2xl bg-surface border border-border hover:border-gray-600 transition-colors">
-                    <div class="flex items-center gap-3 mb-3"><div class="w-7 h-7 rounded-full bg-blue-500/10 flex items-center justify-center text-primary"><svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg></div><h3 class="font-medium text-heading">What I Learned</h3></div>
-                    <p class="text-text leading-relaxed">This week was incredibly rich in
-                                            learning. I gained hands-on
-                                            experience with network
-                                            troubleshooting — specifically
-                                            understanding how media converters
-                                            work and how something as simple as
-                                            a faulty power cord can bring down
-                                            an entire building's internet
-                                            connection. I also learned the
-                                            difference between local network
-                                            latency and remote desktop latency
-                                            through the ping diagnostics Sir
-                                            Jhong demonstrated. The file
-                                            recovery task taught me the
-                                            importance of checking for hidden
-                                            files before assuming data is
-                                            missing, and the password bypass
-                                            using Hiren's Boot CD PE showed me
-                                            how powerful bootable recovery tools
-                                            can be in an IT environment.</p>
-                </div>
-                <div class="p-5 rounded-2xl bg-surface border border-border hover:border-gray-600 transition-colors">
-                    <div class="flex items-center gap-3 mb-3"><div class="w-7 h-7 rounded-full bg-orange-500/10 flex items-center justify-center text-orange-400"><svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg></div><h3 class="font-medium text-heading">Challenges Encountered</h3></div>
-                    <p class="text-text leading-relaxed">The biggest challenge this week was
-                                            the Staff House internet outage. It
-                                            required us to systematically go
-                                            back and forth between locations,
-                                            testing each component in the chain
-                                            — from the server room to the Staff
-                                            House and back — before we could
-                                            isolate the faulty power cord as the
-                                            root cause. The file recovery task
-                                            was also challenging because the
-                                            hidden files on the flash drive
-                                            initially made us think the
-                                            necessary files were missing
-                                            entirely. It was a reminder to
-                                            always check file visibility
-                                            settings before jumping to
-                                            conclusions.</p>
+        <nav class="glass-nav fixed top-0 w-full z-50 transition-all">
+            <div
+                class="max-w-3xl mx-auto px-6 h-16 flex items-center justify-between">
+                <a href="index.html" class="flex items-center gap-2.5 group">
+                    <span
+                        class="w-2 h-2 rounded-full bg-primary group-hover:scale-[1.6] transition-transform duration-300"></span>
+                    <span
+                        class="text-heading font-medium tracking-tight text-sm">OJT
+                        Journal</span>
+                </a>
+                <div class="flex gap-6 text-sm font-medium text-text">
+                    <a href="index.html"
+                        class="hover:text-heading transition-colors">Home</a>
+                    <a href="index.html#journal"
+                        class="hover:text-heading transition-colors">Journal</a>
+                    <a href="index.html#about"
+                        class="hover:text-heading transition-colors">About</a>
                 </div>
             </div>
-        </section>
-        
-        <div class="h-px w-full bg-border my-12 fade-in delay-3"></div>
-        
-        <section class="fade-in delay-3">
-            <h2 class="text-lg font-medium text-heading mb-4 tracking-tight">Skills Gained</h2>
-            <div class="flex flex-wrap gap-2.5">
-                <span class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">Network Troubleshooting</span>
-                <span class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">UTP Cable Crimping</span>
-                <span class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">Printer Troubleshooting</span>
-                <span class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">Data Recovery</span>
-                <span class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">Router Configuration</span>
-                <span class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">Password Bypass</span>
-                <span class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">Media Converter Diagnostics</span>
-                <span class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">IT Documentation</span>
-            </div>
-        </section>
-        
-        <nav class="mt-24 pt-8 border-t border-border flex justify-between items-center text-sm font-medium text-text fade-in delay-3">
-            <a href="week2.html" class="flex items-center gap-2 hover:text-heading transition-colors group">
-                <svg class="w-4 h-4 group-hover:-translate-x-1.5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 19l-7-7 7-7" /></svg>
-                Week 2
-            </a>
-            <a href="week4.html" class="flex items-center gap-2 hover:text-heading transition-colors group">
-                Week 4
-                <svg class="w-4 h-4 group-hover:translate-x-1.5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5l7 7-7 7" /></svg>
-            </a>
         </nav>
-    </main>
-</body>
+
+        <main class="max-w-2xl mx-auto px-6 pt-32 md:pt-40">
+            <header class="mb-14 fade-in">
+                <div
+                    class="flex items-center gap-3 text-xs font-semibold tracking-wider uppercase mb-5 text-primary">
+                    <span>Week 3</span><span
+                        class="w-1 h-1 rounded-full bg-border"></span><span
+                        class="text-text">March 2 – March 7, 2026</span>
+                </div>
+                <h1
+                    class="text-3xl md:text-[2.5rem] font-semibold text-heading tracking-tight leading-[1.15] mb-8">Week
+                    3 – Network Troubleshooting, Data Recovery &amp; IT
+                    Support</h1>
+                <div
+                    class="flex flex-wrap gap-5 text-sm text-text border-y border-border py-4">
+                    <div class="flex items-center gap-2"><svg
+                            class="w-4 h-4 text-gray-500" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor"><path
+                                stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="1.5"
+                                d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
+                        ALINDECO</div>
+                    <div class="flex items-center gap-2"><svg
+                            class="w-4 h-4 text-gray-500" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor"><path
+                                stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="1.5"
+                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        42 Hours Logged</div>
+                </div>
+            </header>
+
+            <article
+                class="prose text-[0.95rem] md:text-base text-text fade-in delay-1">
+                <h2
+                    class="text-lg font-medium text-heading mb-4 tracking-tight">Narrative</h2>
+                <p>
+                    The third week of my internship started on Day
+                    10 with a printer troubleshooting request. An
+                    Epson L360 inkjet printer owned by Ma'am Mervie
+                    Curie M. Belen of the Warehouse Office was
+                    brought to our attention due to poor print
+                    quality — the printouts were coming out faded
+                    and streaky, with visible banding across the
+                    pages. Upon inspecting the unit, we first
+                    checked the ink levels and found them to be
+                    adequate, so the issue was not ink-related. We
+                    then noticed that the power cord appeared worn
+                    and was not providing a stable connection,
+                    causing the printer to intermittently lose
+                    power. We replaced the faulty power cord with a
+                    new one, which resolved the power instability.
+                    To address the print quality, we performed a
+                    power ink flushing — a deeper cleaning cycle
+                    that forces ink through the print head nozzles
+                    at high pressure to clear any dried ink or
+                    clogs. After running the flush and printing a
+                    nozzle check pattern, the output quality was
+                    noticeably restored, and Ma'am Belen confirmed
+                    that the prints were back to their expected
+                    clarity.
+                </p>
+
+                <p>
+                    Day 11 was largely administrative. We spent most
+                    of the day preparing documents for the IT
+                    Maintenance Request Form — a standardized
+                    internal document used by the IT department to
+                    formally log and track all maintenance
+                    activities performed on company equipment. This
+                    includes details such as the type of equipment
+                    serviced, the nature of the issue reported, the
+                    troubleshooting steps taken, the parts replaced
+                    (if any), and the final resolution. Proper
+                    documentation is a critical part of IT
+                    operations because it creates an audit trail,
+                    helps track recurring hardware issues, and
+                    ensures accountability. Filling out these forms
+                    also helped me understand the importance of
+                    maintaining organized records in a professional
+                    IT environment, as it allows the team to
+                    reference past maintenance history when
+                    diagnosing future problems on the same
+                    equipment.
+                </p>
+
+                <p>
+                    On Day 12, we created a UTP (Unshielded Twisted
+                    Pair) cable for a LAN-to-LAN connection needed
+                    by one of the employees in the Admin Office.
+                    This involved cutting the cable to the required
+                    length, stripping the outer jacket, arranging
+                    the individual wire pairs according to the
+                    T-568B wiring standard, and crimping RJ-45
+                    connectors onto both ends using a crimping tool.
+                    After crimping, we tested the cable with a LAN
+                    cable tester to verify that all eight pins were
+                    making proper contact and that there were no
+                    crossed or broken wires. The cable was then
+                    deployed to establish a direct Ethernet
+                    connection for the employee's workstation. In
+                    addition to the cabling work, we also prepared
+                    several documents that required signatures from
+                    various department heads. We organized the
+                    paperwork, ensured all necessary fields were
+                    filled out, and personally visited the
+                    corresponding signatories across the office to
+                    obtain their approvals. This part of the day
+                    gave me insight into how IT tasks often involve
+                    coordination with other departments and that the
+                    administrative side of IT work is just as
+                    important as the technical side.
+                </p>
+
+                <!-- Inline image 1 -->
+                <div
+                    class="my-10 border border-border rounded-xl overflow-hidden bg-surface p-1.5 group relative">
+                    <div
+                        class="flex overflow-x-auto snap-x snap-mandatory gap-2 scroll-smooth pb-2"
+                        style="scrollbar-width: none; -ms-overflow-style: none;">
+                        <div class="snap-center shrink-0 w-full">
+                            <img
+                                src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=900&q=80"
+                                alt="Network cabling and IT documentation"
+                                class="w-full h-auto rounded-lg rounded-b-sm grayscale-[60%] opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 object-cover max-h-64">
+                        </div>
+                        <div class="snap-center shrink-0 w-full">
+                            <img
+                                src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=901&q=80"
+                                alt="Network cabling and IT documentation 2"
+                                class="w-full h-auto rounded-lg rounded-b-sm grayscale-[60%] opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 object-cover max-h-64">
+                        </div>
+                        <div class="snap-center shrink-0 w-full">
+                            <img
+                                src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=902&q=80"
+                                alt="Network cabling and IT documentation 3"
+                                class="w-full h-auto rounded-lg rounded-b-sm grayscale-[60%] opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 object-cover max-h-64">
+                        </div>
+                    </div>
+                    <figcaption
+                        class="text-[0.75rem] text-center pt-3 pb-1.5 text-gray-500 tracking-wide uppercase">Hands-on
+                        IT
+                        work — from cable creation to document
+                        preparation.</figcaption>
+                    <!-- CSS to hide scrollbar for webkit -->
+                    <style>
+        .flex::-webkit-scrollbar { display: none; }
+    </style>
+                </div>
+
+                <p>
+                    Day 13 was by far the most eventful and
+                    learning-intensive day of the week. It started
+                    with a complaint that there was no internet
+                    connection at the Staff House. The first thing
+                    we did was check the server connection that
+                    feeds the Staff House. We noticed that the
+                    indicator light on the <strong
+                        class="text-heading font-medium">media
+                        converter</strong> — a networking device
+                    that converts signals between different media
+                    types, in this case converting fiber optic
+                    signals into Ethernet (RJ-45/LAN) signals so
+                    that devices using standard copper Ethernet
+                    cables can connect to a fiber optic network —
+                    was showing only one light, indicating that the
+                    fiber-to-Ethernet conversion was not happening
+                    and there was indeed no active internet
+                    connection being passed through.
+                </p>
+
+                <p>
+                    We initially tried unplugging the LAN cable from
+                    the server and transferring it to a different
+                    port on the switch, but nothing changed. So we
+                    proceeded to the Staff House to inspect the
+                    media converter on that end. We found the same
+                    single-light indicator there as well. We tried
+                    unplugging both the power supply and the LAN
+                    cable from the Staff House media converter, but
+                    the issue persisted. Given that the problem
+                    appeared on both ends, we concluded that the
+                    issue was not with the Staff House connection
+                    itself but rather with the media converter at
+                    the server side — it seemed like the device was
+                    failing to convert the incoming fiber optic
+                    signal to an Ethernet signal. We returned to the
+                    Admin Office and tried unplugging the media
+                    converter from the server and plugging it back
+                    in, but still nothing changed. As a final step,
+                    we decided to replace the power cord of the
+                    media converter, suspecting that it might not be
+                    receiving sufficient or stable power. Sure
+                    enough, right after swapping the power cord, the
+                    indicator light showing an active internet
+                    connection came on. The light on the switch port
+                    connected to the Staff House LAN also turned on,
+                    confirming that the connection was restored. We
+                    went back to the Staff House to verify, and
+                    after connecting a phone to the Wi-Fi, the
+                    internet was confirmed to be working again.
+                </p>
+
+                <p>
+                    As soon as we returned to the main office,
+                    another complaint came in — this time from Ma'am
+                    Lindy, who reported that printing was taking an
+                    unusually long time. She suspected that the
+                    internet was slow since her printer was
+                    connected over the network. The troubleshooting
+                    for this issue was handled by our mentor, Sir
+                    Jhong, as we were still not familiar with
+                    diagnosing network printing performance issues.
+                    Sir Jhong ran a <code
+                        class="bg-surface px-1.5 py-0.5 rounded text-[0.85em] text-heading border border-border font-mono">ping
+                        google.com</code>
+                    command, and the response times were
+                    consistently in the 8ms–10ms range, which
+                    indicated that the local internet connection was
+                    perfectly healthy. He then pinged the IP address
+                    of the remote desktop that Ma'am Lindy was
+                    using, and the response times jumped to the
+                    86ms–89ms range. This clearly showed that the
+                    bottleneck was not the local network but the
+                    connection to the remote desktop — the high
+                    latency meant that data was taking significantly
+                    longer to travel between the remote desktop and
+                    the local printer. Since the remote desktop was
+                    hosted at the head office, the only course of
+                    action was to follow up with the head office IT
+                    team to investigate the connection on their end.
+                </p>
+
+                <!-- Inline image 2 -->
+                <div
+                    class="my-10 border border-border rounded-xl overflow-hidden bg-surface p-1.5 group relative">
+                    <div
+                        class="flex overflow-x-auto snap-x snap-mandatory gap-2 scroll-smooth pb-2"
+                        style="scrollbar-width: none; -ms-overflow-style: none;">
+                        <div class="snap-center shrink-0 w-full">
+                            <img
+                                src="https://images.unsplash.com/photo-1612178991541-b48cc8e92a4d?w=900&q=80"
+                                alt="Network troubleshooting and data recovery"
+                                class="w-full h-auto rounded-lg rounded-b-sm grayscale-[60%] opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 object-cover max-h-64">
+                        </div>
+                        <div class="snap-center shrink-0 w-full">
+                            <img
+                                src="https://images.unsplash.com/photo-1612178991541-b48cc8e92a4d?w=901&q=80"
+                                alt="Network troubleshooting and data recovery 2"
+                                class="w-full h-auto rounded-lg rounded-b-sm grayscale-[60%] opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 object-cover max-h-64">
+                        </div>
+                        <div class="snap-center shrink-0 w-full">
+                            <img
+                                src="https://images.unsplash.com/photo-1612178991541-b48cc8e92a4d?w=902&q=80"
+                                alt="Network troubleshooting and data recovery 3"
+                                class="w-full h-auto rounded-lg rounded-b-sm grayscale-[60%] opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 object-cover max-h-64">
+                        </div>
+                    </div>
+                    <figcaption
+                        class="text-[0.75rem] text-center pt-3 pb-1.5 text-gray-500 tracking-wide uppercase">A
+                        day
+                        filled with network diagnostics, file
+                        recovery, and hands-on troubleshooting.</figcaption>
+                    <!-- CSS to hide scrollbar for webkit -->
+                    <style>
+        .flex::-webkit-scrollbar { display: none; }
+    </style>
+                </div>
+
+                <p>
+                    Later that day, we were asked to restore some
+                    files for one of the employees in the Purchasing
+                    Department. We booted the system unit and
+                    successfully entered the BIOS setup, but we
+                    encountered difficulty getting the boot options
+                    to appear so we could boot from the USB flash
+                    drive. We tried analyzing the situation first
+                    and plugged the flash drive into different USB
+                    ports on the system unit. When that didn't work,
+                    we checked whether the flash drive itself was
+                    corrupted by plugging it into our laptop. Upon
+                    inspection, we discovered that the flash drive
+                    did not contain the recovery files we needed to
+                    perform the restoration — the expected folders
+                    and files were simply missing. We then copied
+                    the necessary recovery files onto the flash
+                    drive and attempted the task again, but it still
+                    didn't boot properly.
+                </p>
+
+                <p>
+                    At that point, we decided to inform our mentor,
+                    Sir Jhong, about the problem. We showed him the
+                    contents of the flash drive, and he quickly
+                    identified the issue — the folders and files
+                    that we needed were actually present on the
+                    drive but were hidden. He showed us how to
+                    unhide the files by adjusting the folder options
+                    to display hidden files and folders. With the
+                    correct files now visible and accessible, we
+                    proceeded with the restoration. After
+                    approximately two hours of running the recovery
+                    process, we were able to successfully retrieve
+                    the files. However, Sir Joseph, the employee
+                    from the Purchasing team, informed us that he
+                    could not locate specific files he was looking
+                    for among the recovered data. He asked us to
+                    perform the restoration once more, but this time
+                    to specifically recover only files from the
+                    years 2023–2024, filtered by file type —
+                    specifically pictures and documents. We were
+                    also tasked with scanning physical documents to
+                    a PC. What amazed me was that the scanning could
+                    be done wirelessly — all we had to do was select
+                    the name of the destination desktop from the
+                    scanner's interface, and the scanned documents
+                    were sent directly to that computer over the
+                    network without needing any physical USB or
+                    cable connection. It was a small but impressive
+                    demonstration of how modern office equipment
+                    leverages network connectivity to streamline
+                    everyday tasks.
+                </p>
+
+                <p>
+                    On Day 14, we configured a TP-Link router for
+                    the Engineering Office. The task involved
+                    accessing the router's admin panel through a web
+                    browser, where we changed both the Wi-Fi network
+                    name (SSID) and the password. We renamed the
+                    network from its default name to "PM3-Temp"
+                    because the router was serving as a temporary
+                    replacement in the Engineering Office. Changing
+                    the SSID to a recognizable name helps employees
+                    easily identify and connect to the correct
+                    network, especially in an office environment
+                    where multiple Wi-Fi networks may be visible. We
+                    also created another LAN (Local Area Network)
+                    cable, this time for the Warehouse Office. One
+                    of the system units there had previously
+                    undergone a motherboard replacement (this repair
+                    was performed before we started our OJT) due to
+                    damaged ports on the original board. Since the
+                    new motherboard was already installed, our task
+                    was to run and connect the new LAN cable to
+                    re-establish the network connection. We crimped
+                    the cable using the T-568B standard, tested it
+                    for continuity, and successfully connected the
+                    system unit back to the office network. The
+                    cabling was completed without any issues.
+                </p>
+
+                <p>
+                    The last day of the week, Day 15, involved an
+                    Acer TravelMate 5760 (XSS38) laptop brought in
+                    by one of the employees who had forgotten their
+                    Windows login password. The laptop was going to
+                    be repurposed as a backup device — the plan was
+                    to back up the data on its existing HDD and
+                    eventually replace it with an SSD for better
+                    performance. However, before any of that could
+                    happen, we first needed to bypass the forgotten
+                    password to gain access to the system. Instead
+                    of going through the lengthy manual process of
+                    bypassing the Windows password (such as using
+                    command prompt through recovery mode or editing
+                    the SAM registry hive), we used Hiren's
+                    Boot CD PE — a pre-installation
+                    environment bootable tool that contains a suite
+                    of utilities for system recovery, diagnostics,
+                    and password management. Using the password
+                    reset utility included in Hiren's Boot CD PE, we
+                    were able to reset the Windows login password
+                    quickly and gain access to the laptop without
+                    any data loss. Once we had successfully bypassed
+                    the password and confirmed access to the
+                    desktop, we proceeded to update the installed
+                    version of Microsoft Office from the outdated
+                    MS Office 2010 to MS
+                    Office 365, ensuring the employee
+                    would have access to the latest productivity
+                    features, cloud integration, and security
+                    updates.
+                </p>
+            </article>
+
+            <div
+                class="flex items-center justify-center gap-2 my-14 fade-in delay-2"><div
+                    class="h-px w-12 bg-border"></div><div
+                    class="w-1 h-1 rounded-full bg-border"></div><div
+                    class="h-px w-12 bg-border"></div></div>
+
+            <section class="fade-in delay-2">
+                <h2
+                    class="text-lg font-medium text-heading mb-6 tracking-tight">Insights</h2>
+                <div class="flex flex-col gap-4 text-[0.95rem]">
+                    <div
+                        class="p-5 rounded-2xl bg-surface border border-border hover:border-gray-600 transition-colors">
+                        <div class="flex items-center gap-3 mb-3"><div
+                                class="w-7 h-7 rounded-full bg-blue-500/10 flex items-center justify-center text-primary"><svg
+                                    class="w-3.5 h-3.5" fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"><path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2"
+                                        d="M13 10V3L4 14h7v7l9-11h-7z" /></svg></div><h3
+                                class="font-medium text-heading">What I
+                                Learned</h3></div>
+                        <p class="text-text leading-relaxed">This week was
+                            incredibly rich in
+                            learning. I gained hands-on
+                            experience with network
+                            troubleshooting — specifically
+                            understanding how media converters
+                            work and how something as simple as
+                            a faulty power cord can bring down
+                            an entire building's internet
+                            connection. I also learned the
+                            difference between local network
+                            latency and remote desktop latency
+                            through the ping diagnostics Sir
+                            Jhong demonstrated. The file
+                            recovery task taught me the
+                            importance of checking for hidden
+                            files before assuming data is
+                            missing, and the password bypass
+                            using Hiren's Boot CD PE showed me
+                            how powerful bootable recovery tools
+                            can be in an IT environment.</p>
+                    </div>
+                    <div
+                        class="p-5 rounded-2xl bg-surface border border-border hover:border-gray-600 transition-colors">
+                        <div class="flex items-center gap-3 mb-3"><div
+                                class="w-7 h-7 rounded-full bg-orange-500/10 flex items-center justify-center text-orange-400"><svg
+                                    class="w-3.5 h-3.5" fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"><path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2"
+                                        d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg></div><h3
+                                class="font-medium text-heading">Challenges
+                                Encountered</h3></div>
+                        <p class="text-text leading-relaxed">The biggest
+                            challenge this week was
+                            the Staff House internet outage. It
+                            required us to systematically go
+                            back and forth between locations,
+                            testing each component in the chain
+                            — from the server room to the Staff
+                            House and back — before we could
+                            isolate the faulty power cord as the
+                            root cause. The file recovery task
+                            was also challenging because the
+                            hidden files on the flash drive
+                            initially made us think the
+                            necessary files were missing
+                            entirely. It was a reminder to
+                            always check file visibility
+                            settings before jumping to
+                            conclusions.</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="h-px w-full bg-border my-12 fade-in delay-3"></div>
+
+            <section class="fade-in delay-3">
+                <h2
+                    class="text-lg font-medium text-heading mb-4 tracking-tight">Skills
+                    Gained</h2>
+                <div class="flex flex-wrap gap-2.5">
+                    <span
+                        class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">Network
+                        Troubleshooting</span>
+                    <span
+                        class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">UTP
+                        Cable Crimping</span>
+                    <span
+                        class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">Printer
+                        Troubleshooting</span>
+                    <span
+                        class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">Data
+                        Recovery</span>
+                    <span
+                        class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">Router
+                        Configuration</span>
+                    <span
+                        class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">Password
+                        Bypass</span>
+                    <span
+                        class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">Media
+                        Converter Diagnostics</span>
+                    <span
+                        class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">IT
+                        Documentation</span>
+                </div>
+            </section>
+
+            <nav
+                class="mt-24 pt-8 border-t border-border flex justify-between items-center text-sm font-medium text-text fade-in delay-3">
+                <a href="week2.html"
+                    class="flex items-center gap-2 hover:text-heading transition-colors group">
+                    <svg
+                        class="w-4 h-4 group-hover:-translate-x-1.5 transition-transform duration-300"
+                        fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor"><path stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="1.5"
+                            d="M15 19l-7-7 7-7" /></svg>
+                    Week 2
+                </a>
+                <a href="week4.html"
+                    class="flex items-center gap-2 hover:text-heading transition-colors group">
+                    Week 4
+                    <svg
+                        class="w-4 h-4 group-hover:translate-x-1.5 transition-transform duration-300"
+                        fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor"><path stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="1.5"
+                            d="M9 5l7 7-7 7" /></svg>
+                </a>
+            </nav>
+        </main>
+
+        <!-- Auto-scroll Carousel Script -->
+        <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const carousels = document.querySelectorAll('.overflow-x-auto.snap-x');
+            carousels.forEach(carousel => {
+                let scrollInterval;
+                
+                const startScroll = () => {
+                    scrollInterval = setInterval(() => {
+                        // If reached the end, scroll back to the start
+                        if (carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - 10) {
+                            carousel.scrollTo({ left: 0, behavior: 'smooth' });
+                        } else {
+                            // Otherwise, scroll by the width of one image container
+                            carousel.scrollBy({ left: carousel.clientWidth, behavior: 'smooth' });
+                        }
+                    }, 3000); // 3 seconds interval
+                };
+                
+                startScroll();
+                
+                // Pause on hover
+                carousel.addEventListener('mouseenter', () => clearInterval(scrollInterval));
+                carousel.addEventListener('mouseleave', startScroll);
+            });
+        });
+    </script>
+    </body>
 </html>

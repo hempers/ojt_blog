@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" class="dark scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Week 5 – OJT Journal</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <style type="text/tailwindcss">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Week 5 – OJT Journal</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet">
+        <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+        <style type="text/tailwindcss">
       @theme {
         --font-sans: 'Inter', sans-serif;
         --color-bg: #09090b; --color-surface: #18181b; --color-border: #27272a; 
@@ -21,201 +23,375 @@
       @keyframes fadeIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
       .delay-1 { animation-delay: 0.1s; } .delay-2 { animation-delay: 0.2s; } .delay-3 { animation-delay: 0.3s; }
     </style>
-</head>
-<body class="pb-24 selection:bg-primary/30 selection:text-white">
-    
-    <nav class="glass-nav fixed top-0 w-full z-50 transition-all">
-        <div class="max-w-3xl mx-auto px-6 h-16 flex items-center justify-between">
-            <a href="index.html" class="flex items-center gap-2.5 group">
-                <span class="w-2 h-2 rounded-full bg-primary group-hover:scale-[1.6] transition-transform duration-300"></span>
-                <span class="text-heading font-medium tracking-tight text-sm">OJT Journal</span>
-            </a>
-            <div class="flex gap-6 text-sm font-medium text-text">
-                <a href="index.html" class="hover:text-heading transition-colors">Home</a>
-                <a href="index.html#journal" class="hover:text-heading transition-colors">Journal</a>
-                <a href="index.html#about" class="hover:text-heading transition-colors">About</a>
-            </div>
-        </div>
-    </nav>
-    
-    <main class="max-w-2xl mx-auto px-6 pt-32 md:pt-40">
-        <header class="mb-14 fade-in">
-            <div class="flex items-center gap-3 text-xs font-semibold tracking-wider uppercase mb-5 text-primary">
-                <span>Week 5</span><span class="w-1 h-1 rounded-full bg-border"></span><span class="text-text">March 16 – March 21, 2026</span>
-            </div>
-            <h1 class="text-3xl md:text-[2.5rem] font-semibold text-heading tracking-tight leading-[1.15] mb-8">Week 5 – RMS Development & Network Troubleshooting</h1>
-            <div class="flex flex-wrap gap-5 text-sm text-text border-y border-border py-4">
-                <div class="flex items-center gap-2"><svg class="w-4 h-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg> ALINDECO</div>
-                <div class="flex items-center gap-2"><svg class="w-4 h-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg> 36 Hours Logged</div>
-            </div>
-        </header>
-        
-        <article class="prose text-[0.95rem] md:text-base text-text fade-in delay-1">
-            <h2 class="text-lg font-medium text-heading mb-4 tracking-tight">Narrative</h2>
-            <p>
-                                Week 5 began on March 16 with the start of
-                                development for the system we discussed two
-                                weeks ago. Although this system is considered a
-                                challenge project and not a required output for
-                                us, it is intended to be useful for the company
-                                itself. The day was focused oadn understanding
-                                the expected scope and preparing the initial
-                                direction for implementation.
-                            </p>
+    </head>
+    <body class="pb-24 selection:bg-primary/30 selection:text-white">
 
-                            <p>
-                                On March 17, I started the day by updating my
-                                journal. After that, we were asked to go to the
-                                production office for cable management. We first
-                                identified and prepared all the required tools
-                                and materials, including a crimping tool, UTP
-                                Cat5e cable, RJ45 connectors, a TP-Link 5-port
-                                Gigabit Desktop Switch (TL-SG1005D), and screws
-                                for mounting the switch on the wall.
-                            </p>
-
-                            <p>
-                                The main issue we encountered that day was that
-                                the internet link on one desktop was only
-                                reaching 100 Mbps instead of 1000 Mbps. After
-                                troubleshooting, we found that the problem was
-                                the cable. We created a new temporary LAN cable
-                                connection between the router and the new
-                                switch, installed the switch first, connected
-                                all needed LAN lines, and tested the output.
-                                Sir Jhong also redid the RJ45 connection from
-                                the switch to the desktop, but there was still
-                                no change. He then redid the crimping on the
-                                other cable end at the main switch in the
-                                engineering office. After reconnecting the
-                                desktop directly to the new switch, the gigabit
-                                speed was restored and the issue was resolved.
-                                Later that afternoon, I continued working on
-                                the Request Management System (RMS).
-                            </p>
-
-                            <figure class="my-10 border border-border rounded-xl overflow-hidden bg-surface p-1.5 group"><img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=900&q=80" alt="Cable management and network switch installation" class="w-full h-auto rounded-lg rounded-b-sm grayscale-[60%] opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 object-cover max-h-64"><figcaption class="text-[0.75rem] text-center pt-3 pb-1.5 text-gray-500 tracking-wide uppercase">Production
-                                    office support: cable management,
-                                    troubleshooting, and switch installation.</figcaption></figure>
-
-                            <p>
-                                March 18 started with fixing an error while
-                                running the RMS project. After that, we reviewed
-                                the list of computers subscribed to ESET and
-                                cross-checked it against the BICOL MasterList
-                                WorkStation provided by our mentor.
-                            </p>
-
-                            <p>
-                                ESET is endpoint security
-                                software (antivirus and threat protection) used
-                                to monitor and protect computers from malware and
-                                other security risks. Through cross-checking, we
-                                identified which desktops still need Windows 11
-                                upgrades, storage upgrades, renaming, domain
-                                joining, and ESET registration updates.
-                            </p>
-
-                            <p>
-                                On March 19, I continued working on the
-                                inventory system and printed a sample QR format
-                                to present to the admin head. Later, we created
-                                another LAN cable for CCTV connection in
-                                production management. We were also asked to
-                                troubleshoot a desktop in the production
-                                department because the user reported that it had
-                                not turned on for one day.
-                            </p>
-
-                            <p>
-                                During diagnostics, our mentor tested the power
-                                supply by jumpering pins, then we opened the
-                                system unit and checked the RAM. After cleaning
-                                and reseating, the desktop booted with one RAM
-                                module installed. When we added the second RAM,
-                                the system showed error code
-                                <code class="bg-surface px-1.5 py-0.5 rounded text-[0.85em] text-heading border border-border font-mono">0xc0000221</code> (blue screen). Removing
-                                the secondary RAM restored normal boot, so we
-                                concluded that the second RAM stick was faulty
-                                and left it removed.
-                            </p>
-
-                            <figure class="my-10 border border-border rounded-xl overflow-hidden bg-surface p-1.5 group"><img src="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=900&q=80" alt="Desktop troubleshooting and hardware checking" class="w-full h-auto rounded-lg rounded-b-sm grayscale-[60%] opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 object-cover max-h-64"><figcaption class="text-[0.75rem] text-center pt-3 pb-1.5 text-gray-500 tracking-wide uppercase">Hands-on
-                                    hardware troubleshooting helped isolate the
-                                    faulty RAM module.</figcaption></figure>
-
-                            <p>
-                                The final workday of the week, March 20, was
-                                focused on further clarification of the system
-                                planned for the purchasing department. I explored
-                                existing systems related to our project and
-                                helped clarify the expected workflow to align the
-                                planned solution with the department's actual
-                                process.
-                            </p>
-        </article>
-        
-        <div class="flex items-center justify-center gap-2 my-14 fade-in delay-2"><div class="h-px w-12 bg-border"></div><div class="w-1 h-1 rounded-full bg-border"></div><div class="h-px w-12 bg-border"></div></div>
-        
-        <section class="fade-in delay-2">
-            <h2 class="text-lg font-medium text-heading mb-6 tracking-tight">Insights</h2>
-            <div class="flex flex-col gap-4 text-[0.95rem]">
-                <div class="p-5 rounded-2xl bg-surface border border-border hover:border-gray-600 transition-colors">
-                    <div class="flex items-center gap-3 mb-3"><div class="w-7 h-7 rounded-full bg-blue-500/10 flex items-center justify-center text-primary"><svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg></div><h3 class="font-medium text-heading">What I Learned</h3></div>
-                    <p class="text-text leading-relaxed">This week strengthened both my
-                                            systems and infrastructure skills. I
-                                            learned how to progress from planning
-                                            to actual implementation in RMS, how
-                                            to systematically isolate network
-                                            speed issues, and how cabling quality
-                                            can directly affect link speed. I
-                                            also gained a clearer understanding
-                                            of endpoint security tracking through
-                                            ESET and asset cross-checking.</p>
-                </div>
-                <div class="p-5 rounded-2xl bg-surface border border-border hover:border-gray-600 transition-colors">
-                    <div class="flex items-center gap-3 mb-3"><div class="w-7 h-7 rounded-full bg-orange-500/10 flex items-center justify-center text-orange-400"><svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg></div><h3 class="font-medium text-heading">Challenges Encountered</h3></div>
-                    <p class="text-text leading-relaxed">The main challenge was troubleshooting
-                                            why a desktop stayed at 100 Mbps
-                                            instead of 1000 Mbps. Even after
-                                            replacing one cable end, the issue
-                                            remained until the other end was
-                                            re-crimped from the main switch side.
-                                            Another challenge was handling a
-                                            non-booting desktop where we had to
-                                            test components one by one and verify
-                                            that the secondary RAM was the source
-                                            of the blue screen.</p>
+        <nav class="glass-nav fixed top-0 w-full z-50 transition-all">
+            <div
+                class="max-w-3xl mx-auto px-6 h-16 flex items-center justify-between">
+                <a href="index.html" class="flex items-center gap-2.5 group">
+                    <span
+                        class="w-2 h-2 rounded-full bg-primary group-hover:scale-[1.6] transition-transform duration-300"></span>
+                    <span
+                        class="text-heading font-medium tracking-tight text-sm">OJT
+                        Journal</span>
+                </a>
+                <div class="flex gap-6 text-sm font-medium text-text">
+                    <a href="index.html"
+                        class="hover:text-heading transition-colors">Home</a>
+                    <a href="index.html#journal"
+                        class="hover:text-heading transition-colors">Journal</a>
+                    <a href="index.html#about"
+                        class="hover:text-heading transition-colors">About</a>
                 </div>
             </div>
-        </section>
-        
-        <div class="h-px w-full bg-border my-12 fade-in delay-3"></div>
-        
-        <section class="fade-in delay-3">
-            <h2 class="text-lg font-medium text-heading mb-4 tracking-tight">Skills Gained</h2>
-            <div class="flex flex-wrap gap-2.5">
-                <span class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">System Requirement Clarification</span>
-                <span class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">RMS Development</span>
-                <span class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">UTP Cable Crimping</span>
-                <span class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">Gigabit Link Troubleshooting</span>
-                <span class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">Switch Installation</span>
-                <span class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">ESET Endpoint Monitoring</span>
-                <span class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">Desktop Hardware Diagnostics</span>
-                <span class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">Inventory QR Preparation</span>
-            </div>
-        </section>
-        
-        <nav class="mt-24 pt-8 border-t border-border flex justify-between items-center text-sm font-medium text-text fade-in delay-3">
-            <a href="week4.html" class="flex items-center gap-2 hover:text-heading transition-colors group">
-                <svg class="w-4 h-4 group-hover:-translate-x-1.5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 19l-7-7 7-7" /></svg>
-                Week 4
-            </a>
-            <a href="week6.html" class="flex items-center gap-2 hover:text-heading transition-colors group">
-                Week 6
-                <svg class="w-4 h-4 group-hover:translate-x-1.5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5l7 7-7 7" /></svg>
-            </a>
         </nav>
-    </main>
-</body>
+
+        <main class="max-w-2xl mx-auto px-6 pt-32 md:pt-40">
+            <header class="mb-14 fade-in">
+                <div
+                    class="flex items-center gap-3 text-xs font-semibold tracking-wider uppercase mb-5 text-primary">
+                    <span>Week 5</span><span
+                        class="w-1 h-1 rounded-full bg-border"></span><span
+                        class="text-text">March 16 – March 21, 2026</span>
+                </div>
+                <h1
+                    class="text-3xl md:text-[2.5rem] font-semibold text-heading tracking-tight leading-[1.15] mb-8">Week
+                    5 – RMS Development & Network Troubleshooting</h1>
+                <div
+                    class="flex flex-wrap gap-5 text-sm text-text border-y border-border py-4">
+                    <div class="flex items-center gap-2"><svg
+                            class="w-4 h-4 text-gray-500" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor"><path
+                                stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="1.5"
+                                d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
+                        ALINDECO</div>
+                    <div class="flex items-center gap-2"><svg
+                            class="w-4 h-4 text-gray-500" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor"><path
+                                stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="1.5"
+                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        36 Hours Logged</div>
+                </div>
+            </header>
+
+            <article
+                class="prose text-[0.95rem] md:text-base text-text fade-in delay-1">
+                <h2
+                    class="text-lg font-medium text-heading mb-4 tracking-tight">Narrative</h2>
+                <p>
+                    Week 5 began on March 16 with the start of
+                    development for the system we discussed two
+                    weeks ago. Although this system is considered a
+                    challenge project and not a required output for
+                    us, it is intended to be useful for the company
+                    itself. The day was focused oadn understanding
+                    the expected scope and preparing the initial
+                    direction for implementation.
+                </p>
+
+                <p>
+                    On March 17, I started the day by updating my
+                    journal. After that, we were asked to go to the
+                    production office for cable management. We first
+                    identified and prepared all the required tools
+                    and materials, including a crimping tool, UTP
+                    Cat5e cable, RJ45 connectors, a TP-Link 5-port
+                    Gigabit Desktop Switch (TL-SG1005D), and screws
+                    for mounting the switch on the wall.
+                </p>
+
+                <p>
+                    The main issue we encountered that day was that
+                    the internet link on one desktop was only
+                    reaching 100 Mbps instead of 1000 Mbps. After
+                    troubleshooting, we found that the problem was
+                    the cable. We created a new temporary LAN cable
+                    connection between the router and the new
+                    switch, installed the switch first, connected
+                    all needed LAN lines, and tested the output.
+                    Sir Jhong also redid the RJ45 connection from
+                    the switch to the desktop, but there was still
+                    no change. He then redid the crimping on the
+                    other cable end at the main switch in the
+                    engineering office. After reconnecting the
+                    desktop directly to the new switch, the gigabit
+                    speed was restored and the issue was resolved.
+                    Later that afternoon, I continued working on
+                    the Request Management System (RMS).
+                </p>
+
+                <div
+                    class="my-10 border border-border rounded-xl overflow-hidden bg-surface p-1.5 group relative">
+                    <div
+                        class="flex overflow-x-auto snap-x snap-mandatory gap-2 scroll-smooth pb-2"
+                        style="scrollbar-width: none; -ms-overflow-style: none;">
+                        <div class="snap-center shrink-0 w-full">
+                            <img
+                                src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=900&q=80"
+                                alt="Cable management and network switch installation"
+                                class="w-full h-auto rounded-lg rounded-b-sm grayscale-[60%] opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 object-cover max-h-64">
+                        </div>
+                        <div class="snap-center shrink-0 w-full">
+                            <img
+                                src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=901&q=80"
+                                alt="Cable management and network switch installation 2"
+                                class="w-full h-auto rounded-lg rounded-b-sm grayscale-[60%] opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 object-cover max-h-64">
+                        </div>
+                        <div class="snap-center shrink-0 w-full">
+                            <img
+                                src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=902&q=80"
+                                alt="Cable management and network switch installation 3"
+                                class="w-full h-auto rounded-lg rounded-b-sm grayscale-[60%] opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 object-cover max-h-64">
+                        </div>
+                    </div>
+                    <figcaption
+                        class="text-[0.75rem] text-center pt-3 pb-1.5 text-gray-500 tracking-wide uppercase">Production
+                        office support: cable management,
+                        troubleshooting, and switch installation.</figcaption>
+                    <!-- CSS to hide scrollbar for webkit -->
+                    <style>
+        .flex::-webkit-scrollbar { display: none; }
+    </style>
+                </div>
+
+                <p>
+                    March 18 started by we reviewing
+                    the list of computers subscribed to ESET and
+                    cross-checked it against the BICOL MasterList
+                    WorkStation provided by our mentor.
+                </p>
+
+                <p>
+                    ESET is endpoint security
+                    software (antivirus and threat protection) used
+                    to monitor and protect computers from malware and
+                    other security risks. Through cross-checking, we
+                    identified which desktops still need Windows 11
+                    upgrades, storage upgrades, renaming, domain
+                    joining, and ESET registration updates.
+                </p>
+
+                <p>
+                    On March 19, I continued working on the
+                    inventory system and printed a sample QR format
+                    to present to the admin head. Later, we created
+                    another LAN cable for CCTV connection in
+                    production management. We were also asked to
+                    troubleshoot a desktop in the production
+                    department because the user reported that it had
+                    not turned on for one day.
+                </p>
+
+                <p>
+                    During diagnostics, our mentor tested the power
+                    supply by jumpering pins, then we opened the
+                    system unit and checked the RAM. After cleaning
+                    and reseating, the desktop booted with one RAM
+                    module installed. When we added the second RAM,
+                    the system showed error code
+                    <code
+                        class="bg-surface px-1.5 py-0.5 rounded text-[0.85em] text-heading border border-border font-mono">0xc0000221</code>
+                    (blue screen). Removing
+                    the secondary RAM restored normal boot, so we
+                    concluded that the second RAM stick was faulty
+                    and left it removed.
+                </p>
+
+                <div
+                    class="my-10 border border-border rounded-xl overflow-hidden bg-surface p-1.5 group relative">
+                    <div
+                        class="flex overflow-x-auto snap-x snap-mandatory gap-2 scroll-smooth pb-2"
+                        style="scrollbar-width: none; -ms-overflow-style: none;">
+                        <div class="snap-center shrink-0 w-full">
+                            <img
+                                src="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=900&q=80"
+                                alt="Desktop troubleshooting and hardware checking"
+                                class="w-full h-auto rounded-lg rounded-b-sm grayscale-[60%] opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 object-cover max-h-64">
+                        </div>
+                        <div class="snap-center shrink-0 w-full">
+                            <img
+                                src="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=901&q=80"
+                                alt="Desktop troubleshooting and hardware checking 2"
+                                class="w-full h-auto rounded-lg rounded-b-sm grayscale-[60%] opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 object-cover max-h-64">
+                        </div>
+                        <div class="snap-center shrink-0 w-full">
+                            <img
+                                src="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=902&q=80"
+                                alt="Desktop troubleshooting and hardware checking 3"
+                                class="w-full h-auto rounded-lg rounded-b-sm grayscale-[60%] opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 object-cover max-h-64">
+                        </div>
+                    </div>
+                    <figcaption
+                        class="text-[0.75rem] text-center pt-3 pb-1.5 text-gray-500 tracking-wide uppercase">Hands-on
+                        hardware troubleshooting helped isolate the
+                        faulty RAM module.</figcaption>
+                    <!-- CSS to hide scrollbar for webkit -->
+                    <style>
+        .flex::-webkit-scrollbar { display: none; }
+    </style>
+                </div>
+
+                <p>
+                    The final workday of the week, March 20, was
+                    focused on further clarification of the system
+                    planned for the purchasing department. I explored
+                    existing systems related to our project and
+                    helped clarify the expected workflow to align the
+                    planned solution with the department's actual
+                    process.
+                </p>
+            </article>
+
+            <div
+                class="flex items-center justify-center gap-2 my-14 fade-in delay-2"><div
+                    class="h-px w-12 bg-border"></div><div
+                    class="w-1 h-1 rounded-full bg-border"></div><div
+                    class="h-px w-12 bg-border"></div></div>
+
+            <section class="fade-in delay-2">
+                <h2
+                    class="text-lg font-medium text-heading mb-6 tracking-tight">Insights</h2>
+                <div class="flex flex-col gap-4 text-[0.95rem]">
+                    <div
+                        class="p-5 rounded-2xl bg-surface border border-border hover:border-gray-600 transition-colors">
+                        <div class="flex items-center gap-3 mb-3"><div
+                                class="w-7 h-7 rounded-full bg-blue-500/10 flex items-center justify-center text-primary"><svg
+                                    class="w-3.5 h-3.5" fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"><path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2"
+                                        d="M13 10V3L4 14h7v7l9-11h-7z" /></svg></div><h3
+                                class="font-medium text-heading">What I
+                                Learned</h3></div>
+                        <p class="text-text leading-relaxed">This week
+                            strengthened both my
+                            systems and infrastructure skills. I
+                            learned how to progress from planning
+                            to actual implementation in RMS, how
+                            to systematically isolate network
+                            speed issues, and how cabling quality
+                            can directly affect link speed. I
+                            also gained a clearer understanding
+                            of endpoint security tracking through
+                            ESET and asset cross-checking.</p>
+                    </div>
+                    <div
+                        class="p-5 rounded-2xl bg-surface border border-border hover:border-gray-600 transition-colors">
+                        <div class="flex items-center gap-3 mb-3"><div
+                                class="w-7 h-7 rounded-full bg-orange-500/10 flex items-center justify-center text-orange-400"><svg
+                                    class="w-3.5 h-3.5" fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"><path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2"
+                                        d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg></div><h3
+                                class="font-medium text-heading">Challenges
+                                Encountered</h3></div>
+                        <p class="text-text leading-relaxed">The main challenge
+                            was troubleshooting
+                            why a desktop stayed at 100 Mbps
+                            instead of 1000 Mbps. Even after
+                            replacing one cable end, the issue
+                            remained until the other end was
+                            re-crimped from the main switch side.
+                            Another challenge was handling a
+                            non-booting desktop where we had to
+                            test components one by one and verify
+                            that the secondary RAM was the source
+                            of the blue screen.</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="h-px w-full bg-border my-12 fade-in delay-3"></div>
+
+            <section class="fade-in delay-3">
+                <h2
+                    class="text-lg font-medium text-heading mb-4 tracking-tight">Skills
+                    Gained</h2>
+                <div class="flex flex-wrap gap-2.5">
+                    <span
+                        class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">System
+                        Requirement Clarification</span>
+                    <span
+                        class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">RMS
+                        Development</span>
+                    <span
+                        class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">UTP
+                        Cable Crimping</span>
+                    <span
+                        class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">Gigabit
+                        Link Troubleshooting</span>
+                    <span
+                        class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">Switch
+                        Installation</span>
+                    <span
+                        class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">ESET
+                        Endpoint Monitoring</span>
+                    <span
+                        class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">Desktop
+                        Hardware Diagnostics</span>
+                    <span
+                        class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">Inventory
+                        QR Preparation</span>
+                </div>
+            </section>
+
+            <nav
+                class="mt-24 pt-8 border-t border-border flex justify-between items-center text-sm font-medium text-text fade-in delay-3">
+                <a href="week4.html"
+                    class="flex items-center gap-2 hover:text-heading transition-colors group">
+                    <svg
+                        class="w-4 h-4 group-hover:-translate-x-1.5 transition-transform duration-300"
+                        fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor"><path stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="1.5"
+                            d="M15 19l-7-7 7-7" /></svg>
+                    Week 4
+                </a>
+                <a href="week6.html"
+                    class="flex items-center gap-2 hover:text-heading transition-colors group">
+                    Week 6
+                    <svg
+                        class="w-4 h-4 group-hover:translate-x-1.5 transition-transform duration-300"
+                        fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor"><path stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="1.5"
+                            d="M9 5l7 7-7 7" /></svg>
+                </a>
+            </nav>
+        </main>
+
+        <!-- Auto-scroll Carousel Script -->
+        <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const carousels = document.querySelectorAll('.overflow-x-auto.snap-x');
+            carousels.forEach(carousel => {
+                let scrollInterval;
+                
+                const startScroll = () => {
+                    scrollInterval = setInterval(() => {
+                        // If reached the end, scroll back to the start
+                        if (carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - 10) {
+                            carousel.scrollTo({ left: 0, behavior: 'smooth' });
+                        } else {
+                            // Otherwise, scroll by the width of one image container
+                            carousel.scrollBy({ left: carousel.clientWidth, behavior: 'smooth' });
+                        }
+                    }, 3000); // 3 seconds interval
+                };
+                
+                startScroll();
+                
+                // Pause on hover
+                carousel.addEventListener('mouseenter', () => clearInterval(scrollInterval));
+                carousel.addEventListener('mouseleave', startScroll);
+            });
+        });
+    </script>
+    </body>
 </html>
