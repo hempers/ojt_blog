@@ -1,110 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Week 2 – PC Setup & Printer Maintenance | OJT Journal</title>
-
-        <!-- Google Fonts – Poppins -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
-            rel="stylesheet">
-
-        <!-- Bootstrap 5 CSS -->
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-            rel="stylesheet">
-
-        <!-- Bootstrap Icons -->
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-            rel="stylesheet">
-
-        <!-- Custom CSS (shared + week page styles) -->
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-
-        <!-- ===== NAVBAR ===== -->
-        <nav class="navbar navbar-expand-lg bg-white sticky-top">
-            <div class="container">
-                <a class="navbar-brand" href="index.html">
-                    <span class="brand-dot"></span> OJT Journal
-                </a>
-
-                <button class="navbar-toggler" type="button"
-                    data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse justify-content-end"
-                    id="navbarNav">
-                    <ul class="navbar-nav gap-1">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link"
-                                href="index.html#journal">Journal</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link"
-                                href="index.html#about">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link"
-                                href="index.html#contact">Contact</a>
-                        </li>
-                    </ul>
-                </div>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 2 – OJT Journal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --font-sans: 'Inter', sans-serif;
+        --color-bg: #09090b; --color-surface: #18181b; --color-border: #27272a; 
+        --color-text: #a1a1aa; --color-heading: #f4f4f5; --color-primary: #3b82f6; 
+      }
+      body { font-family: var(--font-sans); background-color: var(--color-bg); color: var(--color-text); -webkit-font-smoothing: antialiased; }
+      .glass-nav { background-color: rgba(9, 9, 11, 0.7); backdrop-filter: blur(12px); border-bottom: 1px solid var(--color-border); }
+      .prose p { margin-bottom: 1.6em; line-height: 1.8; }
+      .fade-in { animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; opacity: 0; }
+      @keyframes fadeIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+      .delay-1 { animation-delay: 0.1s; } .delay-2 { animation-delay: 0.2s; } .delay-3 { animation-delay: 0.3s; }
+    </style>
+</head>
+<body class="pb-24 selection:bg-primary/30 selection:text-white">
+    
+    <nav class="glass-nav fixed top-0 w-full z-50 transition-all">
+        <div class="max-w-3xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2.5 group">
+                <span class="w-2 h-2 rounded-full bg-primary group-hover:scale-[1.6] transition-transform duration-300"></span>
+                <span class="text-heading font-medium tracking-tight text-sm">OJT Journal</span>
+            </a>
+            <div class="flex gap-6 text-sm font-medium text-text">
+                <a href="index.html" class="hover:text-heading transition-colors">Home</a>
+                <a href="index.html#journal" class="hover:text-heading transition-colors">Journal</a>
+                <a href="index.html#about" class="hover:text-heading transition-colors">About</a>
             </div>
-        </nav>
-
-        <!-- ===== WEEK BANNER / HEADER ===== -->
-        <header class="wk-banner">
-            <img
-                src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1400&q=85"
-                alt="PC Deployment & Hardware Maintenance"
-                class="wk-banner__img">
-            <div class="wk-banner__overlay"></div>
-            <div class="wk-banner__content container">
-                <span class="wk-banner__label">
-                    <i class="bi bi-journal-text me-1"></i>Weekly Journal
-                </span>
-                <h1 class="wk-banner__title">
-                    Week 2 – PC Setup &amp; Printer Maintenance
-                </h1>
-                <p class="wk-banner__date">
-                    <i class="bi bi-calendar3 me-1"></i>February 23 – February
-                    28, 2026
-                </p>
-                <div class="wk-banner__meta">
-                    <span><i class="bi bi-building me-1"></i>ALINDECO IT
-                        Department</span>
-                    <span><i class="bi bi-clock me-1"></i>44 Hours Logged</span>
-                    <span><i class="bi bi-tools me-1"></i>Hardware &amp;
-                        Systems</span>
-                </div>
+        </div>
+    </nav>
+    
+    <main class="max-w-2xl mx-auto px-6 pt-32 md:pt-40">
+        <header class="mb-14 fade-in">
+            <div class="flex items-center gap-3 text-xs font-semibold tracking-wider uppercase mb-5 text-primary">
+                <span>Week 2</span><span class="w-1 h-1 rounded-full bg-border"></span><span class="text-text"></span>
+            </div>
+            <h1 class="text-3xl md:text-[2.5rem] font-semibold text-heading tracking-tight leading-[1.15] mb-8">Week 2 – PC Setup &amp; Printer Maintenance</h1>
+            <div class="flex flex-wrap gap-5 text-sm text-text border-y border-border py-4">
+                <div class="flex items-center gap-2"><svg class="w-4 h-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg> ALINDECO</div>
+                <div class="flex items-center gap-2"><svg class="w-4 h-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg> 44 Hours Logged</div>
             </div>
         </header>
-
-        <!-- ===== MAIN CONTENT ===== -->
-        <main class="wk-main py-5">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8 col-xl-7">
-
-                        <!-- ===== NARRATIVE SECTION ===== -->
-                        <section class="wk-section" id="narrative">
-                            <span class="section-label">Weekly Narrative</span>
-                            <h2 class="section-title">What Happened This
-                                Week</h2>
-
-                            <p class="wk-body-text">
+        
+        <article class="prose text-[0.95rem] md:text-base text-text fade-in delay-1">
+            <h2 class="text-lg font-medium text-heading mb-4 tracking-tight">Narrative</h2>
+            <p>
                                 The second week of my internship began with a
                                 hands-on deployment task. On Day 4, we were
                                 assigned to set up a company computer using a
@@ -129,7 +77,7 @@
                                 employee's workflow continuity.
                             </p>
 
-                            <p class="wk-body-text">
+                            <p>
                                 On Day 5, we continued working on the same unit
                                 by adding SSD storage to the computer to improve
                                 its overall performance. We then updated the
@@ -144,19 +92,11 @@
                             </p>
 
                             <!-- Inline image 1 -->
-                            <figure class="wk-figure">
-                                <img
-                                    src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=900&q=80"
-                                    alt="PC setup and configuration in progress"
-                                    class="wk-figure__img">
-                                <figcaption class="wk-figure__caption">
-                                    <i class="bi bi-camera me-1"></i>Setting up
+                            <figure class="my-10 border border-border rounded-xl overflow-hidden bg-surface p-1.5 group"><img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=900&q=80" alt="PC setup and configuration in progress" class="w-full h-auto rounded-lg rounded-b-sm grayscale-[60%] opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 object-cover max-h-64"><figcaption class="text-[0.75rem] text-center pt-3 pb-1.5 text-gray-500 tracking-wide uppercase">Setting up
                                     and configuring the backup system unit for
-                                    deployment.
-                                </figcaption>
-                            </figure>
+                                    deployment.</figcaption></figure>
 
-                            <p class="wk-body-text">
+                            <p>
                                 Day 6 started with the deployment of the system
                                 unit that was configured the previous day, now
                                 equipped with the updated Windows installation
@@ -174,7 +114,7 @@
                                 computers.
                             </p>
 
-                            <p class="wk-body-text">
+                            <p>
                                 The second half of the week shifted toward
                                 printer maintenance. On Day 7, we replaced the
                                 toner cartridge of a Brother DCP-L2540DW series
@@ -186,7 +126,7 @@
                                 equipment running smoothly.
                             </p>
 
-                            <p class="wk-body-text">
+                            <p>
                                 On Day 8, we continued with printer maintenance
                                 by cleaning the ink waste pad of another Epson
                                 L120 unit. We then moved on to a more involved
@@ -200,19 +140,11 @@
                             </p>
 
                             <!-- Inline image 2 -->
-                            <figure class="wk-figure">
-                                <img
-                                    src="https://images.unsplash.com/photo-1612178991541-b48cc8e92a4d?w=900&q=80"
-                                    alt="Printer maintenance and troubleshooting"
-                                    class="wk-figure__img">
-                                <figcaption class="wk-figure__caption">
-                                    <i class="bi bi-camera me-1"></i>Printer
+                            <figure class="my-10 border border-border rounded-xl overflow-hidden bg-surface p-1.5 group"><img src="https://images.unsplash.com/photo-1612178991541-b48cc8e92a4d?w=900&q=80" alt="Printer maintenance and troubleshooting" class="w-full h-auto rounded-lg rounded-b-sm grayscale-[60%] opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 object-cover max-h-64"><figcaption class="text-[0.75rem] text-center pt-3 pb-1.5 text-gray-500 tracking-wide uppercase">Printer
                                     disassembly and cleaning during routine
-                                    maintenance.
-                                </figcaption>
-                            </figure>
+                                    maintenance.</figcaption></figure>
 
-                            <p class="wk-body-text">
+                            <p>
                                 The last day of the week, Day 9, was dedicated
                                 to troubleshooting the same HP Deskjet Ink
                                 Advantage 3635 which was now prompting an E4
@@ -232,27 +164,16 @@
                                 printer components interact and how one faulty
                                 part can cascade into multiple error symptoms.
                             </p>
-                        </section>
-
-                        <!-- ===== DIVIDER ===== -->
-                        <hr class="wk-divider">
-
-                        <!-- ===== REFLECTION SECTION ===== -->
-                        <section class="wk-section" id="reflection">
-                            <span class="section-label">Reflection &amp;
-                                Insights</span>
-                            <h2 class="section-title">What I Took Away</h2>
-
-                            <div class="wk-reflection-card">
-                                <div class="wk-reflection-item">
-                                    <div class="wk-reflection-icon">
-                                        <i class="bi bi-lightbulb-fill"></i>
-                                    </div>
-                                    <div>
-                                        <h5 class="wk-reflection-heading">What I
-                                            Learned</h5>
-                                        <p class="wk-reflection-text">
-                                            This week gave me a well-rounded
+        </article>
+        
+        <div class="flex items-center justify-center gap-2 my-14 fade-in delay-2"><div class="h-px w-12 bg-border"></div><div class="w-1 h-1 rounded-full bg-border"></div><div class="h-px w-12 bg-border"></div></div>
+        
+        <section class="fade-in delay-2">
+            <h2 class="text-lg font-medium text-heading mb-6 tracking-tight">Insights</h2>
+            <div class="flex flex-col gap-4 text-[0.95rem]">
+                <div class="p-5 rounded-2xl bg-surface border border-border hover:border-gray-600 transition-colors">
+                    <div class="flex items-center gap-3 mb-3"><div class="w-7 h-7 rounded-full bg-blue-500/10 flex items-center justify-center text-primary"><svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg></div><h3 class="font-medium text-heading">What I Learned</h3></div>
+                    <p class="text-text leading-relaxed">This week gave me a well-rounded
                                             experience covering both PC
                                             deployment and printer maintenance.
                                             I learned the full process of
@@ -269,23 +190,11 @@
                                             Deskjet 3635 taught me how encoder
                                             strips and encoder sensors work
                                             together to control print carriage
-                                            positioning.
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div class="wk-reflection-item">
-                                    <div
-                                        class="wk-reflection-icon wk-reflection-icon--orange">
-                                        <i
-                                            class="bi bi-exclamation-triangle-fill"></i>
-                                    </div>
-                                    <div>
-                                        <h5
-                                            class="wk-reflection-heading">Challenges
-                                            Encountered</h5>
-                                        <p class="wk-reflection-text">
-                                            The biggest challenge this week was
+                                            positioning.</p>
+                </div>
+                <div class="p-5 rounded-2xl bg-surface border border-border hover:border-gray-600 transition-colors">
+                    <div class="flex items-center gap-3 mb-3"><div class="w-7 h-7 rounded-full bg-orange-500/10 flex items-center justify-center text-orange-400"><svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg></div><h3 class="font-medium text-heading">Challenges Encountered</h3></div>
+                    <p class="text-text leading-relaxed">The biggest challenge this week was
                                             troubleshooting the HP Deskjet Ink
                                             Advantage 3635. After replacing the
                                             encoder strip, the error code
@@ -302,161 +211,34 @@
                                             fix itself. It reinforced the need
                                             for patience and systematic
                                             elimination when diagnosing hardware
-                                            issues.
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div class="wk-reflection-item">
-                                    <div
-                                        class="wk-reflection-icon wk-reflection-icon--green">
-                                        <i class="bi bi-graph-up-arrow"></i>
-                                    </div>
-                                    <div>
-                                        <h5 class="wk-reflection-heading">How
-                                            This Week Built My Skills</h5>
-                                        <p class="wk-reflection-text">
-                                            By the end of Week 2, I became more
-                                            confident in handling both computer
-                                            deployment and printer maintenance
-                                            tasks independently. The PC
-                                            inventory activity improved my
-                                            documentation and organizational
-                                            skills, while the printer repair
-                                            work sharpened my ability to
-                                            diagnose mechanical issues and
-                                            carefully disassemble and reassemble
-                                            hardware. I also developed a better
-                                            understanding of how domain joining
-                                            and computer naming conventions work
-                                            in a corporate network environment.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-
-                        <!-- ===== DIVIDER ===== -->
-                        <hr class="wk-divider">
-
-                        <!-- ===== SKILLS GAINED SECTION ===== -->
-                        <section class="wk-section" id="skills">
-                            <span class="section-label">Skills Gained</span>
-                            <h2 class="section-title">Technical Skills from This
-                                Week</h2>
-
-                            <div class="wk-skills-grid">
-                                <div class="wk-skill-badge">
-                                    <i class="bi bi-pc-display"></i>
-                                    <span>Backup PC Setup &amp;
-                                        Deployment</span>
-                                </div>
-                                <div class="wk-skill-badge">
-                                    <i class="bi bi-hdd-fill"></i>
-                                    <span>SSD Installation</span>
-                                </div>
-                                <div class="wk-skill-badge">
-                                    <i class="bi bi-windows"></i>
-                                    <span>Windows Update &amp; Activation</span>
-                                </div>
-                                <div class="wk-skill-badge">
-                                    <i class="bi bi-server"></i>
-                                    <span>Domain Joining &amp; PC
-                                        Renaming</span>
-                                </div>
-                                <div class="wk-skill-badge">
-                                    <i class="bi bi-printer-fill"></i>
-                                    <span>Printer Driver Installation</span>
-                                </div>
-                                <div class="wk-skill-badge">
-                                    <i class="bi bi-tools"></i>
-                                    <span>Printer Disassembly &amp;
-                                        Cleaning</span>
-                                </div>
-                                <div class="wk-skill-badge">
-                                    <i class="bi bi-exclamation-triangle"></i>
-                                    <span>Printer Troubleshooting</span>
-                                </div>
-                                <div class="wk-skill-badge">
-                                    <i class="bi bi-clipboard-data-fill"></i>
-                                    <span>PC Inventory &amp;
-                                        Documentation</span>
-                                </div>
-                                <div class="wk-skill-badge">
-                                    <i class="bi bi-folder2-open"></i>
-                                    <span>File Restoration &amp; Transfer</span>
-                                </div>
-                                <div class="wk-skill-badge">
-                                    <i class="bi bi-microsoft"></i>
-                                    <span>MS Office Installation &amp;
-                                        Activation</span>
-                                </div>
-                            </div>
-                        </section>
-
-                    </div>
+                                            issues.</p>
                 </div>
             </div>
-        </main>
-
-        <!-- ===== WEEK NAVIGATION ===== -->
-        <nav class="wk-nav-bar" aria-label="Week navigation">
-            <div class="container">
-                <div class="wk-nav-inner">
-
-                    <a href="week1.html" class="wk-nav-btn wk-nav-btn--prev">
-                        <i class="bi bi-arrow-left"></i>
-                        <span class="wk-nav-btn__label">Previous Week</span>
-                        <span class="wk-nav-btn__sub">Week 1 – Orientation &amp;
-                            Hardware Setup</span>
-                    </a>
-
-                    <a href="index.html" class="wk-nav-btn wk-nav-btn--home">
-                        <i class="bi bi-house-fill"></i>
-                        <span class="wk-nav-btn__label">Back to Home</span>
-                    </a>
-
-                    <a href="week3.html" class="wk-nav-btn wk-nav-btn--next">
-                        <span class="wk-nav-btn__label">Next Week</span>
-                        <span class="wk-nav-btn__sub">Week 3 – Network &amp; IT
-                            Operations</span>
-                        <i class="bi bi-arrow-right"></i>
-                    </a>
-
-                </div>
+        </section>
+        
+        <div class="h-px w-full bg-border my-12 fade-in delay-3"></div>
+        
+        <section class="fade-in delay-3">
+            <h2 class="text-lg font-medium text-heading mb-4 tracking-tight">Skills Gained</h2>
+            <div class="flex flex-wrap gap-2.5">
+                <span class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">SSD Installation</span>
+                <span class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">Windows Update &amp; Activation</span>
+                <span class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">Printer Driver Installation</span>
+                <span class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">Printer Troubleshooting</span>
+                <span class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">File Restoration &amp; Transfer</span>
             </div>
+        </section>
+        
+        <nav class="mt-24 pt-8 border-t border-border flex justify-between items-center text-sm font-medium text-text fade-in delay-3">
+            <a href="week1.html" class="flex items-center gap-2 hover:text-heading transition-colors group">
+                <svg class="w-4 h-4 group-hover:-translate-x-1.5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 19l-7-7 7-7" /></svg>
+                Week 1
+            </a>
+            <a href="week3.html" class="flex items-center gap-2 hover:text-heading transition-colors group">
+                Week 3
+                <svg class="w-4 h-4 group-hover:translate-x-1.5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5l7 7-7 7" /></svg>
+            </a>
         </nav>
-
-        <!-- ===== FOOTER ===== -->
-        <footer class="site-footer py-4 text-center">
-            <div class="container">
-                <p class="mb-0">
-                    &copy; 2026 Mae Anne B. Bongat &mdash; BSIT Internship
-                    Journal
-                </p>
-            </div>
-        </footer>
-
-        <!-- Bootstrap 5 JS -->
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-        <!-- Scroll-reveal: fade in sections as user scrolls -->
-        <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add('wk-visible');
-                            observer.unobserve(entry.target);
-                        }
-                    });
-                }, { threshold: 0.12 });
-
-                document.querySelectorAll('.wk-section, .wk-figure, .wk-reflection-item, .wk-skill-badge')
-                    .forEach(el => observer.observe(el));
-            });
-        </script>
-
-    </body>
+    </main>
+</body>
 </html>

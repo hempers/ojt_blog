@@ -1,759 +1,449 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>OJT Journal – Mae Anne Bongat</title>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OJT Journal – Mae Anne Bongat</title>
 
-        <!-- Google Fonts – Poppins -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
-            rel="stylesheet">
+    <!-- Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-        <!-- Bootstrap 5 CSS -->
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-            rel="stylesheet">
+    <!-- Tailwind CSS (Browser setup for real-time simple styling without build tools) -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    
+    <!-- Custom CSS Configuration -->
+    <style type="text/tailwindcss">
+      @theme {
+        --font-sans: 'Inter', sans-serif;
+        --color-bg: #09090b; 
+        --color-surface: #18181b; 
+        --color-border: #27272a; 
+        --color-text: #a1a1aa; 
+        --color-heading: #f4f4f5; 
+        --color-primary: #3b82f6; 
+      }
+      
+      body {
+        font-family: var(--font-sans);
+        background-color: var(--color-bg);
+        color: var(--color-text);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      
+      .glass-nav {
+         background-color: rgba(9, 9, 11, 0.7);
+         backdrop-filter: blur(16px);
+         -webkit-backdrop-filter: blur(16px);
+         border-bottom: 1px solid var(--color-border);
+      }
+      
+      .fade-in {
+         animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+         opacity: 0;
+      }
+      @keyframes fadeIn {
+         from { opacity: 0; transform: translateY(16px); }
+         to { opacity: 1; transform: translateY(0); }
+      }
+      .delay-1 { animation-delay: 0.1s; }
+      .delay-2 { animation-delay: 0.2s; }
+      .delay-3 { animation-delay: 0.3s; }
+      
+      /* Active nav link style inside Tailwind */
+      .nav-link.active {
+          color: var(--color-heading);
+          background-color: rgba(255, 255, 255, 0.05);
+      }
+      
+      .typewriter-cursor {
+          animation: blink 1s step-end infinite;
+      }
+      @keyframes blink {
+          50% { opacity: 0; }
+      }
+      
+      /* Progress bar animation */
+      .progress-bar-fill {
+          transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+    </style>
+</head>
+<body class="selection:bg-primary/30 selection:text-white">
 
-        <!-- Bootstrap Icons -->
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-            rel="stylesheet">
+    <!-- Minimal Glass Navigation -->
+    <nav class="glass-nav fixed top-0 w-full z-50 transition-all">
+        <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-2.5 group">
+                <span class="w-2 h-2 rounded-full bg-primary group-hover:scale-[1.6] transition-transform duration-300 ease-out"></span>
+                <span class="text-heading font-medium tracking-tight text-sm">OJT Journal</span>
+            </a>
+            <div class="hidden md:flex gap-2 text-sm font-medium text-text bg-surface/50 border border-border p-1 rounded-full">
+                <a href="#" class="nav-link px-4 py-1.5 rounded-full hover:text-heading hover:bg-white/5 transition-all">Home</a>
+                <a href="#journal" class="nav-link px-4 py-1.5 rounded-full hover:text-heading hover:bg-white/5 transition-all">Journal</a>
+                <a href="#about" class="nav-link px-4 py-1.5 rounded-full hover:text-heading hover:bg-white/5 transition-all">About</a>
+                <a href="#contact" class="nav-link px-4 py-1.5 rounded-full hover:text-heading hover:bg-white/5 transition-all">Contact</a>
+            </div>
+            <!-- Mobile Menu Placeholder (hidden on desktop) -->
+            <button class="md:hidden text-text hover:text-heading">
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" /></svg>
+            </button>
+        </div>
+    </nav>
 
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
+    <!-- ===== HERO SECTION ===== -->
+    <section class="min-h-screen flex items-center pt-20 relative overflow-hidden">
+        <!-- Subtle background glow -->
+        <div class="absolute top-1/4 right-0 w-96 h-96 bg-primary/10 rounded-full blur-[100px] pointer-events-none"></div>
+        <div class="absolute bottom-1/4 left-1/4 w-64 h-64 bg-purple-500/5 rounded-full blur-[80px] pointer-events-none"></div>
+        
+        <div class="max-w-5xl mx-auto px-6 w-full fade-in">
+            <div class="flex flex-col md:flex-row items-center gap-12 md:gap-20">
+                <div class="flex-1 text-center md:text-left">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-medium tracking-wide border border-primary/20 mb-8">
+                        <span class="relative flex h-2 w-2">
+                          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                          <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                        </span>
+                        WELCOME TO MY BLOG
+                    </div>
+                    
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-heading tracking-tight leading-[1.1] mb-6">
+                        Hi, I'm <br class="hidden md:block"/>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-200">Mae Anne Bongat</span>
+                    </h1>
+                    
+                    <div class="h-8 mb-6">
+                        <p class="text-lg md:text-xl font-medium text-text">
+                            <span id="typewriter-text"></span><span class="typewriter-cursor text-primary">|</span>
+                        </p>
+                    </div>
+                    
+                    <p class="text-base text-gray-400 max-w-lg mx-auto md:mx-0 leading-relaxed mb-10">
+                        Documenting my internship journey and growth in the IT field — week by week, task by task.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row items-center gap-4 justify-center md:justify-start">
+                        <a href="#journal" class="w-full sm:w-auto px-8 py-3 rounded-full bg-heading text-bg text-sm font-semibold tracking-wide hover:bg-gray-200 transition-colors shadow-[0_0_20px_rgba(255,255,255,0.15)]">
+                            View Journal
+                        </a>
+                        <a href="#about" class="w-full sm:w-auto px-8 py-3 rounded-full bg-surface border border-border text-sm font-medium hover:bg-border transition-colors">
+                            About My OJT
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 relative flex-shrink-0 fade-in delay-2">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent rounded-full animate-pulse blur-xl"></div>
+                    <img src="images/my-profile.jpg" alt="Mae Anne Bongat" class="w-full h-full object-cover rounded-full border border-border p-1.5 shadow-2xl relative z-10 grayscale-[30%] hover:grayscale-0 transition-all duration-700">
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <!-- ===== NAVBAR ===== -->
-        <nav class="navbar navbar-expand-lg bg-white sticky-top">
-            <div class="container">
-                <!-- Logo -->
-                <a class="navbar-brand" href="#">
-                    <span class="brand-dot"></span> OJT Journal
+    <!-- ===== ABOUT / PROGRESS SECTION ===== -->
+    <section id="about" class="py-24 border-y border-border bg-black/30">
+        <div class="max-w-3xl mx-auto px-6 text-center">
+            <h2 class="text-xs font-semibold tracking-widest text-primary uppercase mb-3">About My Internship</h2>
+            <h3 class="text-2xl md:text-3xl font-semibold text-heading tracking-tight mb-6">486 Hours of Real-World IT Experience</h3>
+            <p class="text-text leading-relaxed mb-12 max-w-2xl mx-auto">
+                This blog documents my 486-hour On-the-Job Training (OJT) experience as a 4th year BS Information Technology student. Through this internship, I am gaining hands-on exposure to hardware troubleshooting, system installation, network configuration, and IT operations — translating classroom knowledge into real-world technical skills in the ALINDECO IT Department.
+            </p>
+            
+            <div class="bg-surface border border-border p-8 rounded-3xl max-w-xl mx-auto mt-8 shadow-xl">
+                <div class="flex justify-between items-end mb-3">
+                    <span class="text-sm font-medium text-heading">Overall Progress</span>
+                    <span class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-200" id="progress-percent">0%</span>
+                </div>
+                <!-- Progress track -->
+                <div class="h-2 w-full bg-black rounded-full overflow-hidden mb-3 border border-border">
+                    <div id="progress-bar" class="h-full bg-gradient-to-r from-blue-600 to-blue-400 rounded-full progress-bar-fill w-0"></div>
+                </div>
+                <div class="flex justify-between text-xs font-medium text-gray-500 tracking-wide">
+                    <span id="progress-completed">0 hrs completed</span>
+                    <span>486 hrs total</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== JOURNAL GRID SECTION ===== -->
+    <section id="journal" class="py-32">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6 border-b border-border pb-6">
+                <div>
+                    <h2 class="text-xs font-semibold tracking-widest text-primary uppercase mb-2">Weekly Logs</h2>
+                    <h3 class="text-3xl font-semibold text-heading tracking-tight">Latest Entries</h3>
+                </div>
+                <a href="#about" class="text-sm text-text hover:text-heading flex items-center gap-1 group transition-colors">
+                    View Progress Tracker 
+                    <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="journal-grid">
+                
+                <!-- WEEK 1 -->
+                <a href="week1.html" class="group bg-surface border border-border rounded-2xl overflow-hidden hover:border-gray-600 transition-all duration-300 hover:shadow-2xl hover:shadow-black/50 block" data-hours="20">
+                    <div class="h-48 overflow-hidden relative border-b border-border">
+                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80" class="w-full h-full object-cover grayscale-[40%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" alt="Week 1">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="px-2 py-1 bg-white/5 border border-border rounded text-[0.65rem] font-semibold text-heading uppercase tracking-wider">Week 1</span>
+                            <span class="text-xs font-medium text-gray-500">Feb 19–21</span>
+                        </div>
+                        <h4 class="text-lg font-medium text-heading mb-2 group-hover:text-primary transition-colors line-clamp-1">Orientation & Hardware Setup</h4>
+                        <p class="text-sm text-text line-clamp-3 leading-relaxed mb-4">Completed company orientation and began hands-on IT tasks such as PC assembly, OS installation, SSD upgrade, and system configuration with data backup.</p>
+                        <span class="text-xs font-medium text-primary flex items-center gap-1">Read entry <svg class="w-3 h-3 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg></span>
+                    </div>
                 </a>
 
-                <!-- Mobile toggler -->
-                <button class="navbar-toggler" type="button"
-                    data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <!-- Nav links -->
-                <div class="collapse navbar-collapse justify-content-end"
-                    id="navbarNav">
-                    <ul class="navbar-nav gap-1">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#journal">Journal</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#about">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contact">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-        <!-- ===== HERO SECTION ===== -->
-        <!-- Interactive: typewriter cycling through role phrases -->
-        <section class="hero-section d-flex align-items-center">
-            <div class="container">
-                <div class="row align-items-center gy-5">
-
-                    <!-- Text content -->
-                    <div class="col-lg-7">
-                        <p class="hero-greeting">
-                            <i class="bi bi-hand-wave"></i> Welcome to my
-                            internship blog
-                        </p>
-
-                        <h1 class="hero-heading">
-                            Hi, I'm <span class="highlight">Mae Anne
-                                B. Bongat</span>
-                        </h1>
-
-                        <!-- Typewriter output -->
-                        <div class="hero-typewriter mb-3">
-                            <span id="typewriter-text"></span><span
-                                class="cursor">|</span>
-                        </div>
-
-                        <p class="hero-subtext">
-                            Documenting my internship journey and growth in the
-                            IT field —
-                            week by week, task by task.
-                        </p>
-
-                        <div class="mt-4 d-flex flex-wrap gap-3">
-                            <a href="#journal" class="btn btn-primary btn-md">
-                                View Journal Entries
-                            </a>
-                            <a href="#about"
-                                class="btn btn-outline-secondary btn-md">
-                                About My OJT
-                            </a>
-                        </div>
+                <!-- WEEK 2 -->
+                <a href="week2.html" class="group bg-surface border border-border rounded-2xl overflow-hidden hover:border-gray-600 transition-all duration-300 hover:shadow-2xl hover:shadow-black/50 block" data-hours="44">
+                    <div class="h-48 overflow-hidden relative border-b border-border">
+                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80" class="w-full h-full object-cover grayscale-[40%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" alt="Week 2">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
                     </div>
-
-                    <!-- Decorative avatar icon -->
-                    <div
-                        class="col-lg-5 d-none d-lg-flex justify-content-center">
-                        <div class="hero-avatar">
-                            <img src="images/my-profile.jpg"
-                                alt="Mae Anne - OJT Intern"
-                                class="img-fluid rounded-circle">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="px-2 py-1 bg-white/5 border border-border rounded text-[0.65rem] font-semibold text-heading uppercase tracking-wider">Week 2</span>
+                            <span class="text-xs font-medium text-gray-500">Feb 23–28</span>
                         </div>
+                        <h4 class="text-lg font-medium text-heading mb-2 group-hover:text-primary transition-colors line-clamp-1">PC Setup & Printer Maintenance</h4>
+                        <p class="text-sm text-text line-clamp-3 leading-relaxed mb-4">Configured and deployed company PCs with SSD upgrades, Windows updates, and domain setup. Assisted in inventory documentation and printer maintenance.</p>
+                        <span class="text-xs font-medium text-primary flex items-center gap-1">Read entry <svg class="w-3 h-3 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg></span>
                     </div>
+                </a>
 
-                </div>
-            </div>
-        </section>
+                <!-- WEEK 3 -->
+                <a href="week3.html" class="group bg-surface border border-border rounded-2xl overflow-hidden hover:border-gray-600 transition-all duration-300 hover:shadow-2xl hover:shadow-black/50 block" data-hours="42">
+                    <div class="h-48 overflow-hidden relative border-b border-border">
+                        <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=600&q=80" class="w-full h-full object-cover grayscale-[40%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" alt="Week 3">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="px-2 py-1 bg-white/5 border border-border rounded text-[0.65rem] font-semibold text-heading uppercase tracking-wider">Week 3</span>
+                            <span class="text-xs font-medium text-gray-500">Mar 2–7</span>
+                        </div>
+                        <h4 class="text-lg font-medium text-heading mb-2 group-hover:text-primary transition-colors line-clamp-1">Net Admin & Recovery Support</h4>
+                        <p class="text-sm text-text line-clamp-3 leading-relaxed mb-4">Troubleshot printer and network connectivity issues, created UTP cables, performed data recovery, and bypassed a laptop password using Hiren's Boot.</p>
+                        <span class="text-xs font-medium text-primary flex items-center gap-1">Read entry <svg class="w-3 h-3 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg></span>
+                    </div>
+                </a>
 
-        <!-- ===== ABOUT MY INTERNSHIP SECTION ===== -->
-        <section id="about" class="section-about py-5">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8 text-center">
+                <!-- WEEK 4 -->
+                <a href="week4.html" class="group bg-surface border border-border rounded-2xl overflow-hidden hover:border-blue-900 transition-all duration-300 shadow-[0_0_20px_rgba(59,130,246,0.05)] block relative" data-hours="44">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-primary/10 blur-[50px] -z-10 group-hover:bg-primary/20 transition-colors"></div>
+                    <div class="h-48 overflow-hidden relative border-b border-border">
+                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&q=80" class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" alt="Week 4">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="px-2 py-1 bg-primary/20 border border-primary/30 rounded text-[0.65rem] font-semibold text-primary uppercase tracking-wider">Week 4</span>
+                            <span class="text-xs font-medium text-gray-500">Mar 9–14</span>
+                        </div>
+                        <h4 class="text-lg font-medium text-heading mb-2 group-hover:text-primary transition-colors line-clamp-1">Malware & Domain Tasks</h4>
+                        <p class="text-sm text-text line-clamp-3 leading-relaxed mb-4">Resolved critical shortcut virus affecting flash drives, configured desktop domain joining with DNS settings, and established Active Directory integration.</p>
+                        <span class="text-xs font-medium text-primary flex items-center gap-1">Read entry <svg class="w-3 h-3 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg></span>
+                    </div>
+                </a>
 
-                        <span class="section-label">About My Internship</span>
-                        <h2 class="section-title">486 Hours of Real-World IT
-                            Experience</h2>
+                <!-- WEEK 5 -->
+                <a href="week5.html" class="group bg-surface border border-border rounded-2xl overflow-hidden hover:border-gray-600 transition-all duration-300 hover:shadow-2xl hover:shadow-black/50 block" data-hours="36">
+                    <div class="h-48 overflow-hidden relative border-b border-border">
+                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80" class="w-full h-full object-cover grayscale-[40%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" alt="Week 5">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="px-2 py-1 bg-white/5 border border-border rounded text-[0.65rem] font-semibold text-heading uppercase tracking-wider">Week 5</span>
+                            <span class="text-xs font-medium text-gray-500">Mar 16–20</span>
+                        </div>
+                        <h4 class="text-lg font-medium text-heading mb-2 group-hover:text-primary transition-colors line-clamp-1">RMS & Networking</h4>
+                        <p class="text-sm text-text line-clamp-3 leading-relaxed mb-4">Initiated RMS development, resolved gigabit network speed issues, audited ESET, troubleshot faulty RAM module, and clarified system requirements.</p>
+                        <span class="text-xs font-medium text-primary flex items-center gap-1">Read entry <svg class="w-3 h-3 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg></span>
+                    </div>
+                </a>
 
-                        <p class="section-text">
-                            This blog documents my 486-hour On-the-Job Training
-                            (OJT) experience
-                            as a 4th year BS Information Technology student.
-                            Through this internship,
-                            I am gaining hands-on exposure to hardware
-                            troubleshooting, system
-                            installation, network configuration, and IT
-                            operations — translating
-                            classroom knowledge into real-world technical
-                            skills.
-                        </p>
+                <script>
+                    const upcomingWeeks = [
+                        { w: 6, d: "Mar 30–Apr 2", hours: 8, title: "Upcoming IT tasks & activities" },
+                        { w: 7, d: "Apr 6–Apr 11", hours: 0, title: "Upcoming IT tasks & activities" },
+                        { w: 8, d: "Apr 13–Apr 18", hours: 0, title: "Upcoming IT tasks & activities" },
+                        { w: 9, d: "Apr 20–Apr 25", hours: 0, title: "Upcoming IT tasks & activities" },
+                        { w: 10, d: "Apr 27–May 2", hours: 0, title: "Upcoming IT tasks & activities" },
+                        { w: 11, d: "May 4–May 9", hours: 0, title: "Upcoming IT operations" },
+                        { w: 12, d: "May 11–May 16", hours: 0, title: "Final Evaluation & Wrap-up" }
+                    ];
 
-                        <!-- Dynamic progress bar — driven by data-hours on journal cards -->
-                        <div class="progress-wrapper mt-4">
-                            <div class="d-flex justify-content-between mb-1">
-                                <span class="fw-semibold text-muted small">OJT
-                                    Progress</span>
-                                <span class="fw-bold small"
-                                    id="progress-percent">0%</span>
+                    upcomingWeeks.forEach(week => {
+                        let html = `
+                        <div class="bg-surface/50 border border-border/50 rounded-2xl overflow-hidden opacity-60 pointer-events-none" data-hours="\${week.hours}">
+                            <div class="h-48 border-b border-border/50 flex items-center justify-center bg-black/20">
+                                <svg class="w-10 h-10 text-border" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                             </div>
-                            <div class="progress ojt-progress">
-                                <div id="progress-bar" class="progress-bar"
-                                    role="progressbar" style="width: 0%"
-                                    aria-valuenow="0" aria-valuemin="0"
-                                    aria-valuemax="100">
+                            <div class="p-6">
+                                <div class="flex justify-between items-center mb-3">
+                                    <span class="px-2 py-1 bg-transparent border border-border/50 rounded text-[0.65rem] font-semibold text-gray-500 uppercase tracking-wider">Week \${week.w}</span>
+                                    <span class="text-xs font-medium text-gray-600">\${week.d}</span>
                                 </div>
+                                <h4 class="text-lg font-medium text-gray-400 mb-2">Coming Soon</h4>
+                                <p class="text-sm text-gray-500 line-clamp-2">More hands-on IT tasks and experiences will be documented soon.</p>
                             </div>
-                            <div class="d-flex justify-content-between mt-1">
-                                <span class="progress-label"
-                                    id="progress-completed">0 hrs
-                                    completed</span>
-                                <span class="progress-label">486 hrs
-                                    total</span>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ===== LATEST JOURNAL ENTRIES SECTION ===== -->
-        <!-- To update progress: change data-hours on each col to the hours logged that week -->
-        <section id="journal" class="section-journal py-5">
-            <div class="container">
-
-                <div class="text-center mb-5">
-                    <span class="section-label">Weekly Logs</span>
-                    <h2 class="section-title">Latest Journal Entries</h2>
-                </div>
-
-                <div class="row g-4" id="journal-grid">
-
-                    <!-- WEEK 1 -->
-                    <div class="col-md-4" data-hours="20">
-                        <div class="card journal-card h-100">
-                            <img
-                                src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80"
-                                class="card-img-top"
-                                alt="Week 1 – Hardware Setup">
-                            <p class="card-caption">PC Disassembly & Hardware
-                                Setup</p>
-                            <div class="card-body d-flex flex-column">
-                                <span class="badge-week">Week 1</span>
-                                <h5 class="card-title mt-2">Orientation &
-                                    Hardware Setup</h5>
-                                <p class="text-muted small mb-2">
-                                    <i class="bi bi-calendar3 me-1"></i>Feb 19 –
-                                    Feb 21, 2026
-                                </p>
-                                <p class="card-text flex-grow-1">
-                                    Completed company orientation and began
-                                    hands-on IT tasks such as PC assembly, OS
-                                    installation, SSD upgrade, and system
-                                    configuration with data backup.
-                                </p>
-                                <a href="week1.html"
-                                    class="btn btn-outline-primary btn-sm mt-auto">
-                                    Read More <i class="bi bi-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- WEEK 2 -->
-                    <div class="col-md-4" data-hours="44">
-                        <div class="card journal-card h-100">
-                            <img
-                                src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80"
-                                class="card-img-top"
-                                alt="Week 2 – Hardware Setup">
-                            <p class="card-caption">PC Setup & Printer
-                                Maintenance</p>
-                            <div class="card-body d-flex flex-column">
-                                <span class="badge-week">Week 2</span>
-                                <h5 class="card-title mt-2">PC Setup &
-                                    Printer
-                                    Maintenance</h5>
-                                <p class="text-muted small mb-2">
-                                    <i class="bi bi-calendar3 me-1"></i>Feb 23 –
-                                    Feb 28, 2026
-                                </p>
-                                <p class="card-text flex-grow-1">
-                                    Configured and deployed company PCs with SSD
-                                    upgrades, Windows updates, and domain setup.
-                                    Assisted in inventory documentation and
-                                    performed printer maintenance and
-                                    troubleshooting.
-                                </p>
-                                <a href="week2.html"
-                                    class="btn btn-outline-primary btn-sm mt-auto">
-                                    Read More <i class="bi bi-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- WEEK 3 -->
-                    <div class="col-md-4" data-hours="42">
-                        <div class="card journal-card h-100">
-                            <img
-                                src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=600&q=80"
-                                class="card-img-top"
-                                alt="Week 3 – Network Troubleshooting, Data Recovery & IT Support">
-                            <p class="card-caption">Network Troubleshooting,
-                                Data Recovery & IT Support</p>
-                            <div class="card-body d-flex flex-column">
-                                <span class="badge-week">Week
-                                    3</span>
-                                <h5 class="card-title mt-2">Network
-                                    Troubleshooting, Data Recovery &amp; IT
-                                    Support</h5>
-                                <p class="text-muted small mb-2">
-                                    <i class="bi bi-calendar3 me-1"></i>March 2
-                                    – March 7, 2026
-                                </p>
-                                <p class="card-text flex-grow-1">
-                                    Troubleshot printer and network connectivity
-                                    issues,
-                                    created UTP cables, performed data recovery,
-                                    configured a TP-Link router, and bypassed a
-                                    laptop password using Hiren's Boot CD PE.
-                                </p>
-                                <a href="week3.html"
-                                    class="btn btn-outline-primary btn-sm mt-auto">
-                                    Read More <i class="bi bi-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4" data-hours="44">
-                        <div class="card journal-card h-100">
-                            <img
-                                src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&q=80"
-                                class="card-img-top"
-                                alt="Week 4 – Malware Removal, Domain Configuration & System Implementation">
-                            <p class="card-caption">Shortcut Virus Removal &
-                                Domain Configuration</p>
-                            <div class="card-body d-flex flex-column">
-                                <span class="badge-week">Week 4</span>
-                                <h5 class="card-title mt-2">IT Support &amp;
-                                    Domain Management Tasks</h5>
-                                <p class="text-muted small mb-2">
-                                    <i class="bi bi-calendar3 me-1"></i>March 9
-                                    – March 14, 2026
-                                </p>
-                                <p class="card-text flex-grow-1">
-                                    Resolved critical shortcut virus affecting
-                                    flash drives, configured desktop domain
-                                    joining with DNS settings, established
-                                    Active Directory integration, and
-                                    implemented QR code inventory system for the
-                                    company.
-                                </p>
-                                <a href="week4.html"
-                                    class="btn btn-outline-primary btn-sm mt-auto">
-                                    Read More <i class="bi bi-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4" data-hours="36">
-                        <div class="card journal-card h-100">
-                            <img
-                                src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80"
-                                class="card-img-top"
-                                alt="Week 5 – System Development & Networking">
-                            <p class="card-caption">
-                                System Development &amp; Networking Support</p>
-                            <div class="card-body d-flex flex-column">
-                                <span class="badge-week">Week
-                                    5</span>
-                                <h5 class="card-title mt-2">
-                                    RMS Development &amp; Network Troubleshooting</h5>
-                                <p class="text-muted small mb-2">
-                                    <i class="bi bi-calendar3 me-1"></i>March 16
-                                    – March 20, 2026
-                                </p>
-                                <p class="card-text flex-grow-1">
-                                    Initiated RMS (Request Management System) development, performed cable management and resolved gigabit network speed issues, audited ESET and Windows 11 upgrade requirements, troubleshot faulty RAM module, and clarified system requirements with purchasing department.
-                                </p>
-                                <a href="week5.html"
-                                    class="btn btn-outline-primary btn-sm mt-auto">
-                                    Read More <i class="bi bi-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4" data-hours="44">
-                        <div class="card journal-card h-100">
-                            <img
-                                src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=600&q=80"
-                                class="card-img-top" alt="Week 5 – Coming Soon">
-                            <p class="card-caption">Upcoming IT operations &
-                                support</p>
-                            <div class="card-body d-flex flex-column">
-                                <span class="badge-week coming-soon">Week
-                                    5</span>
-                                <h5 class="card-title mt-2">Coming Soon</h5>
-                                <p class="text-muted small mb-2">
-                                    <i class="bi bi-calendar3 me-1"></i>March 23
-                                    – March 28, 2026
-                                </p>
-                                <p class="card-text flex-grow-1">
-                                    More hands-on IT tasks and experiences will
-                                    be documented
-                                    here as the internship progresses.
-                                </p>
-                                <a href="#"
-                                    class="btn btn-outline-secondary btn-sm mt-auto disabled">
-                                    Coming Soon
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                        <div class="col-md-4" data-hours="8"><!--WHOLE DAY SABADO-->
-                            <div class="card journal-card h-100">
-                                <img
-                                    src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80"
-                                    class="card-img-top" alt="Week 6 – Coming Soon">
-                                <p class="card-caption">Upcoming IT tasks &
-                                    activities</p>
-                                <div class="card-body d-flex flex-column">
-                                    <span class="badge-week coming-soon">Week
-                                        6</span>
-                                <h5 class="card-title mt-2">Coming Soon</h5>
-                                <p class="text-muted small mb-2">
-                                    <i class="bi bi-calendar3 me-1"></i>March 30
-                                    – April 2, 2026
-                                </p>
-                                <p class="card-text flex-grow-1">
-                                    More hands-on IT tasks and experiences will
-                                    be documented
-                                    here as the internship progresses.
-                                </p>
-                                <a href="#"
-                                    class="btn btn-outline-secondary btn-sm mt-auto disabled">
-                                    Coming Soon
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4" data-hours="0"><!--WHOLE DAY SABADO-->
-                        <div class="card journal-card h-100">
-                            <img
-                                src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80"
-                                class="card-img-top" alt="Week 7 – Coming Soon">
-                            <p class="card-caption">Upcoming IT tasks &
-                                activities</p>
-                            <div class="card-body d-flex flex-column">
-                                <span class="badge-week coming-soon">Week
-                                    7</span>
-                                <h5 class="card-title mt-2">Coming Soon</h5>
-                                <p class="text-muted small mb-2">
-                                    <i class="bi bi-calendar3 me-1"></i>April 6
-                                    – April 11, 2026
-                                </p>
-                                <p class="card-text flex-grow-1">
-                                    More hands-on IT tasks and experiences will
-                                    be documented
-                                    here as the internship progresses.
-                                </p>
-                                <a href="#"
-                                    class="btn btn-outline-secondary btn-sm mt-auto disabled">
-                                    Coming Soon
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4" data-hours="0"><!--WHOLE DAY SABADO-->
-                        <div class="card journal-card h-100">
-                            <img
-                                src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=600&q=80"
-                                class="card-img-top" alt="Week 8 – Coming Soon">
-                            <p class="card-caption">Upcoming IT operations &
-                                support</p>
-                            <div class="card-body d-flex flex-column">
-                                <span class="badge-week coming-soon">Week
-                                    8</span>
-                                <h5 class="card-title mt-2">Coming Soon</h5>
-                                <p class="text-muted small mb-2">
-                                    <i class="bi bi-calendar3 me-1"></i>April 13
-                                    – April 18, 2026
-                                </p>
-                                <p class="card-text flex-grow-1">
-                                    More hands-on IT tasks and experiences will
-                                    be documented
-                                    here as the internship progresses.
-                                </p>
-                                <a href="#"
-                                    class="btn btn-outline-secondary btn-sm mt-auto disabled">
-                                    Coming Soon
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4" data-hours="0"><!--WHOLE DAY SABADO-->
-                        <div class="card journal-card h-100">
-                            <img
-                                src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80"
-                                class="card-img-top" alt="Week 9 – Coming Soon">
-                            <p class="card-caption">Upcoming IT tasks &
-                                activities</p>
-                            <div class="card-body d-flex flex-column">
-                                <span class="badge-week coming-soon">Week
-                                    9</span>
-                                <h5 class="card-title mt-2">Coming Soon</h5>
-                                <p class="text-muted small mb-2">
-                                    <i class="bi bi-calendar3 me-1"></i>April 20
-                                    – April 25, 2026
-                                </p>
-                                <p class="card-text flex-grow-1">
-                                    More hands-on IT tasks and experiences will
-                                    be documented
-                                    here as the internship progresses.
-                                </p>
-                                <a href="#"
-                                    class="btn btn-outline-secondary btn-sm mt-auto disabled">
-                                    Coming Soon
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4" data-hours="0">
-                        <!--WHOLE DAY SABADO-->
-                        <div class="card journal-card h-100">
-                            <img
-                                src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80"
-                                class="card-img-top"
-                                alt="Week 10 – Coming Soon">
-                            <p class="card-caption">Upcoming IT tasks &
-                                activities</p>
-                            <div class="card-body d-flex flex-column">
-                                <span class="badge-week coming-soon">Week
-                                    10</span>
-                                <h5 class="card-title mt-2">Coming Soon</h5>
-                                <p class="text-muted small mb-2">
-                                    <i class="bi bi-calendar3 me-1"></i>April 27
-                                    – May 2, 2026
-                                </p>
-                                <p class="card-text flex-grow-1">
-                                    More hands-on IT tasks and experiences will
-                                    be documented
-                                    here as the internship progresses.
-                                </p>
-                                <a href="#"
-                                    class="btn btn-outline-secondary btn-sm mt-auto disabled">
-                                    Coming Soon
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4" data-hours="0">
-                        <div class="card journal-card h-100">
-                            <img
-                                src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=600&q=80"
-                                class="card-img-top"
-                                alt="Week 11 – Coming Soon">
-                            <p class="card-caption">Upcoming IT operations &
-                                support</p>
-                            <div class="card-body d-flex flex-column">
-                                <span class="badge-week coming-soon">Week
-                                    11</span>
-                                <h5 class="card-title mt-2">Coming Soon</h5>
-                                <p class="text-muted small mb-2">
-                                    <i class="bi bi-calendar3 me-1"></i>May 4
-                                    – May 9, 2026
-                                </p>
-                                <p class="card-text flex-grow-1">
-                                    More hands-on IT tasks and experiences will
-                                    be documented
-                                    here as the internship progresses.
-                                </p>
-                                <a href="#"
-                                    class="btn btn-outline-secondary btn-sm mt-auto disabled">
-                                    Coming Soon
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- ===== REFLECTION QUOTE SECTION ===== -->
-        <section class="section-quote py-5">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="quote-block text-center">
-                            <i class="bi bi-quote quote-icon"></i>
-                            <blockquote>
-                                "The internship experience is not just about
-                                learning technical skills —
-                                it's about learning how to think, adapt, and
-                                grow as a professional
-                                in the real world."
-                            </blockquote>
-                            <p class="quote-author">— Mae Anne B. Bongat, BSIT
-                                Intern</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ===== CONTACT SECTION ===== -->
-        <section id="contact" class="section-contact py-5">
-            <div class="container">
-                <div class="text-center mb-5">
-                    <span class="section-label">Get In Touch</span>
-                    <h2 class="section-title">Contact Me</h2>
-                    <p class="section-text">
-                        Have questions about my internship journey or want to
-                        connect?
-                        Feel free to reach out through any of the channels
-                        below.
-                    </p>
-                </div>
-
-                <div class="row g-4 justify-content-center">
-                    <!-- Email -->
-                    <div class="col-md-4 col-sm-6">
-                        <div class="contact-card text-center">
-                            <div class="contact-icon">
-                                <i class="bi bi-envelope-fill"></i>
-                            </div>
-                            <h5 class="contact-card__title">Email</h5>
-                            <p
-                                class="contact-card__text">maeannebongat@gmail.com</p>
-                        </div>
-                    </div>
-
-                    <!-- Phone -->
-                    <div class="col-md-4 col-sm-6">
-                        <div class="contact-card text-center">
-                            <div class="contact-icon">
-                                <i class="bi bi-telephone-fill"></i>
-                            </div>
-                            <h5 class="contact-card__title">Phone</h5>
-                            <p class="contact-card__text">+63 951 372 1462</p>
-                        </div>
-                    </div>
-
-                    <!-- Location -->
-                    <div class="col-md-4 col-sm-6">
-                        <div class="contact-card text-center">
-                            <div class="contact-icon">
-                                <i class="bi bi-geo-alt-fill"></i>
-                            </div>
-                            <h5 class="contact-card__title">OJT Location</h5>
-                            <p class="contact-card__text">ALINDECO, IT
-                                Department</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Social Links -->
-                <div class="text-center mt-5">
-                    <p class="fw-semibold text-muted small mb-3">Connect with
-                        me</p>
-                    <div class="contact-socials">
-                        <a
-                            href="https://www.facebook.com/profile.php?id=61585226079521"
-                            class="contact-social-link" target="_blank"
-                            aria-label="Facebook">
-                            <i class="bi bi-facebook"></i>
-                        </a>
-                        <a
-                            href="https://www.linkedin.com/in/maeanne-bongat-585226079521"
-                            class="contact-social-link" target="_blank"
-                            aria-label="LinkedIn">
-                            <i class="bi bi-linkedin"></i>
-                        </a>
-                        <a href="https://github.com/hempers"
-                            class="contact-social-link" target="_blank"
-                            aria-label="GitHub">
-                            <i class="bi bi-github"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ===== FOOTER ===== -->
-        <footer class="site-footer py-4">
-            <div class="container text-center">
-                <p class="mb-0">
-                    © 2026 Mae Anne B. Bongat | BSIT Internship Journal
-                </p>
-            </div>
-        </footer>
-
-        <!-- Bootstrap 5 JS Bundle (includes Popper) -->
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-        <script>
-            // ===== TYPEWRITER EFFECT =====
-            // Cycles through role phrases in the hero section
-            const phrases = [
-                'BSIT Student | OJT Intern',
-                'Hardware Troubleshooting',
-                'IT Operations & Support',
-                'Learning. Growing. Documenting.'
-            ];
-            let phraseIndex = 0;
-            let charIndex   = 0;
-            let isDeleting  = false;
-            const typeEl = document.getElementById('typewriter-text');
-
-            function typeWriter() {
-                const current = phrases[phraseIndex];
-
-                typeEl.textContent = isDeleting
-                    ? current.substring(0, --charIndex)
-                    : current.substring(0, ++charIndex);
-
-                let speed = isDeleting ? 45 : 85;
-
-                if (!isDeleting && charIndex === current.length) {
-                    speed = 1800;           // pause at end
-                    isDeleting = true;
-                } else if (isDeleting && charIndex === 0) {
-                    isDeleting = false;
-                    phraseIndex = (phraseIndex + 1) % phrases.length;
-                    speed = 400;            // pause before next phrase
-                }
-
-                setTimeout(typeWriter, speed);
-            }
-
-
-            // ===== DYNAMIC PROGRESS BAR =====
-            // Reads data-hours from each journal card col — just update that number each week
-            const TOTAL_HOURS = 486;
-
-            function updateProgress() {
-                const cards = document.querySelectorAll('#journal-grid [data-hours]');
-                let completed = 0;
-                cards.forEach(card => {
-                    completed += parseFloat(card.dataset.hours) || 0;
-                });
-
-                const pct        = Math.min((completed / TOTAL_HOURS) * 100, 100);
-                const pctDisplay = pct % 1 === 0 ? pct.toFixed(0) : pct.toFixed(1);
-
-                document.getElementById('progress-bar').style.width        = pct + '%';
-                document.getElementById('progress-bar').setAttribute('aria-valuenow', pct);
-                document.getElementById('progress-percent').textContent    = pctDisplay + '%';
-                document.getElementById('progress-completed').textContent  = completed + ' hrs completed';
-            }
-
-
-            // ===== SCROLL-SPY NAV =====
-            // Highlights the nav link whose section is currently in view
-            function initScrollSpy() {
-                const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-
-                // Map each link to its target section element
-                const sections = Array.from(navLinks).map(link => {
-                    const href = link.getAttribute('href');
-                    // '#' maps to the top / hero section
-                    if (href === '#') return document.querySelector('.hero-section');
-                    return document.querySelector(href);
-                }).filter(Boolean);
-
-                function setActive() {
-                    const scrollY   = window.scrollY;
-                    const navHeight = document.querySelector('.navbar').offsetHeight;
-                    let currentIdx  = 0;
-
-                    sections.forEach((section, i) => {
-                        if (section && scrollY >= section.offsetTop - navHeight - 40) {
-                            currentIdx = i;
-                        }
+                        </div>`;
+                        document.write(html);
                     });
+                </script>
 
-                    navLinks.forEach((link, i) => {
-                        link.classList.toggle('active', i === currentIdx);
-                    });
-                }
+            </div>
+        </div>
+    </section>
 
-                window.addEventListener('scroll', setActive, { passive: true });
-                setActive(); // run once on load
+    <!-- ===== REFLECTION QUOTE SECTION ===== -->
+    <section class="py-24 border-y border-border bg-gradient-to-br from-[#09090b] to-[#0f172a] relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1000&q=5')] bg-cover bg-center opacity-5 mix-blend-screen"></div>
+        <div class="max-w-3xl mx-auto px-6 text-center relative z-10">
+            <svg class="w-12 h-12 md:w-16 md:h-16 text-primary/30 mx-auto mb-6" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+            <blockquote class="text-xl md:text-2xl lg:text-3xl font-medium text-heading leading-tight mb-8">
+                "The internship experience is not just about learning technical skills — it's about learning how to think, adapt, and grow as a professional in the real world."
+            </blockquote>
+            <p class="text-sm font-semibold tracking-widest text-primary uppercase">— Mae Anne B. Bongat</p>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section id="contact" class="py-32">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-16 border-b border-border pb-16">
+                <h2 class="text-xs font-semibold tracking-widest text-primary uppercase mb-3">Get In Touch</h2>
+                <h3 class="text-3xl font-semibold text-heading tracking-tight mb-4">Contact Me</h3>
+                <p class="text-text max-w-lg mx-auto leading-relaxed">Have questions about my internship journey or want to connect? Feel free to reach out through any of the channels below.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-16">
+                <a href="mailto:maeannebongat@gmail.com" class="bg-surface border border-border hover:border-gray-600 transition-colors rounded-3xl p-8 text-center group">
+                    <div class="w-12 h-12 rounded-full bg-white/5 border border-border flex items-center justify-center mx-auto mb-4 group-hover:bg-primary group-hover:border-primary transition-colors">
+                        <svg class="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                    </div>
+                    <h5 class="text-sm font-medium text-heading mb-1">Email</h5>
+                    <p class="text-xs text-text">maeannebongat@gmail.com</p>
+                </a>
+                
+                <div class="bg-surface border border-border rounded-3xl p-8 text-center">
+                    <div class="w-12 h-12 rounded-full bg-white/5 border border-border flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-5 h-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+                    </div>
+                    <h5 class="text-sm font-medium text-heading mb-1">Phone</h5>
+                    <p class="text-xs text-text">+63 951 372 1462</p>
+                </div>
+                
+                <div class="bg-surface border border-border rounded-3xl p-8 text-center">
+                    <div class="w-12 h-12 rounded-full bg-white/5 border border-border flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-5 h-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                    </div>
+                    <h5 class="text-sm font-medium text-heading mb-1">Location</h5>
+                    <p class="text-xs text-text">ALINDECO HRAD Dept</p>
+                </div>
+            </div>
+            
+            <div class="flex justify-center gap-4">
+                <a href="https://www.facebook.com/profile.php?id=61585226079521" class="w-10 h-10 rounded-full border border-border flex items-center justify-center text-text hover:bg-heading hover:text-bg transition-colors" target="_blank" aria-label="Facebook">
+                    <svg fill="currentColor" viewBox="0 0 24 24" class="w-4 h-4"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/maeanne-bongat-585226079521" class="w-10 h-10 rounded-full border border-border flex items-center justify-center text-text hover:bg-heading hover:text-bg transition-colors" target="_blank" aria-label="LinkedIn">
+                    <svg fill="currentColor" viewBox="0 0 24 24" class="w-4 h-4"><path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd" /></svg>
+                </a>
+                <a href="https://github.com/hempers" class="w-10 h-10 rounded-full border border-border flex items-center justify-center text-text hover:bg-heading hover:text-bg transition-colors" target="_blank" aria-label="GitHub">
+                    <svg fill="currentColor" viewBox="0 0 24 24" class="w-4 h-4"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" /></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-8 border-t border-border text-center text-xs text-gray-500 bg-surface/50">
+        &copy; 2026 Mae Anne B. Bongat | BSIT Internship Journal
+    </footer>
+
+    <script>
+        // Hero Typewriter Effect
+        const phrases = [
+            'BSIT Student | OJT Intern',
+            'Hardware Troubleshooting',
+            'IT Operations & Support',
+            'Learning. Growing. Documenting.'
+        ];
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        const typeEl = document.getElementById('typewriter-text');
+
+        function typeWriter() {
+            const current = phrases[phraseIndex];
+            typeEl.textContent = isDeleting
+                ? current.substring(0, --charIndex)
+                : current.substring(0, ++charIndex);
+
+            let speed = isDeleting ? 30 : 60;
+
+            if (!isDeleting && charIndex === current.length) {
+                speed = 2000;
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+                speed = 400;
             }
+            setTimeout(typeWriter, speed);
+        }
 
-
-            // ===== INIT =====
-            document.addEventListener('DOMContentLoaded', () => {
-                typeWriter();
-                updateProgress();
-                initScrollSpy();
+        // Dynamic Progress Bar
+        const TOTAL_HOURS = 486;
+        function updateProgress() {
+            let completed = 0;
+            document.querySelectorAll('[data-hours]').forEach(el => {
+                completed += parseFloat(el.getAttribute('data-hours')) || 0;
             });
-        </script>
+            const pct = Math.min((completed / TOTAL_HOURS) * 100, 100);
+            const displayPct = pct % 1 === 0 ? pct.toFixed(0) : pct.toFixed(1);
 
-    </body>
+            // Timeout ensures animation plays once page heavily renders
+            setTimeout(() => {
+                document.getElementById('progress-bar').style.width = pct + '%';
+                document.getElementById('progress-percent').textContent = displayPct + '%';
+                document.getElementById('progress-completed').textContent = completed + ' hrs completed';
+            }, 300);
+        }
+
+        // Scroll Spy
+        function initScrollSpy() {
+            const sections = Array.from(document.querySelectorAll('.nav-link')).map(link => {
+                const target = document.querySelector(link.getAttribute('href') === '#' ? 'body' : link.getAttribute('href'));
+                return { link, target };
+            });
+
+            window.addEventListener('scroll', () => {
+                let current = null;
+                // Read from bottom to top so the lowest visible section wins
+                sections.slice().reverse().forEach(({link, target}) => {
+                    if (!current && target && window.scrollY >= (target.offsetTop - 150)) {
+                        current = link;
+                    }
+                });
+                sections.forEach(({link}) => link.classList.toggle('active', link === current));
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            typeWriter();
+            updateProgress();
+            initScrollSpy();
+        });
+    </script>
+</body>
 </html>

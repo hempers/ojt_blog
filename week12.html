@@ -1,132 +1,59 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="dark scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Week 12: Final Project & Completion | Mae Anne Bongat</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-    <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #ffffff; color: #111827; }
-        .mono { font-family: 'JetBrains Mono', monospace; }
-        .glass { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(226, 232, 240, 1); }
-        .reading-progress { position: fixed; top: 0; left: 0; width: 0%; height: 4px; background: linear-gradient(to right, #3b82f6, #8b5cf6); z-index: 100; }
-        .content-shadow { box-shadow: 0 20px 50px -12px rgb(0 0 0 / 0.5); }
-        article p { line-height: 1.8; margin-bottom: 1.5rem; font-size: 1.1rem; color: #4b5563; }
+    <title>Week 12 – OJT Journal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --font-sans: 'Inter', sans-serif;
+        --color-bg: #09090b; --color-surface: #18181b; --color-border: #27272a; 
+        --color-text: #a1a1aa; --color-heading: #f4f4f5; --color-primary: #3b82f6; 
+      }
+      body { font-family: var(--font-sans); background-color: var(--color-bg); color: var(--color-text); -webkit-font-smoothing: antialiased; }
+      .glass-nav { background-color: rgba(9, 9, 11, 0.7); backdrop-filter: blur(12px); border-bottom: 1px solid var(--color-border); }
+      .fade-in { animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; opacity: 0; }
+      @keyframes fadeIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+      .delay-1 { animation-delay: 0.1s; } 
     </style>
 </head>
-<body class="antialiased bg-white">
-    <div class="reading-progress" id="progress-bar"></div>
-    <nav class="fixed top-0 left-0 right-0 z-50 glass">
-        <div class="max-w-6xl mx-auto px-6 h-16 flex justify-between items-center">
-            <a href="index.html" class="flex items-center gap-2 group font-bold text-gray-900 uppercase tracking-tighter">
-                <i class="bi bi-arrow-left text-blue-600 group-hover:-translate-x-1 transition-transform"></i> Back to Journal
+<body class="pb-24 selection:bg-primary/30 selection:text-white">
+    <nav class="glass-nav fixed top-0 w-full z-50 transition-all">
+        <div class="max-w-3xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2.5 group">
+                <span class="w-2 h-2 rounded-full bg-primary group-hover:scale-[1.6] transition-transform duration-300"></span>
+                <span class="text-heading font-medium tracking-tight text-sm">OJT Journal</span>
             </a>
-            <div class="hidden md:flex gap-6 items-center">
-                <span class="text-xs font-bold text-gray-500 uppercase tracking-widest mono">Week 12 / 0 Hours</span>
+            <div class="flex gap-6 text-sm font-medium text-text">
+                <a href="index.html" class="hover:text-heading transition-colors">Home</a>
+                <a href="index.html#journal" class="hover:text-heading transition-colors">Journal</a>
+                <a href="index.html#about" class="hover:text-heading transition-colors">About</a>
             </div>
         </div>
     </nav>
-    <header class="relative pt-32 pb-20 bg-gray-50 overflow-hidden">
-        <div class="absolute inset-0 opacity-40">
-            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1400&q=85" alt="Week 12" class="w-full h-full object-cover">
-        </div>
-        <div class="absolute inset-0 bg-gradient-to-t from-gray-50 via-gray-50/60 to-transparent"></div>
-        <div class="relative max-w-4xl mx-auto px-6 text-center md:text-left">
-            <div class="flex flex-wrap items-center justify-center md:justify-start gap-3 mb-6">
-                <span class="px-3 py-1 bg-blue-600 text-gray-900 text-[10px] font-black rounded-full uppercase tracking-wider">Final</span>
-                <span class="px-3 py-1 bg-black/10 backdrop-blur text-gray-900 text-[10px] font-black rounded-full uppercase tracking-wider">Project</span>
+    <main class="max-w-2xl mx-auto px-6 pt-32 md:pt-40 text-center">
+        <div class="fade-in flex flex-col items-center justify-center min-h-[50vh]">
+            <div class="w-16 h-16 bg-surface border border-border rounded-full flex items-center justify-center mb-6 text-border mx-auto">
+                <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
             </div>
-            <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-6">
-                Final Project & <br><span class="text-blue-600 font-medium">Completion</span>
-            </h1>
-            <div class="flex flex-wrap items-center justify-center md:justify-start gap-6 text-gray-600">
-                <div class="flex items-center gap-2"><i class="bi bi-calendar3 text-blue-600"></i>
-                    <span class="text-sm font-medium">May 5 – 9, 2026</span>
-                </div>
-                <div class="flex items-center gap-2"><i class="bi bi-clock text-blue-600"></i>
-                    <span class="text-sm font-medium">7 mins read</span>
-                </div>
-                <div class="flex items-center gap-2"><i class="bi bi-geo-alt text-blue-600"></i>
-                    <span class="text-sm font-medium">IT Dept, ALINDECO</span>
-                </div>
-            </div>
-        </div>
-    </header>
-    <main class="relative z-10 -mt-10 max-w-4xl mx-auto px-6 pb-20">
-        <div class="bg-gray-50 rounded-[2.5rem] p-8 md:p-16 content-shadow border border-gray-300">
-            <article>
-                <section id="narrative" class="mb-16">
-                    <div class="flex items-center gap-4 mb-8"><div class="h-px flex-grow bg-slate-100"></div>
-                        <span class="text-xs font-bold text-gray-500 uppercase tracking-[0.2em]">The Experience</span>
-                        <div class="h-px flex-grow bg-slate-100"></div>
-                    </div>
-                    <p>Week twelve represented the culmination of the internship—a comprehensive final project and assessment of the skills and knowledge gained over the past three months. This week involved conducting a complete system audit, preparing a final report, and undergoing an evaluation of my internship performance.</p>
-                    <div class="my-12 relative">
-                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=900&q=80" alt="Week 12" class="w-full h-[400px] object-cover rounded-3xl">
-                        <div class="mt-4 flex items-start gap-3 text-gray-500 italic text-sm"><i class="bi bi-info-circle text-blue-600"></i>
-                            <span>System audit and comprehensive IT infrastructure assessment.</span>
-                        </div>
-                    </div>
-                    <p>Early in the week, I conducted a comprehensive audit of the IT infrastructure, reviewing hardware inventory, software licenses, network configurations, security postures, and documentation completeness. This audit required applying knowledge from all previous weeks and identifying areas that might need attention.</p>
-                    <p>Mid-week, I prepared a detailed final report documenting findings from the audit, recommendations for improvements, and a comprehensive summary of the entire internship experience. This report summarized everything learned, from technical skills to soft skills development.</p>
-                    <p>By week's end, I participated in a formal internship completion assessment with my mentor and department leadership. They reviewed my performance, asked technical and situational questions, and provided feedback on my development. This experience marked the successful completion of a transformative three months.</p>
-                </section>
-                <section id="reflection" class="mb-16">
-                    <h2 class="text-3xl font-extrabold text-gray-900 mb-8">Reflections & Insights</h2>
-                    <div class="grid gap-6">
-                        <div class="p-8 rounded-3xl bg-blue-50/50 border border-blue-100 relative overflow-hidden group">
-                            <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:scale-110 transition-transform"><i class="bi bi-lightbulb text-6xl text-blue-600"></i></div>
-                            <h5 class="text-lg font-bold text-blue-900 mb-3 flex items-center gap-2"><i class="bi bi-check-circle-fill"></i> Holistic Professional Development</h5>
-                            <p class="text-slate-600 !mb-0 text-sm md:text-base leading-relaxed">This internship demonstrated that being a successful IT professional requires far more than technical knowledge. Project management, communication, documentation, customer service, and strategic thinking are equally important.</p>
-                        </div>
-                        <div class="p-8 rounded-3xl bg-amber-50/50 border border-amber-100 relative overflow-hidden group">
-                            <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:scale-110 transition-transform text-amber-600"><i class="bi bi-exclamation-triangle text-6xl"></i></div>
-                            <h5 class="text-lg font-bold text-amber-900 mb-3 flex items-center gap-2"><i class="bi bi-tools"></i> Continuous Learning Imperative</h5>
-                            <p class="text-slate-600 !mb-0 text-sm md:text-base leading-relaxed">Technology changes rapidly. The skills learned during this internship are foundational but just the beginning. Staying current with technology trends and continuously improving is essential.</p>
-                        </div>
-                    </div>
-                </section>
-                <section id="skills" class="mb-8">
-                    <h2 class="text-xl font-bold text-slate-900 mb-6">Technical Competencies Built</h2>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-4 py-2 bg-slate-100 rounded-xl text-slate-600 text-xs font-bold mono">SYSTEM_AUDITING</span>
-                        <span class="px-4 py-2 bg-slate-100 rounded-xl text-slate-600 text-xs font-bold mono">PERFORMANCE_ASSESSMENT</span>
-                        <span class="px-4 py-2 bg-slate-100 rounded-xl text-slate-600 text-xs font-bold mono">REPORT_WRITING</span>
-                        <span class="px-4 py-2 bg-slate-100 rounded-xl text-slate-600 text-xs font-bold mono">PROFESSIONAL_COMMUNICATION</span>
-                        <span class="px-4 py-2 bg-slate-100 rounded-xl text-slate-600 text-xs font-bold mono">CAREER_READINESS</span>
-                    </div>
-                </section>
-            </article>
+            <h1 class="text-3xl font-semibold text-heading tracking-tight mb-4">Coming Soon</h1>
+            <p class="text-text max-w-sm mb-10 mx-auto">Details about Week 12 will be uploaded here once completed.</p>
+            
+            <nav class="w-full pt-8 border-t border-border flex justify-between items-center text-sm font-medium text-text">
+                <a href="week11.html" class="flex items-center gap-2 hover:text-heading transition-colors group">
+                    <svg class="w-4 h-4 group-hover:-translate-x-1.5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 19l-7-7 7-7" /></svg>
+                    Week 11
+                </a>
+                <a href="week12.html" class="flex items-center gap-2 hover:text-heading transition-colors group">
+                    Week 12
+                    <svg class="w-4 h-4 group-hover:translate-x-1.5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5l7 7-7 7" /></svg>
+                </a>
+            </nav>
         </div>
     </main>
-    <nav class="max-w-4xl mx-auto px-6 mb-20">
-        <div class="flex flex-col md:flex-row gap-4">
-            <a href="week11.html" class="flex-1 p-8 rounded-3xl bg-white border border-slate-200 hover:border-blue-500 hover:shadow-xl hover:shadow-blue-50 transition-all group">
-                <span class="text-[10px] font-bold text-blue-600 uppercase tracking-widest block mb-2">Previous Week</span>
-                <div class="flex justify-between items-center"><span class="font-bold text-slate-900">Data Recovery & Disaster Planning</span>
-                    <i class="bi bi-arrow-left text-blue-600 group-hover:-translate-x-2 transition-transform"></i>
-                </div>
-            </a>
-            <a href="index.html" class="flex-1 p-8 rounded-3xl bg-blue-600 text-gray-900 hover:bg-blue-700 transition-all group">
-                <span class="text-[10px] font-bold text-blue-200 uppercase tracking-widest block mb-2">Internship Complete</span>
-                <div class="flex justify-between items-center"><span class="font-bold text-gray-900">Return to Home</span>
-                    <i class="bi bi-arrow-right text-blue-200 group-hover:translate-x-2 transition-transform"></i>
-                </div>
-            </a>
-        </div>
-    </nav>
-    <footer class="py-12 border-t border-slate-100 text-center">
-        <p class="text-xs font-bold text-gray-500 uppercase tracking-widest">© 2026 Mae Anne Bongat | OJT Digital Journal</p>
-    </footer>
-    <script>
-        window.onscroll = function() {
-            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            let scrolled = (winScroll / height) * 100;
-            document.getElementById("progress-bar").style.width = scrolled + "%";
-        };
-    </script>
 </body>
 </html>

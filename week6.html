@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 6 – OJT Journal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --font-sans: 'Inter', sans-serif;
+        --color-bg: #09090b; --color-surface: #18181b; --color-border: #27272a; 
+        --color-text: #a1a1aa; --color-heading: #f4f4f5; --color-primary: #3b82f6; 
+      }
+      body { font-family: var(--font-sans); background-color: var(--color-bg); color: var(--color-text); -webkit-font-smoothing: antialiased; }
+      .glass-nav { background-color: rgba(9, 9, 11, 0.7); backdrop-filter: blur(12px); border-bottom: 1px solid var(--color-border); }
+      .fade-in { animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; opacity: 0; }
+      @keyframes fadeIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+      .delay-1 { animation-delay: 0.1s; } 
+    </style>
+</head>
+<body class="pb-24 selection:bg-primary/30 selection:text-white">
+    <nav class="glass-nav fixed top-0 w-full z-50 transition-all">
+        <div class="max-w-3xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2.5 group">
+                <span class="w-2 h-2 rounded-full bg-primary group-hover:scale-[1.6] transition-transform duration-300"></span>
+                <span class="text-heading font-medium tracking-tight text-sm">OJT Journal</span>
+            </a>
+            <div class="flex gap-6 text-sm font-medium text-text">
+                <a href="index.html" class="hover:text-heading transition-colors">Home</a>
+                <a href="index.html#journal" class="hover:text-heading transition-colors">Journal</a>
+                <a href="index.html#about" class="hover:text-heading transition-colors">About</a>
+            </div>
+        </div>
+    </nav>
+    <main class="max-w-2xl mx-auto px-6 pt-32 md:pt-40 text-center">
+        <div class="fade-in flex flex-col items-center justify-center min-h-[50vh]">
+            <div class="w-16 h-16 bg-surface border border-border rounded-full flex items-center justify-center mb-6 text-border mx-auto">
+                <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            </div>
+            <h1 class="text-3xl font-semibold text-heading tracking-tight mb-4">Coming Soon</h1>
+            <p class="text-text max-w-sm mb-10 mx-auto">Details about Week 6 will be uploaded here once completed.</p>
+            
+            <nav class="w-full pt-8 border-t border-border flex justify-between items-center text-sm font-medium text-text">
+                <a href="week5.html" class="flex items-center gap-2 hover:text-heading transition-colors group">
+                    <svg class="w-4 h-4 group-hover:-translate-x-1.5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 19l-7-7 7-7" /></svg>
+                    Week 5
+                </a>
+                <a href="week7.html" class="flex items-center gap-2 hover:text-heading transition-colors group">
+                    Week 7
+                    <svg class="w-4 h-4 group-hover:translate-x-1.5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5l7 7-7 7" /></svg>
+                </a>
+            </nav>
+        </div>
+    </main>
+</body>
+</html>
