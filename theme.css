@@ -1,0 +1,74 @@
+/* ============================================================
+   OJT Journal - Custom Utilities & Animations
+   Tailwind CSS v4 Custom Components
+   ============================================================ */
+
+/* ===== COMPONENT STYLES ===== */
+
+/* Glassmorphism Navigation */
+.glass-nav {
+  background-color: rgba(9, 9, 11, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* Prose Typography */
+.prose p {
+  margin-bottom: 1.6em;
+  line-height: 1.8;
+}
+
+/* ===== ANIMATIONS ===== */
+
+/* Fade-in Animation */
+.fade-in {
+  animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation Delays */
+.delay-1 {
+  animation-delay: 0.1s;
+}
+
+.delay-2 {
+  animation-delay: 0.2s;
+}
+
+.delay-3 {
+  animation-delay: 0.3s;
+}
+
+/* Active Navigation Link Style */
+.nav-link.active {
+  color: var(--color-heading);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Typewriter Cursor Blink */
+.typewriter-cursor {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Progress Bar Animation */
+.progress-bar-fill {
+  transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}

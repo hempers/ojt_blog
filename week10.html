@@ -11,15 +11,21 @@
     <style type="text/tailwindcss">
       @theme {
         --font-sans: 'Inter', sans-serif;
-        --color-bg: #09090b; --color-surface: #18181b; --color-border: #27272a; 
-        --color-text: #a1a1aa; --color-heading: #f4f4f5; --color-primary: #3b82f6; 
+        --color-bg: #09090b;
+        --color-surface: #18181b;
+        --color-border: #27272a;
+        --color-text: #a1a1aa;
+        --color-heading: #f4f4f5;
+        --color-primary: #3b82f6;
       }
-      body { font-family: var(--font-sans); background-color: var(--color-bg); color: var(--color-text); -webkit-font-smoothing: antialiased; }
-      .glass-nav { background-color: rgba(9, 9, 11, 0.7); backdrop-filter: blur(12px); border-bottom: 1px solid var(--color-border); }
-      .fade-in { animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; opacity: 0; }
-      @keyframes fadeIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
-      .delay-1 { animation-delay: 0.1s; } 
+      body {
+        font-family: var(--font-sans);
+        background-color: var(--color-bg);
+        color: var(--color-text);
+        -webkit-font-smoothing: antialiased;
+      }
     </style>
+    <link rel="stylesheet" href="theme.css">
 </head>
 <body class="pb-24 selection:bg-primary/30 selection:text-white">
     <nav class="glass-nav fixed top-0 w-full z-50 transition-all">
