@@ -41,25 +41,128 @@
             </div>
         </div>
     </nav>
-    <main class="max-w-2xl mx-auto px-6 pt-32 md:pt-40 text-center">
-        <div class="fade-in flex flex-col items-center justify-center min-h-[50vh]">
-            <div class="w-16 h-16 bg-surface border border-border rounded-full flex items-center justify-center mb-6 text-border mx-auto">
-                <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+    <main class="max-w-2xl mx-auto px-6 pt-32 md:pt-40">
+        <header class="mb-14 fade-in">
+            <div class="flex items-center gap-3 text-xs font-semibold tracking-wider uppercase mb-5 text-primary">
+                <span>Week 11</span><span class="w-1 h-1 rounded-full bg-border"></span><span class="text-text">April 27 – 30, 2026</span>
             </div>
-            <h1 class="text-3xl font-semibold text-heading tracking-tight mb-4">Coming Soon</h1>
-            <p class="text-text max-w-sm mb-10 mx-auto">Details about Week 11 will be uploaded here once completed.</p>
-            
-            <nav class="w-full pt-8 border-t border-border flex justify-between items-center text-sm font-medium text-text">
-                <a href="week10.html" class="flex items-center gap-2 hover:text-heading transition-colors group">
-                    <svg class="w-4 h-4 group-hover:-translate-x-1.5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 19l-7-7 7-7" /></svg>
-                    Week 10
-                </a>
-                <a href="week12.html" class="flex items-center gap-2 hover:text-heading transition-colors group">
-                    Week 12
-                    <svg class="w-4 h-4 group-hover:translate-x-1.5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5l7 7-7 7" /></svg>
-                </a>
-            </nav>
+            <h1 class="text-3xl md:text-[2.5rem] font-semibold text-heading tracking-tight leading-[1.15] mb-8">Week 11 – Network Troubleshooting & Server Organization</h1>
+            <div class="flex flex-wrap gap-5 text-sm text-text border-y border-border py-4">
+                <div class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                    </svg>
+                    ALINDECO
+                </div>
+                <div class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    Network & Infrastructure
+                </div>
+            </div>
+        </header>
+
+        <article class="prose text-[0.95rem] md:text-base text-text fade-in delay-1">
+            <h2 class="text-lg font-medium text-heading mb-4 tracking-tight">Narrative</h2>
+            <p>
+                Week 11 was characterized by a focus on infrastructure maintenance, network troubleshooting, and project refinement. I started the week on April 27 by deploying an upgraded Windows 11 desktop in the warehouse department. Upon deployment, we hit a significant roadblock: we couldn't sign in with the new domain user account because the domain controller appeared unavailable. After investigating the network adapter settings, I found the culprit—the system was prioritizing IPv6 over IPv4, which was causing the domain resolution failure. By logging in through the local <code>ALINDECO\administrator</code> account, disabling IPv6, and restarting, the workstation successfully connected to the domain. I spent the rest of the day progressing with the development of the Purchase Requisition Tracking System (PRTS).
+            </p>
+
+            <p>
+                On April 28, I shifted focus to the production office to address persistent CCTV connectivity issues. The task involved recrimping several aging LAN cables to ensure stable connections for the Hikvision camera system. The network path ran from the internet to a switch and then to the Network Video Recorder (NVR). Despite having the correct software configurations, the cameras wouldn't appear on the monitor. After testing the components, we determined the NVR was failing to handshake with the switch. We resolved the bottleneck by swapping out the NVR for a backup unit, which immediately detected all cameras on the network.
+            </p>
+
+            <div class="my-10 border border-border rounded-xl overflow-hidden bg-surface p-1.5 group relative">
+                <div class="flex overflow-x-auto snap-x snap-mandatory gap-2 scroll-smooth pb-2" style="scrollbar-width: none; -ms-overflow-style: none;">
+                    <div class="snap-center shrink-0 w-full">
+                        <img src="images/week11/cctv-setup.png" alt="CCTV NVR Troubleshooting" class="w-full h-auto rounded-lg rounded-b-sm grayscale-[60%] opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 object-cover max-h-64">
+                    </div>
+                </div>
+                <figcaption class="text-[0.75rem] text-center pt-3 pb-1.5 text-gray-500 tracking-wide uppercase">Troubleshooting Hikvision CCTV connections and NVR configuration.</figcaption>
+            </div>
+
+            <p>
+                April 29 was a day of system auditing and project updates. I spent time recording computer registration data from ESET into our inventory system to keep our asset records current. I also implemented a major set of changes in the PRTS project, focusing on core logic updates and UI improvements based on recent feedback.
+            </p>
+
+            <p>
+                The week concluded on April 30 with a focus on physical infrastructure and routine maintenance. I spent time in the server room recrimping messy or aging wires and cutting excess cabling to organize the server rack, which is vital for both airflow and future troubleshooting. To round out the day, I handled maintenance requests across the office, including replacing toner cartridges in several printers to ensure smooth daily operations.
+            </p>
+
+            <div class="my-10 border border-border rounded-xl overflow-hidden bg-surface p-1.5 group relative">
+                <div class="flex overflow-x-auto snap-x snap-mandatory gap-2 scroll-smooth pb-2" style="scrollbar-width: none; -ms-overflow-style: none;">
+                    <div class="snap-center shrink-0 w-full">
+                        <img src="images/week11/server-room.png" alt="Server Room cable management" class="w-full h-auto rounded-lg rounded-b-sm grayscale-[60%] opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 object-cover max-h-64">
+                    </div>
+                    <div class="snap-center shrink-0 w-full">
+                        <img src="images/week11/printer-maintenance.png" alt="Printer Toner Replacement" class="w-full h-auto rounded-lg rounded-b-sm grayscale-[60%] opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 object-cover max-h-64">
+                    </div>
+                </div>
+                <figcaption class="text-[0.75rem] text-center pt-3 pb-1.5 text-gray-500 tracking-wide uppercase">Maintaining physical infrastructure and organizing server room cabling.</figcaption>
+            </div>
+        </article>
+
+        <div class="flex items-center justify-center gap-2 my-14 fade-in delay-2">
+            <div class="h-px w-12 bg-border"></div>
+            <div class="w-1 h-1 rounded-full bg-border"></div>
+            <div class="h-px w-12 bg-border"></div>
         </div>
+
+        <section class="fade-in delay-2">
+            <h2 class="text-lg font-medium text-heading mb-6 tracking-tight">Insights</h2>
+            <div class="flex flex-col gap-4 text-[0.95rem]">
+                <div class="p-5 rounded-2xl bg-surface border border-border hover:border-gray-600 transition-colors">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-7 h-7 rounded-full bg-blue-500/10 flex items-center justify-center text-primary">
+                            <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                        </div>
+                        <h3 class="font-medium text-heading">What I Learned</h3>
+                    </div>
+                    <p class="text-text leading-relaxed">I learned how protocol prioritization (IPv6 vs IPv4) can impact domain authentication in local networks. Understanding that modern OS updates can sometimes alter network behavior helped me develop a more methodical troubleshooting approach. Additionally, working on the CCTV system taught me that even with correct software settings, hardware failures like a faulty NVR or a poorly crimped cable can be the root cause of network downtime.</p>
+                </div>
+                <div class="p-5 rounded-2xl bg-surface border border-border hover:border-gray-600 transition-colors">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-7 h-7 rounded-full bg-orange-500/10 flex items-center justify-center text-orange-400">
+                            <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                            </svg>
+                        </div>
+                        <h3 class="font-medium text-heading">Challenges Encountered</h3>
+                    </div>
+                    <p class="text-text leading-relaxed">The most tedious challenge this week was physical cable management and recrimping. Working in the server room and production office required patience and precision to ensure reliable connections. Another hurdle was diagnosing why the Hikvision cameras weren't appearing on the NVR, which required testing individual components to isolate the faulty recorder.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="h-px w-full bg-border my-12 fade-in delay-3"></div>
+
+        <section class="fade-in delay-3">
+            <h2 class="text-lg font-medium text-heading mb-4 tracking-tight">Skills Gained</h2>
+            <div class="flex flex-wrap gap-2.5">
+                <span class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">Network IPv4/IPv6 Troubleshooting</span>
+                <span class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">LAN Cable Recrimping (RJ45)</span>
+                <span class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">CCTV & NVR Configuration</span>
+                <span class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">Server Room Cable Management</span>
+            </div>
+        </section>
+
+        <nav class="w-full pt-16 border-t border-border flex justify-between items-center text-sm font-medium text-text mt-12 mb-12 fade-in delay-3">
+            <a href="week10.html" class="flex items-center gap-2 hover:text-heading transition-colors group">
+                <svg class="w-4 h-4 group-hover:-translate-x-1.5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 19l-7-7 7-7" />
+                </svg>
+                Week 10
+            </a>
+            <a href="week12.html" class="flex items-center gap-2 hover:text-heading transition-colors group">
+                Week 12
+                <svg class="w-4 h-4 group-hover:translate-x-1.5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5l7 7-7 7" />
+                </svg>
+            </a>
+        </nav>
     </main>
 
     <!-- Auto-scroll Carousel Script -->
@@ -78,7 +181,7 @@
                             // Otherwise, scroll by the width of one image container
                             carousel.scrollBy({ left: carousel.clientWidth, behavior: 'smooth' });
                         }
-                    }, 3000); // 3 seconds interval
+                    }, 2000); // 2 seconds interval
                 };
                 
                 startScroll();
