@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" class="dark scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Week 12 – OJT Journal</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <style type="text/tailwindcss">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Week 12 – OJT Journal</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet">
+        <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+        <style type="text/tailwindcss">
       @theme {
         --font-sans: 'Inter', sans-serif;
         --color-bg: #09090b;
@@ -25,45 +27,272 @@
         -webkit-font-smoothing: antialiased;
       }
     </style>
-    <link rel="stylesheet" href="theme.css">
-</head>
-<body class="pb-24 selection:bg-primary/30 selection:text-white">
-    <nav class="glass-nav fixed top-0 w-full z-50 transition-all">
-        <div class="max-w-3xl mx-auto px-6 h-16 flex items-center justify-between">
-            <a href="index.html" class="flex items-center gap-2.5 group">
-                <span class="w-2 h-2 rounded-full bg-primary group-hover:scale-[1.6] transition-transform duration-300"></span>
-                <span class="text-heading font-medium tracking-tight text-sm">OJT Journal</span>
-            </a>
-            <div class="flex gap-6 text-sm font-medium text-text">
-                <a href="index.html" class="hover:text-heading transition-colors">Home</a>
-                <a href="index.html#journal" class="hover:text-heading transition-colors">Journal</a>
-                <a href="index.html#about" class="hover:text-heading transition-colors">About</a>
+        <link rel="stylesheet" href="theme.css">
+    </head>
+    <body class="pb-24 selection:bg-primary/30 selection:text-white">
+        <nav class="glass-nav fixed top-0 w-full z-50 transition-all">
+            <div
+                class="max-w-3xl mx-auto px-6 h-16 flex items-center justify-between">
+                <a href="index.html" class="flex items-center gap-2.5 group">
+                    <span
+                        class="w-2 h-2 rounded-full bg-primary group-hover:scale-[1.6] transition-transform duration-300"></span>
+                    <span
+                        class="text-heading font-medium tracking-tight text-sm">OJT
+                        Journal</span>
+                </a>
+                <div class="flex gap-6 text-sm font-medium text-text">
+                    <a href="index.html"
+                        class="hover:text-heading transition-colors">Home</a>
+                    <a href="index.html#journal"
+                        class="hover:text-heading transition-colors">Journal</a>
+                    <a href="index.html#about"
+                        class="hover:text-heading transition-colors">About</a>
+                </div>
             </div>
-        </div>
-    </nav>
-    <main class="max-w-2xl mx-auto px-6 pt-32 md:pt-40 text-center">
-        <div class="fade-in flex flex-col items-center justify-center min-h-[50vh]">
-            <div class="w-16 h-16 bg-surface border border-border rounded-full flex items-center justify-center mb-6 text-border mx-auto">
-                <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-            </div>
-            <h1 class="text-3xl font-semibold text-heading tracking-tight mb-4">Coming Soon</h1>
-            <p class="text-text max-w-sm mb-10 mx-auto">Details about Week 12 will be uploaded here once completed.</p>
-            
-            <nav class="w-full pt-8 border-t border-border flex justify-between items-center text-sm font-medium text-text">
-                <a href="week11.html" class="flex items-center gap-2 hover:text-heading transition-colors group">
-                    <svg class="w-4 h-4 group-hover:-translate-x-1.5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 19l-7-7 7-7" /></svg>
+        </nav>
+        <main class="max-w-2xl mx-auto px-6 pt-32 md:pt-40">
+            <header class="mb-14 fade-in">
+                <div
+                    class="flex items-center gap-3 text-xs font-semibold tracking-wider uppercase mb-5 text-primary">
+                    <span>Week 12</span><span
+                        class="w-1 h-1 rounded-full bg-border"></span><span
+                        class="text-text">May 4 – May 9, 2026</span>
+                </div>
+                <h1
+                    class="text-3xl md:text-[2.5rem] font-semibold text-heading tracking-tight leading-[1.15] mb-8">Week
+                    12 – PRT System Finalization &amp; Fiber Optic Splicing</h1>
+                <div
+                    class="flex flex-wrap gap-5 text-sm text-text border-y border-border py-4">
+                    <div class="flex items-center gap-2"><svg
+                            class="w-4 h-4 text-gray-500" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor"><path
+                                stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="1.5"
+                                d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>ALINDECO</div>
+                </div>
+            </header>
+
+            <article
+                class="prose text-[0.95rem] md:text-base text-text fade-in delay-1">
+                <h2
+                    class="text-lg font-medium text-heading mb-4 tracking-tight">Narrative</h2>
+
+                <p>
+                    Week 12 began with continued
+                    development on the PRT System (Purchase Request Tracking
+                    System). May 4 and 5 were dedicated to refinement and
+                    feature enhancement of the system, building upon the
+                    progress made in previous weeks.
+                </p>
+
+                <p>
+                    On May 6, 2026, I shifted focus to hands-on infrastructure
+                    and equipment maintenance work. I created a LAN cable for
+                    the CCTV and NVR (Network Video Recorder) system, then
+                    proceeded to install a new monitor for CCTV monitoring in
+                    the production office, improving the surveillance
+                    capabilities and allowing real-time facility monitoring.
+                </p>
+
+                <p>
+                    In the afternoon, I tackled printer maintenance by resetting
+                    the Epson L120 printer's waste ink pad counter. Following
+                    this, I assembled a newly purchased Epson L121 printer and
+                    installed it for Ms. Susan Clerigo, as her HP DeskJet Ink
+                    Advantage 3635 had become irreparable and was no longer
+                    worth servicing.
+                </p>
+
+                <p>
+                    Upon installation, an error occurred during ink
+                    initialization. To resolve this issue, we removed the
+                    printer's connection from the system unit, pressed the stop
+                    button for 3 seconds, and then waited for 20 minutes to
+                    allow the ink initialization process to complete. This
+                    procedure is critical for ensuring the printer's internal
+                    ink system is properly configured and ready for operation.
+                </p>
+
+                <p>
+                    On May 7, 2026, I verified that the Epson L121 printer had
+                    successfully completed its initialization. After confirming
+                    the initialization was successful, I installed the printer
+                    at Ms. Susan's workstation and performed a test print to
+                    ensure there were no printing errors. The test print was
+                    successful, confirming that the printer was fully
+                    operational and ready for daily use. Upon completing the
+                    printer installation, I proceeded to work on UI
+                    modifications for the PRT System, continuing the development
+                    efforts from earlier in the week.
+                </p>
+
+                <p>
+                    May 8 proved to be the most memorable day of my entire
+                    internship. The morning was dedicated to UI refinement of
+                    the PRT System. In the afternoon, our mentor Sir Jhong
+                    introduced me to an advanced and challenging technical
+                    skill: fiber optic splicing. Fiber optic splicing is the
+                    process of joining two fiber optic cables end-to-end to
+                    create a continuous optical path for high-speed data
+                    transmission.
+                </p>
+
+                <p>
+                    Despite multiple initial attempts, we persisted through the
+                    learning curve and eventually achieved a perfect splice. The
+                    most challenging aspect was inserting the fiber optic cable
+                    into the SC connector, which requires precision alignment
+                    and extremely careful handling. After numerous trials and
+                    adjustments, we successfully executed a flawless splice.
+                </p>
+
+                <p>
+                    To validate our work and ensure the splice was functional, I
+                    connected the fiber optic splice to a media converter,
+                    plugged in a LAN connection from the switch to the media
+                    converter, then connected from the media converter to a
+                    computer. The test was successful — the fiber optic
+                    connection worked perfectly on the first try! This was both
+                    a challenging and rewarding experience, representing a new
+                    and valuable skill acquired during the internship. The hands-on practice demonstrated how fiber
+                    optic splicing, while technically demanding, is essential
+                    for establishing high-speed, long-distance network
+                    connections in modern IT infrastructure.
+                </p>
+            </article>
+
+            <div
+                class="flex items-center justify-center gap-2 my-14 fade-in delay-2"><div
+                    class="h-px w-12 bg-border"></div><div
+                    class="w-1 h-1 rounded-full bg-border"></div><div
+                    class="h-px w-12 bg-border"></div></div>
+
+            <section class="fade-in delay-2">
+                <h2
+                    class="text-lg font-medium text-heading mb-6 tracking-tight">Insights</h2>
+                <div class="flex flex-col gap-4 text-[0.95rem]">
+                    <div
+                        class="p-5 rounded-2xl bg-surface border border-border hover:border-gray-600 transition-colors">
+                        <div class="flex items-center gap-3 mb-3"><div
+                                class="w-7 h-7 rounded-full bg-blue-500/10 flex items-center justify-center text-primary"><svg
+                                    class="w-3.5 h-3.5" fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"><path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2"
+                                        d="M13 10V3L4 14h7v7l9-11h-7z" /></svg></div><h3
+                                class="font-medium text-heading">What I
+                                Learned</h3></div>
+                        <p class="text-text leading-relaxed">This week
+                            encapsulated a broad range of IT work — from
+                            managing printer lifecycle (troubleshooting,
+                            replacement, and installation), to CCTV
+                            infrastructure setup, to advanced networking with
+                            fiber optic splicing. The ability to perform fiber
+                            optic splicing represents proficiency in
+                            cutting-edge network infrastructure. This week
+                            demonstrated that IT work spans from end-user
+                            support (printer installation and configuration) to
+                            enterprise-level infrastructure (fiber optics and
+                            network backbone work). The successful
+                            troubleshooting of the printer initialization error
+                            reinforced the importance of understanding
+                            equipment-specific procedures and patience during
+                            resolution.</p>
+                    </div>
+                    <div
+                        class="p-5 rounded-2xl bg-surface border border-border hover:border-gray-600 transition-colors">
+                        <div class="flex items-center gap-3 mb-3"><div
+                                class="w-7 h-7 rounded-full bg-orange-500/10 flex items-center justify-center text-orange-400"><svg
+                                    class="w-3.5 h-3.5" fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"><path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2"
+                                        d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg></div><h3
+                                class="font-medium text-heading">Challenges
+                                Encountered</h3></div>
+                        <p class="text-text leading-relaxed">The primary
+                            challenge of the week was fiber optic splicing,
+                            which required precision, patience, and multiple
+                            attempts to perfect. The insertion of the fiber into
+                            the SC connector was particularly demanding,
+                            requiring steady hands, careful alignment, and an
+                            understanding of connector mechanics. The printer
+                            ink initialization issue also presented a challenge,
+                            requiring research and understanding of
+                            printer-specific troubleshooting procedures.
+                            However, overcoming both of these challenges and
+                            achieving success provided a strong sense of
+                            accomplishment and confidence in tackling advanced
+                            IT infrastructure tasks and complex hardware
+                            troubleshooting.</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="h-px w-full bg-border my-12 fade-in delay-3"></div>
+
+            <section class="fade-in delay-3">
+                <h2
+                    class="text-lg font-medium text-heading mb-4 tracking-tight">Skills
+                    Gained</h2>
+                <div class="flex flex-wrap gap-2.5">
+                    <span
+                        class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">Fiber
+                        Optic Splicing</span>
+                    <span
+                        class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">SC
+                        Connector Installation</span>
+                    <span
+                        class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">Printer
+                        Installation &amp; Setup</span>
+                    <span
+                        class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">Printer
+                        Ink Initialization Troubleshooting</span>
+                    <span
+                        class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">CCTV
+                        &amp; NVR Setup</span>
+                    <span
+                        class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">LAN
+                        Cable Creation</span>
+                    <span
+                        class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">Media
+                        Converter Testing</span>
+                    <span
+                        class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">PRT
+                        System Development &amp; UI Design</span>
+                </div>
+            </section>
+
+            <nav
+                class="mt-24 pt-8 border-t border-border flex justify-between items-center text-sm font-medium text-text fade-in delay-3">
+                <a href="week11.html"
+                    class="flex items-center gap-2 hover:text-heading transition-colors group">
+                    <svg
+                        class="w-4 h-4 group-hover:-translate-x-1.5 transition-transform duration-300"
+                        fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor"><path stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="1.5"
+                            d="M15 19l-7-7 7-7" /></svg>
                     Week 11
                 </a>
-                <a href="week12.html" class="flex items-center gap-2 hover:text-heading transition-colors group">
-                    Week 12
-                    <svg class="w-4 h-4 group-hover:translate-x-1.5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5l7 7-7 7" /></svg>
+                <span class="text-text font-medium">Week 12</span>
+                <a href="week13.html"
+                    class="flex items-center gap-2 hover:text-heading transition-colors group">
+                    Week 13
+                    <svg
+                        class="w-4 h-4 group-hover:translate-x-1.5 transition-transform duration-300"
+                        fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor"><path stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="1.5"
+                            d="M9 5l7 7-7 7" /></svg>
                 </a>
             </nav>
-        </div>
-    </main>
+        </main>
 
-    <!-- Auto-scroll Carousel Script -->
-    <script>
+        <!-- Auto-scroll Carousel Script -->
+        <script>
         document.addEventListener('DOMContentLoaded', () => {
             const carousels = document.querySelectorAll('.overflow-x-auto.snap-x');
             carousels.forEach(carousel => {
@@ -89,5 +318,5 @@
             });
         });
     </script>
-</body>
+    </body>
 </html>
