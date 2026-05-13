@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" class="dark scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Week 10 – OJT Journal</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <style type="text/tailwindcss">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Week 10 – OJT Journal</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet">
+        <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+        <style type="text/tailwindcss">
       @theme {
         --font-sans: 'Inter', sans-serif;
         --color-bg: #09090b;
@@ -25,152 +27,357 @@
         -webkit-font-smoothing: antialiased;
       }
     </style>
-    <link rel="stylesheet" href="theme.css">
-</head>
-<body class="pb-24 selection:bg-primary/30 selection:text-white">
-    <nav class="glass-nav fixed top-0 w-full z-50 transition-all">
-        <div class="max-w-3xl mx-auto px-6 h-16 flex items-center justify-between">
-            <a href="index.html" class="flex items-center gap-2.5 group">
-                <span class="w-2 h-2 rounded-full bg-primary group-hover:scale-[1.6] transition-transform duration-300"></span>
-                <span class="text-heading font-medium tracking-tight text-sm">OJT Journal</span>
-            </a>
-            <div class="flex gap-6 text-sm font-medium text-text">
-                <a href="index.html" class="hover:text-heading transition-colors">Home</a>
-                <a href="index.html#journal" class="hover:text-heading transition-colors">Journal</a>
-                <a href="index.html#about" class="hover:text-heading transition-colors">About</a>
-            </div>
-        </div>
-    </nav>
-    <main class="max-w-2xl mx-auto px-6 pt-32 md:pt-40">
-        <header class="mb-14 fade-in">
-            <div class="flex items-center gap-3 text-xs font-semibold tracking-wider uppercase mb-5 text-primary">
-                <span>Week 10</span><span class="w-1 h-1 rounded-full bg-border"></span><span class="text-text">April 20 – 25, 2026</span>
-            </div>
-            <h1 class="text-3xl md:text-[2.5rem] font-semibold text-heading tracking-tight leading-[1.15] mb-8">Week 10 – Microsoft Graph API Integration & OS Deployment</h1>
-            <div class="flex flex-wrap gap-5 text-sm text-text border-y border-border py-4">
-                <div class="flex items-center gap-2">
-                    <svg class="w-4 h-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                    </svg>
-                    ALINDECO
-                </div>
-                <div class="flex items-center gap-2">
-                    <svg class="w-4 h-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    Software & Technical Support
+        <link rel="stylesheet" href="theme.css">
+    </head>
+    <body class="pb-24 selection:bg-primary/30 selection:text-white">
+        <nav class="glass-nav fixed top-0 w-full z-50 transition-all">
+            <div
+                class="max-w-3xl mx-auto px-6 h-16 flex items-center justify-between">
+                <a href="index.html" class="flex items-center gap-2.5 group">
+                    <span
+                        class="w-2 h-2 rounded-full bg-primary group-hover:scale-[1.6] transition-transform duration-300"></span>
+                    <span
+                        class="text-heading font-medium tracking-tight text-sm">OJT
+                        Journal</span>
+                </a>
+                <div class="flex gap-6 text-sm font-medium text-text">
+                    <a href="index.html"
+                        class="hover:text-heading transition-colors">Home</a>
+                    <a href="index.html#journal"
+                        class="hover:text-heading transition-colors">Journal</a>
+                    <a href="index.html#about"
+                        class="hover:text-heading transition-colors">About</a>
                 </div>
             </div>
-        </header>
-
-        <article class="prose text-[0.95rem] md:text-base text-text fade-in delay-1">
-            <h2 class="text-lg font-medium text-heading mb-4 tracking-tight">Narrative</h2>
-            <p>
-                Week 10 was a milestone week that bridged the gap between advanced software engineering and essential technical support. I spent April 20 and 22 continuing the development of the Purchase Requisition Tracking System (PRTS). These days were focused on refining the backend logic and ensuring that all development milestones were properly documented through consistent code commits.
-            </p>
-
-            <p>
-                April 23 was a breakout day for learning as I focused entirely on implementing automated email notifications using the Microsoft Graph API. The process began in the Azure Portal, where I registered my application to establish a connection between my system and Microsoft's services. I carefully secured the Client ID, Tenant ID, and generated a client secret—a step where I learned that Azure only displays the secret once. I then navigated to API permissions to add and grant admin consent for <code>Mail.Send</code>, a critical step for allowing the application to send emails on behalf of the company.
-            </p>
-
-            <p>
-                During implementation, I hit a snag: our <code>noreply@alindeco.com</code> account was failing because it lacked a mailbox. I corrected this by setting it up as a properly licensed shared mailbox. Once the Azure infrastructure was ready, I successfully tested the access token generation using a client credentials flow. For the final integration into my Laravel project, I installed Guzzle, stored the credentials in the <code>.env</code> file, and created a dedicated service class to handle the communication logic. Seeing the first automated email arrive was a huge success and added a valuable new skill to my toolkit.
-            </p>
-
-            <div class="my-10 border border-border rounded-xl overflow-hidden bg-surface p-1.5 group relative">
-                <div class="flex overflow-x-auto snap-x snap-mandatory gap-2 scroll-smooth pb-2" style="scrollbar-width: none; -ms-overflow-style: none;">
-                    <div class="snap-center shrink-0 w-full">
-                        <img src="images/week10/azure-portal.png" alt="Azure Portal Application Registration" class="w-full h-auto rounded-lg rounded-b-sm grayscale-[60%] opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 object-cover max-h-64">
-                    </div>
-                </div>
-                <figcaption class="text-[0.75rem] text-center pt-3 pb-1.5 text-gray-500 tracking-wide uppercase">Managing API permissions and application credentials in the Azure Portal for email integration.</figcaption>
-            </div>
-
-            <p>
-                On April 24, I encountered a unique technical challenge while upgrading a desktop from Windows 10 to Windows 11. After a successful installation, we were locked out of the system because the pre-created "admin" account wouldn't accept any passwords and lacked a standard password field. To resolve this, I used a specialized recovery technique via the Command Prompt (accessed through <code>Shift + Restart</code>). I navigated to the system drive and used <code>ren utilman.exe utilman.exe.bak</code> followed by <code>copy cmd.exe utilman.exe</code> to replace the Utility Manager with a terminal. After a reboot, I clicked the accessibility icon to open the CMD directly on the login screen, where I ran <code>net user [Username] [Password] /add</code> and <code>net localgroup administrators [username] /add</code> to create a new admin account. This bypass worked perfectly and allowed us to regain full access to the workstation.
-            </p>
-
-            <p>
-                The week concluded on April 25 with a migration project for the Accounting Department. I backed up the existing data and performed a clean upgrade from Windows 10 to Windows 11 using Ventoy as my bootable device. Once the OS was installed, I handled the activation of Microsoft Office, joined the workstation to the company domain, and set up all the necessary localized user accounts and daily software. It was a well-rounded week of software integration and hardware management.
-            </p>
-
-            <div class="my-10 border border-border rounded-xl overflow-hidden bg-surface p-1.5 group relative">
-                <div class="flex overflow-x-auto snap-x snap-mandatory gap-2 scroll-smooth pb-2" style="scrollbar-width: none; -ms-overflow-style: none;">
-                    <div class="snap-center shrink-0 w-full">
-                        <img src="images/week10/windows-upgrade.png" alt="Windows 11 Deployment" class="w-full h-auto rounded-lg rounded-b-sm grayscale-[60%] opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 object-cover max-h-64">
-                    </div>
-                    <div class="snap-center shrink-0 w-full">
-                        <img src="images/week10/commits.png" alt="Development Commits" class="w-full h-auto rounded-lg rounded-b-sm grayscale-[60%] opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 object-cover max-h-64">
-                    </div>
-                </div>
-                <figcaption class="text-[0.75rem] text-center pt-3 pb-1.5 text-gray-500 tracking-wide uppercase">Deploying Windows 11 and tracking system development progress.</figcaption>
-            </div>
-        </article>
-
-        <div class="flex items-center justify-center gap-2 my-14 fade-in delay-2">
-            <div class="h-px w-12 bg-border"></div>
-            <div class="w-1 h-1 rounded-full bg-border"></div>
-            <div class="h-px w-12 bg-border"></div>
-        </div>
-
-        <section class="fade-in delay-2">
-            <h2 class="text-lg font-medium text-heading mb-6 tracking-tight">Insights</h2>
-            <div class="flex flex-col gap-4 text-[0.95rem]">
-                <div class="p-5 rounded-2xl bg-surface border border-border hover:border-gray-600 transition-colors">
-                    <div class="flex items-center gap-3 mb-3">
-                        <div class="w-7 h-7 rounded-full bg-blue-500/10 flex items-center justify-center text-primary">
-                            <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                            </svg>
-                        </div>
-                        <h3 class="font-medium text-heading">What I Learned</h3>
-                    </div>
-                    <p class="text-text leading-relaxed">This week taught me the intricacies of modern API integration using OAuth 2.0 and Microsoft Graph. I learned that successfully sending an email involves more than just code; it requires proper identity management, permission scoping, and mailbox licensing. I also gained experience in advanced OS troubleshooting techniques, specifically using the recovery terminal to manipulate system files for account recovery.</p>
-                </div>
-                <div class="p-5 rounded-2xl bg-surface border border-border hover:border-gray-600 transition-colors">
-                    <div class="flex items-center gap-3 mb-3">
-                        <div class="w-7 h-7 rounded-full bg-orange-500/10 flex items-center justify-center text-orange-400">
-                            <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-                            </svg>
-                        </div>
-                        <h3 class="font-medium text-heading">Challenges Encountered</h3>
-                    </div>
-                    <p class="text-text leading-relaxed">The main challenge was navigating the Azure Portal's security requirements. Specifically, identifying that a shared mailbox requires proper mail-enabled settings before it can be used with the Graph API was a critical "aha" moment. Additionally, the Windows 11 upgrade roadblock tested my ability to research and apply low-level system commands to bypass authentication issues.</p>
-                </div>
-            </div>
-        </section>
-
-        <div class="h-px w-full bg-border my-12 fade-in delay-3"></div>
-
-        <section class="fade-in delay-3">
-            <h2 class="text-lg font-medium text-heading mb-4 tracking-tight">Skills Gained</h2>
-            <div class="flex flex-wrap gap-2.5">
-                <span class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">Microsoft Graph API Implementation</span>
-                <span class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">Azure AD App Registration</span>
-                <span class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">Workstation Domain Joining</span>
-                <span class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">Windows System Recovery & Admin Overrides</span>
-            </div>
-        </section>
-
-        <nav class="w-full pt-16 border-t border-border flex justify-between items-center text-sm font-medium text-text mt-12 mb-12 fade-in delay-3">
-            <a href="week9.html" class="flex items-center gap-2 hover:text-heading transition-colors group">
-                <svg class="w-4 h-4 group-hover:-translate-x-1.5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 19l-7-7 7-7" />
-                </svg>
-                Week 9
-            </a>
-            <a href="week11.html" class="flex items-center gap-2 hover:text-heading transition-colors group">
-                Week 11
-                <svg class="w-4 h-4 group-hover:translate-x-1.5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5l7 7-7 7" />
-                </svg>
-            </a>
         </nav>
-    </main>
+        <main class="max-w-2xl mx-auto px-6 pt-32 md:pt-40">
+            <header class="mb-14 fade-in">
+                <div
+                    class="flex items-center gap-3 text-xs font-semibold tracking-wider uppercase mb-5 text-primary">
+                    <span>Week 10</span><span
+                        class="w-1 h-1 rounded-full bg-border"></span><span
+                        class="text-text">April 20 – 25, 2026</span>
+                </div>
+                <h1
+                    class="text-3xl md:text-[2.5rem] font-semibold text-heading tracking-tight leading-[1.15] mb-8">Week
+                    10 – Microsoft Graph API Integration & OS Deployment</h1>
+                <div
+                    class="flex flex-wrap gap-5 text-sm text-text border-y border-border py-4">
+                    <div class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-gray-500" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="1.5"
+                                d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                        </svg>
+                        ALINDECO
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-gray-500" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="1.5"
+                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        Software & Technical Support
+                    </div>
+                </div>
+            </header>
 
-    <!-- Auto-scroll Carousel Script -->
-    <script>
+            <article
+                class="prose text-[0.95rem] md:text-base text-text fade-in delay-1">
+                <h2
+                    class="text-lg font-medium text-heading mb-4 tracking-tight">Narrative</h2>
+                <p>
+                    Week 10 was a milestone week that bridged the gap between
+                    advanced software engineering and essential technical
+                    support. I spent April 20 and 22 continuing the development
+                    of the Purchase Requisition Tracking System (PRTS). These
+                    days were focused on refining the backend logic and ensuring
+                    that all development milestones were properly documented
+                    through consistent code commits.
+                </p>
+
+                <p>
+                    April 23 was a breakout day for learning as I focused
+                    entirely on implementing automated email notifications using
+                    the Microsoft Graph API. The process began in the Azure
+                    Portal, where I registered my application to establish a
+                    connection between my system and Microsoft's services. I
+                    carefully secured the Client ID, Tenant ID, and generated a
+                    client secret—a step where I learned that Azure only
+                    displays the secret once. I then navigated to API
+                    permissions to add and grant admin consent for
+                    <code>Mail.Send</code>, a critical step for allowing the
+                    application to send emails on behalf of the company.
+                </p>
+
+                <p>
+                    During implementation, I hit a snag: our
+                    <code>noreply@alindeco.com</code> account was failing
+                    because it lacked a mailbox. I corrected this by setting it
+                    up as a properly licensed shared mailbox. Once the Azure
+                    infrastructure was ready, I successfully tested the access
+                    token generation using a client credentials flow. For the
+                    final integration into my Laravel project, I installed
+                    Guzzle, stored the credentials in the <code>.env</code>
+                    file, and created a dedicated service class to handle the
+                    communication logic. Seeing the first automated email arrive
+                    was a huge success and added a valuable new skill to my
+                    toolkit.
+                </p>
+
+                <!-- Inline image carousel -->
+                <div
+                    class="my-10 border border-border rounded-xl overflow-hidden bg-surface p-1.5 group relative">
+                    <div
+                        class="flex overflow-x-auto snap-x snap-mandatory gap-2 scroll-smooth pb-2"
+                        style="scrollbar-width: none; -ms-overflow-style: none;">
+                        <div class="snap-center shrink-0 w-full">
+                            <img
+                                src="images/week10/week10.1.png"
+                                alt="Week10 Documentation 1"
+                                class="w-full h-auto rounded-lg rounded-b-sm grayscale-[60%] opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 object-cover max-h-64">
+                        </div>
+                        <div class="snap-center shrink-0 w-full">
+                            <img
+                                src="images/week10/week10.2.png"
+                                alt="Week10 Documentation 2"
+                                class="w-full h-auto rounded-lg rounded-b-sm grayscale-[60%] opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 object-cover max-h-64">
+                        </div>
+                        <div class="snap-center shrink-0 w-full">
+                            <img
+                                src="images/week10/week10.3.png"
+                                alt="Week10 Documentation 3"
+                                class="w-full h-auto rounded-lg rounded-b-sm grayscale-[60%] opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 object-cover max-h-64">
+                        </div>
+                        <div class="snap-center shrink-0 w-full">
+                            <img
+                                src="images/week10/week10.4.png"
+                                alt="Week10 Documentation 4"
+                                class="w-full h-auto rounded-lg rounded-b-sm grayscale-[60%] opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 object-cover max-h-64">
+                        </div>
+                        <div class="snap-center shrink-0 w-full">
+                            <img
+                                src="images/week10/week10.5.png"
+                                alt="Week10 Documentation 5"
+                                class="w-full h-auto rounded-lg rounded-b-sm grayscale-[60%] opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 object-cover max-h-64">
+                        </div>
+                        <div class="snap-center shrink-0 w-full">
+                            <img
+                                src="images/week10/week10.6.png"
+                                alt="Week10 Documentation 6"
+                                class="w-full h-auto rounded-lg rounded-b-sm grayscale-[60%] opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 object-cover max-h-64">
+                        </div>
+                    </div>
+                    <figcaption
+                        class="text-[0.75rem] text-center pt-3 pb-1.5 text-gray-500 tracking-wide uppercase">Azure
+                        cloud migration and Windows 11 enterprise
+                        deployment.</figcaption>
+                    <!-- CSS to hide scrollbar for webkit -->
+                    <style>
+        .flex::-webkit-scrollbar { display: none; }
+    </style>
+                </div><p>
+                    On April 24, I encountered a unique technical challenge
+                    while upgrading a desktop from Windows 10 to Windows 11.
+                    After a successful installation, we were locked out of the
+                    system because the pre-created "admin" account wouldn't
+                    accept any passwords and lacked a standard password field.
+                    To resolve this, I used a specialized recovery technique via
+                    the Command Prompt (accessed through <code>Shift +
+                        Restart</code>). I navigated to the system drive and
+                    used <code>ren utilman.exe utilman.exe.bak</code> followed
+                    by <code>copy cmd.exe utilman.exe</code> to replace the
+                    Utility Manager with a terminal. After a reboot, I clicked
+                    the accessibility icon to open the CMD directly on the login
+                    screen, where I ran <code>net user [Username] [Password]
+                        /add</code> and <code>net localgroup administrators
+                        [username] /add</code> to create a new admin account.
+                    This bypass worked perfectly and allowed us to regain full
+                    access to the workstation.
+                </p>
+
+                <p>
+                    The week concluded on April 25 with a migration project for
+                    the Accounting Department. I backed up the existing data and
+                    performed a clean upgrade from Windows 10 to Windows 11
+                    using Ventoy as my bootable device. Once the OS was
+                    installed, I handled the activation of Microsoft Office,
+                    joined the workstation to the company domain, and set up all
+                    the necessary localized user accounts and daily software. It
+                    was a well-rounded week of software integration and hardware
+                    management.
+                </p>
+
+                <div
+                    class="my-10 border border-border rounded-xl overflow-hidden bg-surface p-1.5 group relative">
+                    <div
+                        class="flex overflow-x-auto snap-x snap-mandatory gap-2 scroll-smooth pb-2"
+                        style="scrollbar-width: none; -ms-overflow-style: none;">
+                        <div class="snap-center shrink-0 w-full">
+                            <img
+                                src="images/week10/week10.7.png"
+                                alt="Week10 Documentation 7"
+                                class="w-full h-auto rounded-lg rounded-b-sm grayscale-[60%] opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 object-cover max-h-64">
+                        </div>
+                        <div class="snap-center shrink-0 w-full">
+                            <img
+                                src="images/week10/week10.8.png"
+                                alt="Week10 Documentation 8"
+                                class="w-full h-auto rounded-lg rounded-b-sm grayscale-[60%] opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 object-cover max-h-64">
+                        </div>
+                        <div class="snap-center shrink-0 w-full">
+                            <img
+                                src="images/week10/week10.9.png"
+                                alt="Week10 Documentation 9"
+                                class="w-full h-auto rounded-lg rounded-b-sm grayscale-[60%] opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 object-cover max-h-64">
+                        </div>
+                        <div class="snap-center shrink-0 w-full">
+                            <img
+                                src="images/week10/week10.10.png"
+                                alt="Week10 Documentation 10"
+                                class="w-full h-auto rounded-lg rounded-b-sm grayscale-[60%] opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 object-cover max-h-64">
+                        </div>
+                        <div class="snap-center shrink-0 w-full">
+                            <img
+                                src="images/week10/week10.11.png"
+                                alt="Week10 Documentation 11"
+                                class="w-full h-auto rounded-lg rounded-b-sm grayscale-[60%] opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 object-cover max-h-64">
+                        </div>
+                        <div class="snap-center shrink-0 w-full">
+                            <img
+                                src="images/week10/week10.12.png"
+                                alt="Week10 Documentation 12"
+                                class="w-full h-auto rounded-lg rounded-b-sm grayscale-[60%] opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 object-cover max-h-64">
+                        </div>
+                        <div class="snap-center shrink-0 w-full">
+                            <img
+                                src="images/week10/week10.13.png"
+                                alt="Week10 Documentation 13"
+                                class="w-full h-auto rounded-lg rounded-b-sm grayscale-[60%] opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 object-cover max-h-64">
+                        </div>
+                    </div>
+                    <figcaption
+                        class="text-[0.75rem] text-center pt-3 pb-1.5 text-gray-500 tracking-wide uppercase">Deploying
+                        Windows 11 and tracking system development
+                        progress.</figcaption>
+                </div>
+            </article>
+
+            <div
+                class="flex items-center justify-center gap-2 my-14 fade-in delay-2">
+                <div class="h-px w-12 bg-border"></div>
+                <div class="w-1 h-1 rounded-full bg-border"></div>
+                <div class="h-px w-12 bg-border"></div>
+            </div>
+
+            <section class="fade-in delay-2">
+                <h2
+                    class="text-lg font-medium text-heading mb-6 tracking-tight">Insights</h2>
+                <div class="flex flex-col gap-4 text-[0.95rem]">
+                    <div
+                        class="p-5 rounded-2xl bg-surface border border-border hover:border-gray-600 transition-colors">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div
+                                class="w-7 h-7 rounded-full bg-blue-500/10 flex items-center justify-center text-primary">
+                                <svg class="w-3.5 h-3.5" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2"
+                                        d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                </svg>
+                            </div>
+                            <h3 class="font-medium text-heading">What I
+                                Learned</h3>
+                        </div>
+                        <p class="text-text leading-relaxed">This week taught me
+                            the intricacies of modern API integration using
+                            OAuth 2.0 and Microsoft Graph. I learned that
+                            successfully sending an email involves more than
+                            just code; it requires proper identity management,
+                            permission scoping, and mailbox licensing. I also
+                            gained experience in advanced OS troubleshooting
+                            techniques, specifically using the recovery terminal
+                            to manipulate system files for account recovery.</p>
+                    </div>
+                    <div
+                        class="p-5 rounded-2xl bg-surface border border-border hover:border-gray-600 transition-colors">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div
+                                class="w-7 h-7 rounded-full bg-orange-500/10 flex items-center justify-center text-orange-400">
+                                <svg class="w-3.5 h-3.5" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2"
+                                        d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                                </svg>
+                            </div>
+                            <h3 class="font-medium text-heading">Challenges
+                                Encountered</h3>
+                        </div>
+                        <p class="text-text leading-relaxed">The main challenge
+                            was navigating the Azure Portal's security
+                            requirements. Specifically, identifying that a
+                            shared mailbox requires proper mail-enabled settings
+                            before it can be used with the Graph API was a
+                            critical "aha" moment. Additionally, the Windows 11
+                            upgrade roadblock tested my ability to research and
+                            apply low-level system commands to bypass
+                            authentication issues.</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="h-px w-full bg-border my-12 fade-in delay-3"></div>
+
+            <section class="fade-in delay-3">
+                <h2
+                    class="text-lg font-medium text-heading mb-4 tracking-tight">Skills
+                    Gained</h2>
+                <div class="flex flex-wrap gap-2.5">
+                    <span
+                        class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">Microsoft
+                        Graph API Implementation</span>
+                    <span
+                        class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">Azure
+                        AD App Registration</span>
+                    <span
+                        class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">Workstation
+                        Domain Joining</span>
+                    <span
+                        class="px-3.5 py-1.5 rounded-full bg-transparent border border-border text-[0.8rem] text-text hover:text-heading hover:border-gray-500 transition-colors cursor-default">Windows
+                        System Recovery & Admin Overrides</span>
+                </div>
+            </section>
+
+            <nav
+                class="w-full pt-16 border-t border-border flex justify-between items-center text-sm font-medium text-text mt-12 mb-12 fade-in delay-3">
+                <a href="week9.html"
+                    class="flex items-center gap-2 hover:text-heading transition-colors group">
+                    <svg
+                        class="w-4 h-4 group-hover:-translate-x-1.5 transition-transform duration-300"
+                        fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="1.5" d="M15 19l-7-7 7-7" />
+                    </svg>
+                    Week 9
+                </a>
+                <a href="week11.html"
+                    class="flex items-center gap-2 hover:text-heading transition-colors group">
+                    Week 11
+                    <svg
+                        class="w-4 h-4 group-hover:translate-x-1.5 transition-transform duration-300"
+                        fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="1.5" d="M9 5l7 7-7 7" />
+                    </svg>
+                </a>
+            </nav>
+        </main>
+
+        <!-- Auto-scroll Carousel Script -->
+        <script>
         document.addEventListener('DOMContentLoaded', () => {
             const carousels = document.querySelectorAll('.overflow-x-auto.snap-x');
             carousels.forEach(carousel => {
@@ -196,5 +403,5 @@
             });
         });
     </script>
-</body>
+    </body>
 </html>
