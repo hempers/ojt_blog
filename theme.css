@@ -72,3 +72,26 @@
 .progress-bar-fill {
   transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
+
+/* Modal Fade-in Animation */
+.animate-fade-in {
+  animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Gallery Image Hover Effect */
+.gallery-image {
+  transition: all 0.3s ease;
+}
+
+.gallery-image:hover {
+  transform: scale(1.05);
+}
+
+/* Image Modal Styles */
+#imageModal {
+  animation: fadeIn 0.3s ease-out;
+}
+
+#imageModal button:disabled {
+  cursor: not-allowed;
+}
